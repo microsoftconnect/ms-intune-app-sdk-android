@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="offline_startup_app_icon_container_inset">11dp</dimen>
+
+</resources>

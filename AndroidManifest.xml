@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.microsoft.intune.mam"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23"
+        tools:ignore="OldTargetApi" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        tools:ignore="MissingApplicationIcon" >
+        <service
+            android:name="com.microsoft.intune.mam.client.notification.MAMNotificationReceiverService"
+            android:exported="true"
+            android:label=""
+            tools:ignore="ExportedService" />
+        <service
+            android:name="com.microsoft.intune.mam.client.notification.CompanyPortalInstallHandler"
+            android:exported="false"
+            android:label="" />
+        <service
+            android:name="com.microsoft.intune.mam.client.service.MAMBackgroundService"
+            android:exported="false"
+            android:label="" />
+
+        <receiver android:name="com.microsoft.intune.mam.client.service.MAMBackgroundReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.offline.OfflineStartupBlockedActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.startup.MAMStartupActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.resolver.MAMResolverActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.data.WipeUserDataActivity"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.offline.OfflineInstallCompanyPortalDialogActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+    </application>
+
+</manifest>

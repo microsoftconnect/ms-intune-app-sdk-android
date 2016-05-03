@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Whenever we add a new string, translations are not available immediately -->
+  <!-- When adding a new string, remove the '>' above and uncomment the below line -->
+  <!-- tools:ignore="MissingTranslation" > -->
+  <string name="wg_offline_branding_managed_by">회사에서 관리함</string>
+  <string name="wg_offline_go_back">뒤로 이동</string>
+  <string name="wg_offline_cancel">취소</string>
+  <string name="wg_offline_get_the_app">스토어로 이동</string>
+  <string name="wg_offline_policy_required_message">이 앱을 사용하려면 Microsoft Intune을 사용해서 장치를 등록하고 회사 정책을 준수해야 합니다. 도움을 원하시면 IT 부서에 문의하세요.</string>
+  <string name="wg_offline_ssp_install_required_message">이 앱에 회사 계정을 사용하려면 먼저 무료 Intune 회사 포털 앱을 설치해야 합니다. 계속하려면 #8220;스토어로 이동”을 탭하세요.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">이 앱에서 회사 계정을 사용하려면 먼저 Google Play 스토어에서 무료 Intune 회사 포털 앱을 설치해야 합니다. 이 장치에서는 현재 이 스토어를 사용할 수 없습니다. Google Play 스토어를 설치 및 사용하도록 설정한 다음 다시 시도하세요.</string>
+</resources>

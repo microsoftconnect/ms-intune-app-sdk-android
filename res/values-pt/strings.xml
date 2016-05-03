@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Whenever we add a new string, translations are not available immediately -->
+  <!-- When adding a new string, remove the '>' above and uncomment the below line -->
+  <!-- tools:ignore="MissingTranslation" > -->
+  <string name="wg_offline_branding_managed_by">Gerenciado por sua empresa</string>
+  <string name="wg_offline_go_back">Voltar</string>
+  <string name="wg_offline_cancel">Cancelar</string>
+  <string name="wg_offline_get_the_app">Ir para a loja</string>
+  <string name="wg_offline_policy_required_message">Este aplicativo requer que seu dispositivo seja inscrito usando o Microsoft Intune e deve estar em conformidade com as políticas de sua empresa. Contate o Departamento de TI para obter ajuda.</string>
+  <string name="wg_offline_ssp_install_required_message">Antes que você possa usar sua conta de trabalho com este aplicativo, é necessário instalar o aplicativo gratuito do Portal da Empresa do Intune. Toque em “Ir para a loja”  para continuar.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Antes de poder usar sua conta de trabalho neste aplicativo, é necessário instalar o aplicativo gratuito do Portal da Empresa do Intune pela Google Play Store. A loja não encontra-se atualmente habilitada neste dispositivo. Instale e habilite a Google Play Store e tente novamente.</string>
+</resources>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Whenever we add a new string, translations are not available immediately -->
+  <!-- When adding a new string, remove the '>' above and uncomment the below line -->
+  <!-- tools:ignore="MissingTranslation" > -->
+  <string name="wg_offline_branding_managed_by">由您的公司托管</string>
+  <string name="wg_offline_go_back">返回</string>
+  <string name="wg_offline_cancel">取消</string>
+  <string name="wg_offline_get_the_app">转至商店</string>
+  <string name="wg_offline_policy_required_message">此应用程序要求您的设备使用 Microsoft Intune 进行注册且符合您的公司政策。与您的 IT 部门联系以寻求帮助。</string>
+  <string name="wg_offline_ssp_install_required_message">必须先安装免费的 Intune 公司门户应用，才可以将你的工作帐户用于此应用。点击“转至商店”继续。</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">必须先安装来自 Google Play 商店的免费 Intune 公司门户应用，才可以将你的工作帐户用于此应用。此设备上目前未启用商店。请安装并启用 Google Play 商店，然后重试。</string>
+</resources>
