@@ -7,3 +7,6 @@ Before you install and use Microsoft Intune App SDK for Android you **must**:
 
 By downloading and using Intune App SDK for Android you agree to such license terms.  If you do not accept them, do not use the software.
 
+See the [Intune App SDK for Android Developer Guide](https://docs.microsoft.com/en-us/intune/develop/intune-app-sdk-android) on how to integrate the SDK into your Android app.
+
+
