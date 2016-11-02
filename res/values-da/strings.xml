@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+  <!-- Whenever we add a new string, translations are not available immediately -->
+  <!-- When adding a new string, remove the '>' above and uncomment the below line -->
+  <!-- tools:ignore="MissingTranslation" > -->
+  <string name="wg_offline_branding_managed_by">Administreret af din organisation</string>
+  <string name="wg_offline_go_back">Gå tilbage</string>
+  <string name="wg_offline_cancel">Annuller</string>
+  <string name="wg_offline_get_the_app">Gå til butikken</string>
+  <string name="wg_offline_policy_required_message">Dette program er endnu ikke blevet opsat til din brug. Kontakt din it-administrator for at få hjælp.</string>
+  <string name="wg_offline_ssp_install_required_message">Før du kan bruge din arbejds- eller skolekonto til denne app, skal du installere den gratis app Intune-firmaportal. Tryk på “Gå til butikken” for at fortsætte.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Før du kan bruge din arbejds- eller skolekonto til denne app, skal du installere den gratis app Intune-firmaportal fra Google Play Butik. Butikken er i øjeblikket ikke aktiveret på denne enhed. Installér og aktivér Google Play Butik, og prøv derefter igen.</string>
+  <string name="wg_offline_ok">OK</string>
+  <string name="wg_offline_must_restart">Din it-afdeling hjælper dig nu med at beskytte arbejds- eller skoledata i denne app. Genstart appen for at fortsætte.</string>
+  <string name="wg_offline_initialization_failure">Der var et problem med at starte appen. Prøv at opdatere appen eller appen Intune-firmaportal. Kontakt din it-administrator, hvis du har brug for hjælp.</string>
+</resources>

@@ -1,0 +1,28 @@
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+Do Not Translate or Localize 
+
+This file is based on, incorporates, or references material from the projects listed below (collectively, “Third Party Code”). Microsoft is not the original author of the Third Party Code. The original copyright notice and the license under which Microsoft received such Third Party Code, are set forth below. Such licenses and notices are provided for informational purposes only. Microsoft licenses the Third Party Code to you under the license terms governing the Microsoft Product. Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. 
+
+Third Party Code: 
+
+1.  Sample Code from Android Blog "Some Secure Random Thoughts" 14.08.13 
+      (http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html)
+
+
+As the recipient of the above Third-Party Code, Microsoft sets forth a copy of the notices and other information below.
+Provided for Informational Purposes Only 
+
+%% LANGUAGE FROM Sample Code from Android Blog "Some Secure Random Thoughts" 14.08.13 NOTICES AND INFORMATION BEGIN HERE
+========================================= 
+http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html
+Posted by: Alex Klyubin, Android Security Engineer
+
+Licensed:  /* * This software is provided 'as-is', without any express or implied * warranty. In no event will Google be held liable for any damages * arising from the use of this software. * * Permission is granted to anyone to use this software for any purpose, * including commercial applications, and to alter it and redistribute it * freely, as long as the origin is not misrepresented. */
+
+END OF LANGUAGE FROM Sample Code from Android Blog "Some Secure Random Thoughts" 14.08.13 NOTICES AND INFORMATION
+========================================= 
+
+
+
+
+
