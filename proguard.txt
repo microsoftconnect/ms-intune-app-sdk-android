@@ -1,0 +1,12 @@
+-keep class com.microsoft.intune.mam.** { *; }
+-keepattributes Exceptions
+
+# At runtime these classes come from the CompanyPortal.  The SDK will not access
+# them if the CP is not present.  It is safe to ignore warnings when minimizing
+-dontwarn com.microsoft.bond.**
+-dontwarn Microsoft.Telemetry.**
+
+# These classes all contain methods that reference com.microsoft.bond.BondSerializable
+# which comes from the CompanyPortal at runtime.  It is safe to ignore warnings when
+# minimizing
+-dontwarn com.microsoft.intune.mam.client.telemetry.clientschema.**

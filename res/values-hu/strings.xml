@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
@@ -7,7 +7,12 @@
   <string name="wg_offline_go_back">Vissza</string>
   <string name="wg_offline_cancel">Mégse</string>
   <string name="wg_offline_get_the_app">Ugrás az Áruházba</string>
-  <string name="wg_offline_policy_required_message">Az alkalmazás használatához az eszközt be kell léptetni a Microsoft Intune használatával, és meg kell felelnie a céges házirendeknek. Kérje az IT-részleg segítségét.</string>
-  <string name="wg_offline_ssp_install_required_message">Munkahelyi fiókját csak akkor használhatja ezzel az alkalmazással, ha telepíti az Intune Vállalati portál alkalmazást. Koppintson az Ugrás az Áruházba elemre a továbblépéshez.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Munkahelyi fiókját csak akkor használhatja ezzel az alkalmazással, ha a Google Play Áruházból telepíti az Intune Vállalati portál alkalmazást. Az áruház használata jelenleg nincs engedélyezve az eszközön. Telepítse a Google Play Áruházat és engedélyezze annak használatát, majd próbálkozzon újra.</string>
+  <string name="wg_offline_policy_required_message">Ez az alkalmazás nincs beállítva az Ön általi használatra. Kérje az IT-részleg segítségét.</string>
+  <string name="wg_offline_ssp_install_required_message">Csak akkor használhatja a munkahelyi vagy iskolai fiókját ebben az alkalmazásban, ha telepíti az Intune Céges portál alkalmazást. A folytatáshoz koppintson az Ugrás az Áruházba lehetőségre.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Csak akkor használhatja a munkahelyi vagy iskolai fiókját ebben az alkalmazásban, ha telepíti az Intune Céges portál alkalmazást a Google Play Áruházból. Az áruház használata jelenleg nincs engedélyezve az eszközön. Telepítse a Google Play Áruházat és engedélyezze annak használatát, majd próbálkozzon újra.</string>
+  <string name="wg_offline_ok">OK</string>
+  <string name="wg_offline_must_restart">Az informatikai részleg mostantól gondoskodik a munkahelyi vagy iskolai adatok védelméről ebben az alkalmazásban. A folytatáshoz indítsa újra az alkalmazást.</string>
+  <string name="wg_offline_initialization_failure">Hiba történt az alkalmazás indításakor. Próbálja meg frissíteni az alkalmazást vagy az Intune Céges portál alkalmazást. Ha segítségre van szüksége, forduljon a rendszergazdához.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Munkahelye eltávolította az ehhez az alkalmazáshoz tartozó munkahelyi adatokat, mert el lett távolítva az Intune Céges portál alkalmazás vagy annak adatai. Ha újra szeretne csatlakozni, jelentkezzen be munkahelyi vagy iskolai fiókjával.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Munkahelye eltávolította az ehhez az alkalmazáshoz tartozó adatokat, mert az Intune Céges portál alkalmazás vagy annak adatai el lettek távolítva. Az alkalmazás bezárul. Ha újra szeretne csatlakozni, jelentkezzen be munkahelyi vagy iskolai fiókjával.</string>
 </resources>

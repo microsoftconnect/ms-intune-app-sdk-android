@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="23"
+        android:targetSdkVersion="24"
         tools:ignore="OldTargetApi" />
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -16,17 +16,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:allowBackup="false"
         tools:ignore="MissingApplicationIcon" >
         <service
             android:name="com.microsoft.intune.mam.client.notification.MAMNotificationReceiverService"
             android:exported="true"
             android:label=""
             tools:ignore="ExportedService" />
-        <service
-            android:name="com.microsoft.intune.mam.client.notification.CompanyPortalInstallHandler"
-            android:exported="false"
-            android:label="" />
         <service
             android:name="com.microsoft.intune.mam.client.service.MAMBackgroundService"
             android:exported="false"
@@ -41,10 +36,17 @@
         <activity
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineStartupBlockedActivity"
             android:exported="false"
+            android:multiprocess="true"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.offline.OfflineRestartRequiredActivity"
+            android:exported="false"
+            android:multiprocess="true"
             android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.startup.MAMStartupActivity"
             android:exported="false"
+            android:multiprocess="true"
             android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.resolver.MAMResolverActivity"
@@ -56,6 +58,11 @@
             android:noHistory="true" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineInstallCompanyPortalDialogActivity"
+            android:exported="false"
+            android:multiprocess="true"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.microsoft.intune.mam.client.app.offline.OfflineNotifyWipeActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Dialog" />
     </application>

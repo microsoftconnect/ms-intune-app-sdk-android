@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
-  <string name="wg_offline_branding_managed_by">由您的公司托管</string>
+  <string name="wg_offline_branding_managed_by">由你的组织托管</string>
   <string name="wg_offline_go_back">返回</string>
   <string name="wg_offline_cancel">取消</string>
   <string name="wg_offline_get_the_app">转至商店</string>
-  <string name="wg_offline_policy_required_message">此应用程序要求您的设备使用 Microsoft Intune 进行注册且符合您的公司政策。与您的 IT 部门联系以寻求帮助。</string>
-  <string name="wg_offline_ssp_install_required_message">必须先安装免费的 Intune 公司门户应用，才可以将你的工作帐户用于此应用。点击“转至商店”继续。</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">必须先安装来自 Google Play 商店的免费 Intune 公司门户应用，才可以将你的工作帐户用于此应用。此设备上目前未启用商店。请安装并启用 Google Play 商店，然后重试。</string>
+  <string name="wg_offline_policy_required_message">尚未为你设置使用此应用。如需帮助，请与 IT 管理员联系。</string>
+  <string name="wg_offline_ssp_install_required_message">若要将工作或学校帐户用于此应用，必须安装 Intune 公司门户应用。请点击“转到商店”继续操作。</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">若要将工作或学校帐户用于此应用，必须安装来自 Google Play 商店的 Intune 公司门户应用。此设备目前尚未启用该商店。请安装并启用 Google Play 商店，然后重试。</string>
+  <string name="wg_offline_ok">确定</string>
+  <string name="wg_offline_must_restart">IT 部门正在帮助你保护此应用中的工作或学校数据。请重启应用以继续操作。</string>
+  <string name="wg_offline_initialization_failure">启动应用时出现问题。请尝试更新该应用或 Intune 公司门户应用。如需帮助，请与你的 IT 管理员联系。</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">你的组织已删除与此应用关联的数据，因为 Intune 公司门户数据或应用程序已被删除。若要重新连接，必须使用工作或学校帐户登录。</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">你的组织删除了与此应用关联的数据，因为已删除 Intune 公司门户数据或应用程序。此应用程序现将关闭。若要重新连接，必须使用工作或学校帐户登录。</string>
 </resources>

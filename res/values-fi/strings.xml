@@ -1,13 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
-  <string name="wg_offline_branding_managed_by">Yrityksesi hallitsema</string>
+  <string name="wg_offline_branding_managed_by">Organisaatiosi hallitsema</string>
   <string name="wg_offline_go_back">Palaa takaisin</string>
   <string name="wg_offline_cancel">Peruuta</string>
   <string name="wg_offline_get_the_app">Siirry kauppaan</string>
-  <string name="wg_offline_policy_required_message">Tämä sovellus edellyttää että laitteesi on rekisteröity Microsoft Intunen avulla ja että se on yhteensopiva yrityksesi käytännön kanssa. Ota yhteyttä IT-osastoosi saadaksesi tukea.</string>
-  <string name="wg_offline_ssp_install_required_message">Sinun on asennettava ilmainen Intunen yritysportaalisovellus, jotta voit käyttää työtiliäsi tämän sovelluksen kanssa. Jatka napauttamalla Siirry kauppaan.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Sinun on asennettava ilmainen Intunen yritysportaalisovellus Google Play -kaupasta, jotta voit käyttää työtiliäsi tämän sovelluksen kanssa. Kauppa ei ole otettu käyttöön tässä laitteessa. Asenna ja ota käyttöön Google Play -kauppa ja yritä uudelleen.</string>
+  <string name="wg_offline_policy_required_message">Tätä sovellusta ei ole määritetty käyttöösi. Kysy ohjeita IT-järjestelmänvalvojaltasi.</string>
+  <string name="wg_offline_ssp_install_required_message">Sinun on asennettava Intunen yritysportaalisovellus, jotta voit käyttää työ- tai koulutiliäsi tämän sovelluksen kanssa. Jatka napauttamalla Siirry kauppaan.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Sinun on asennettava Intunen yritysportaalisovellus Google Play -kaupasta, jotta voit käyttää työ- tai koulutiliäsi tämän sovelluksen kanssa. Kauppaa ei ole otettu käyttöön tässä laitteessa. Asenna ja ota käyttöön Google Play -kauppa ja yritä uudelleen.</string>
+  <string name="wg_offline_ok">OK</string>
+  <string name="wg_offline_must_restart">IT-osastosi auttaa sinua nyt suojaamaan työ- tai koulutietoja tässä sovelluksessa. Jatka käynnistämällä sovellus uudelleen.</string>
+  <string name="wg_offline_initialization_failure">Sovelluksesi käynnistämisessä oli ongelma. Kokeile päivittää sovellus tai Intunen yritysportaalisovellus. Jos tarvitset apua, ota yhteyttä IT-järjestelmänvalvojaasi.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Organisaatiosi on poistanut tähän sovellukseen liittyvät tietonsa, koska Intune Company Portal -tiedot tai -sovellus poistettiin. Jos haluat yhdistää uudelleen, sinun on kirjauduttava sisään työ- tai koulutililläsi.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Organisaatiosi on poistanut tähän sovellukseen liittyvät tietonsa, koska Intune-yritysportaalitiedot tai -sovellus poistettiin. Tämä sovellus suljetaan nyt. Jos haluat yhdistää uudelleen, sinun on kirjauduttava sisään työ- tai koulutiliisi.</string>
 </resources>
