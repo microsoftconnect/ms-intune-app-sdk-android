@@ -1,4 +1,6 @@
 # Microsoft Intune App SDK for Android 
+Version [4.1.0](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases)
+
 The Microsoft Intune App SDK for Android enables data protection features and mobile app management via Microsoft Intune 
 
 Before you install and use Microsoft Intune App SDK for Android you **must**:
