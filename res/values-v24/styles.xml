@@ -1,0 +1,46 @@
+<!--
+  ~ Copyright (c) Microsoft Corporation.  All rights reserved.
+  -->
+
+<resources>
+
+  <!-- Set text colors to be black for accessibility compliance. -->
+  <style name="MAMActivityBaseTheme" parent="@android:style/Theme.Material.Light">
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textColorAlertDialogListItem">@android:color/black</item>
+    <!-- The black bar at the top of the PIN screen. -->
+    <item name="android:colorPrimaryDark">@android:color/black</item>
+    <item name="android:alertDialogTheme">@style/MAMAlertDialogTheme</item>
+  </style>
+
+  <style name="MAMDialogTheme" parent="@android:style/Theme.Material.Light.Dialog" >
+    <item name="android:alertDialogTheme">@style/MAMAlertDialogTheme</item>
+  </style>
+
+  <!-- We only use this for the install company portal dialog with transparent background.
+       The attributes are copied from Theme.Translucent.NoTitleBar in themes.xml. -->
+  <style name="MAMDialogWithTrasparentBackground" parent="@android:style/Theme.Material.Light.Dialog">
+    <item name="android:alertDialogTheme">@style/MAMAlertDialogTheme</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:colorBackgroundCacheHint">@null</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <!-- To change the text color in AlertDialog buttons, change the colorAccent. -->
+  <style name="MAMAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+    <item name="android:textColor">@android:color/black</item>
+    <!-- colorAccent is ignored on API 24 and up, use buttonStyle to work around.
+         AppCompat does not ignore colorAccent. -->
+    <item name="android:buttonStyle">@style/MAMButton</item>
+  </style>
+
+  <!-- We use this in various internal layout xml files that prompt to inform user to install required apps,
+     or choose an app, or action blocked. -->
+  <style name="MAMButton" parent="@android:style/Widget.Material.Light.Button.Borderless">
+    <item name="android:textColor">#024D89</item>
+  </style>
+
+</resources>

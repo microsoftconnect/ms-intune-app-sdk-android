@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="24"
+        android:targetSdkVersion="26"
         tools:ignore="OldTargetApi" />
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -26,6 +26,11 @@
             android:name="com.microsoft.intune.mam.client.service.MAMBackgroundService"
             android:exported="false"
             android:label="" />
+        <service
+            android:name="com.microsoft.intune.mam.client.service.MAMBackgroundJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            android:label="" />
 
         <receiver android:name="com.microsoft.intune.mam.client.service.MAMBackgroundReceiver" >
             <intent-filter>
@@ -37,21 +42,21 @@
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineStartupBlockedActivity"
             android:exported="false"
             android:multiprocess="true"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMActivityBaseTheme" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineRestartRequiredActivity"
             android:exported="false"
             android:multiprocess="true"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMActivityBaseTheme" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.startup.MAMStartupActivity"
             android:exported="false"
             android:multiprocess="true"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMDialogTheme" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.resolver.MAMResolverActivity"
             android:exported="false"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMDialogTheme" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.data.WipeUserDataActivity"
             android:exported="false"
@@ -60,11 +65,11 @@
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineInstallCompanyPortalDialogActivity"
             android:exported="false"
             android:multiprocess="true"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMDialogTheme" />
         <activity
             android:name="com.microsoft.intune.mam.client.app.offline.OfflineNotifyWipeActivity"
             android:exported="false"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/MAMActivityBaseTheme" />
     </application>
 
 </manifest>

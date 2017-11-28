@@ -3,16 +3,17 @@
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
+  <!-- When updating strings, also update android\Test\MAMTests\MAMStrings.cs in the MDM repo -->
   <string name="wg_offline_branding_managed_by">Géré par votre organisation</string>
   <string name="wg_offline_go_back">Retour</string>
   <string name="wg_offline_cancel">Annuler</string>
   <string name="wg_offline_get_the_app">Accéder au Store</string>
   <string name="wg_offline_policy_required_message">Cette application n\'a pas été configurée pour votre usage. Contactez votre administrateur informatique pour obtenir de l\'aide.</string>
-  <string name="wg_offline_ssp_install_required_message">Pour utiliser votre compte professionnel ou scolaire avec cette application, vous devez installer l\'application Portail d\'entreprise Intune. Appuyez sur « Accéder au Store » pour continuer.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Pour utiliser votre compte professionnel ou scolaire avec cette application, vous devez installer l\'application Portail d\'entreprise Intune à partir de Google Play Store. Ce dernier n\'est pas activé sur cet appareil. Installez et activez Google Play Store, puis réessayez.</string>
+  <string name="wg_offline_ssp_install_required_message">Pour utiliser votre compte professionnel ou scolaire avec cette application, vous devez installer l\'application Portail d\'entreprise Microsoft Intune. Appuyez sur « Accéder au Store » pour continuer.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Pour utiliser votre compte professionnel ou scolaire avec cette application, vous devez installer l\'application Portail d\'entreprise Microsoft Intune à partir du Google Play Store. Ce dernier n\'est pas activé sur cet appareil. Installez et activez Google Play Store, puis réessayez.</string>
   <string name="wg_offline_ok">OK</string>
   <string name="wg_offline_must_restart">Votre service informatique va maintenant vous aider à protéger les données professionnelles ou scolaires dans cette application. Pour continuer, redémarrez l\'application.</string>
-  <string name="wg_offline_initialization_failure">Un problème s\'est produit lors du lancement de votre application. Essayez de mettre à jour l\'application ou l\'application Portail d\'entreprise Intune. Si vous avez besoin d\'aide, contactez votre administrateur informatique.</string>
-  <string name="wg_offline_ssp_removed_notify_wipe">Votre organisation a supprimé ses données associées à cette application car les données ou l\'application du portail d\'entreprise Intune ont été supprimées. Pour vous reconnecter, vous devez utiliser votre compte professionnel ou scolaire.</string>
-  <string name="wg_offline_ssp_removed_notify_system_wipe">Votre organisation a supprimé ses données associées à cette application car les données ou l\'application du portail d\'entreprise Intune ont été supprimées. Cette application va maintenant se fermer. Pour vous reconnecter, vous devez utiliser votre compte professionnel ou scolaire.</string>
+  <string name="wg_offline_initialization_failure">Un problème s\'est produit au lancement de votre application. Essayez de mettre à jour l\'application ou l\'application Portail d\'entreprise Microsoft Intune. Si vous avez besoin d\'aide, contactez votre administrateur informatique.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Votre organisation a supprimé ses données associées à cette application, car l\'application Portail d\'entreprise Microsoft Intune ou ses données ont été supprimées. Pour vous reconnecter, vous devez utiliser votre compte professionnel ou scolaire.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Votre organisation a supprimé ses données associées à cette application, car l\'application Portail d\'entreprise Microsoft Intune ou ses données ont été supprimées. Cette application va maintenant se fermer. Pour vous reconnecter, vous devez utiliser votre compte professionnel ou scolaire.</string>
 </resources>

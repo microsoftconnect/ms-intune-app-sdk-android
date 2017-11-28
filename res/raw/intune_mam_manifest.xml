@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Manifest IntuneMAMVersion="1.0" />
+<Manifest IntuneMAMVersion="1.0" tools:ignore="UnusedResources" xmlns:tools="http://schemas.android.com/tools" />

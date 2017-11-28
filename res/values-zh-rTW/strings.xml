@@ -3,16 +3,17 @@
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
+  <!-- When updating strings, also update android\Test\MAMTests\MAMStrings.cs in the MDM repo -->
   <string name="wg_offline_branding_managed_by">由您的組織管理</string>
   <string name="wg_offline_go_back">返回</string>
   <string name="wg_offline_cancel">取消</string>
   <string name="wg_offline_get_the_app">前往商店</string>
   <string name="wg_offline_policy_required_message">此應用程式未設定供您使用。請連絡您的 IT 系統管理員以取得說明。</string>
-  <string name="wg_offline_ssp_install_required_message">您必須安裝 Intune 公司入口網站應用程式，才可搭配使用您的工作或學校帳戶與此應用程式。請點選 [前往商店] 以繼續。</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">您必須從 Google Play 商店安裝 Intune 公司入口網站應用程式，才可搭配使用您的工作或學校帳戶與此應用程式。這個裝置目前尚未啟用商店。請安裝並啟用 Google Play 商店，然後再試一次。</string>
+  <string name="wg_offline_ssp_install_required_message">若要在此應用程式使用您的工作或學校帳戶，必須安裝 Microsoft Intune 公司入口網站應用程式。若要繼續，請點選 [前往市集]。</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">若要在此應用程式使用您的工作或學校帳戶，必須從 Google Play 商店安裝 Microsoft Intune 公司入口網站應用程式。這部裝置目前尚未啟用此商店。請安裝並啟用 Google Play 商店，然後再試一次。</string>
   <string name="wg_offline_ok">確定</string>
   <string name="wg_offline_must_restart">您的 IT 部門正協助您保護此應用程式中的工作或學校資料。您必須先重新啟動應用程式，才能繼續。</string>
-  <string name="wg_offline_initialization_failure">啟動應用程式時發生問題。請嘗試更新應用程式或 Intune 公司入口網站應用程式。如需相關說明，請連絡您的 IT 管理員。</string>
-  <string name="wg_offline_ssp_removed_notify_wipe">因為 Intune 公司入口網站中的資料或應用程式移除了，所以您的組織也移除了此應用程式的相關資料。若要重新連線，必須使用您的工作帳戶或學校帳戶登入。</string>
-  <string name="wg_offline_ssp_removed_notify_system_wipe">因為 Intune 公司入口網站資料或應用程式已移除，所以您的組織也移除了其與該應用程式相關聯的資料。若要連線，必須使用您的公司或學校帳戶登入。</string>
+  <string name="wg_offline_initialization_failure">啟動您的應用程式時發生問題。請嘗試更新應用程式或 Microsoft Intune 公司入口網站應用程式。如需協助，請連絡您的 IT 系統管理員。</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">因為 Microsoft Intune 公司入口網站資料或應用程式已移除，所以您的組織也移除了其關聯到該應用程式的資料。若要連線，必須使用您的工作或學校帳戶登入。</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">因為 Microsoft Intune 公司入口網站資料或應用程式已移除，所以您的組織也移除了其關聯到該應用程式的資料。此應用程式即將關閉。若要連線，必須使用您的工作或學校帳戶登入。</string>
 </resources>

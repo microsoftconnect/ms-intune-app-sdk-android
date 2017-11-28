@@ -3,16 +3,17 @@
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
+  <!-- When updating strings, also update android\Test\MAMTests\MAMStrings.cs in the MDM repo -->
   <string name="wg_offline_branding_managed_by">Von Ihrer Organisation verwaltet</string>
   <string name="wg_offline_go_back">Zurück</string>
   <string name="wg_offline_cancel">Abbrechen</string>
   <string name="wg_offline_get_the_app">Zum Store gehen</string>
   <string name="wg_offline_policy_required_message">Diese App wurde nicht für Sie eingerichtet. Wenden Sie sich an Ihren IT-Administrator, um Hilfe anzufordern.</string>
-  <string name="wg_offline_ssp_install_required_message">Sie müssen die Intune-Unternehmensportal-App installieren, um Ihr Geschäfts-, Schul- oder Unikonto mit dieser App zu verwenden. Tippen Sie auf “Zum Store gehen”, um den Vorgang fortzusetzen.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Sie müssen die Intune-Unternehmensportal-App aus dem Google Play Store installieren, um das Geschäfts-, Schul- oder Unikonto mit dieser App zu verwenden. Der Store ist auf diesem Gerät nicht aktiviert. Installieren und aktivieren Sie den Google Play Store, und versuchen Sie es dann noch mal.</string>
+  <string name="wg_offline_ssp_install_required_message">Um Ihr Geschäfts-, Schul- oder Unikonto mit dieser App zu verwenden, müssen Sie die Microsoft Intune-Unternehmensportal-App installieren. Tippen Sie auf “Zum Store gehen”, um den Vorgang fortzusetzen.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Um Ihr Geschäfts-, Schul- oder Unikonto mit dieser App zu verwenden, müssen Sie die Microsoft Intune-Unternehmensportal-App über den Google Play Store installieren. Der Store ist auf diesem Gerät aktuell nicht aktiviert. Installieren und aktivieren Sie den Google Play Store, und versuchen Sie es dann noch mal.</string>
   <string name="wg_offline_ok">OK</string>
   <string name="wg_offline_must_restart">Ihre IT-Abteilung unterstützt Sie jetzt beim Schutz von Geschäfts-, Schul- oder Unidaten in dieser App. Starten Sie die App neu, um den Vorgang fortzusetzen.</string>
-  <string name="wg_offline_initialization_failure">Problem beim Starten Ihrer App. Versuchen Sie, die App oder die Intune-Unternehmensportal-App zu aktualisieren. Wenden Sie sich an Ihren IT-Administrator, wenn Sie Hilfe benötigen.</string>
-  <string name="wg_offline_ssp_removed_notify_wipe">Ihre Organisation hat die dieser App zugeordneten Daten entfernt, weil die Intune-Unternehmensportaldaten oder die Intune-Unternehmensportalanwendung entfernt wurde(n). Um erneut eine Verbindung herzustellen, müssen Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto anmelden.</string>
-  <string name="wg_offline_ssp_removed_notify_system_wipe">Ihre Organisation hat die dieser App zugeordneten Daten entfernt, weil die Intune-Unternehmensportaldaten oder die Intune-Unternehmensportalanwendung entfernt wurde(n). Um erneut eine Verbindung herzustellen, müssen Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto anmelden.</string>
+  <string name="wg_offline_initialization_failure">Problem beim Starten Ihrer App. Versuchen Sie, die App oder die Microsoft Intune-Unternehmensportal-App zu aktualisieren. Wenden Sie sich an Ihren IT-Administrator, wenn Sie Hilfe benötigen.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Ihre Organisation hat die dieser App zugeordneten Daten entfernt, weil die Microsoft Intune-Unternehmensportaldaten oder die Anwendung entfernt wurde(n). Um erneut eine Verbindung herzustellen, müssen Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto anmelden.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Ihre Organisation hat die dieser App zugeordneten Daten entfernt, weil die Microsoft Intune-Unternehmensportaldaten oder die Anwendung entfernt wurde(n). Diese Anwendung wird jetzt geschlossen. Um erneut eine Verbindung herzustellen, müssen Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto anmelden.</string>
 </resources>

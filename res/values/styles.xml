@@ -1,0 +1,34 @@
+<!--
+  Copyright (c) Microsoft Corporation.  All rights reserved.
+-->
+
+<resources>
+
+  <!--
+    Here we define most themes that MAM views use.
+    If you want a style to show up differently on API 21 and plus, define the same style in values-v21/styles.xml.
+    Our styles are merged into the app's style, when the same style is also defined in the app, the app's definition wins.
+  -->
+
+  <style name="MAMActivityBaseTheme" parent="@android:style/Theme.Holo.Light" />
+
+  <style name="MAMDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog" />
+
+  <!-- We only use this for the install company portal dialog with transparent background.
+       The attributes are copied from Theme.Translucent.NoTitleBar in themes.xml. -->
+  <style name="MAMDialogWithTrasparentBackground" parent="@android:style/Theme.Holo.Light.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:colorBackgroundCacheHint">@null</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <!-- We use this in various internal layout xml files that prompt to inform user to install required apps,
+       or choose an app, or action blocked. -->
+  <style name="MAMButton" parent="@android:style/Widget.Holo.Button.Borderless">
+    <item name="android:textColor">@android:color/black</item>
+  </style>
+
+</resources>

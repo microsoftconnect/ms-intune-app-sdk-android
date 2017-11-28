@@ -3,16 +3,17 @@
   <!-- Whenever we add a new string, translations are not available immediately -->
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
+  <!-- When updating strings, also update android\Test\MAMTests\MAMStrings.cs in the MDM repo -->
   <string name="wg_offline_branding_managed_by">Spravuje vaše organizace</string>
   <string name="wg_offline_go_back">Zpět</string>
   <string name="wg_offline_cancel">Zrušit</string>
   <string name="wg_offline_get_the_app">Přejít do obchodu</string>
   <string name="wg_offline_policy_required_message">Tato aplikace zatím není nastavená tak, abyste ji mohli používat. O pomoc požádejte správce IT.</string>
-  <string name="wg_offline_ssp_install_required_message">Pokud chcete s touto aplikací používat svůj pracovní nebo školní účet, musíte si nainstalovat aplikaci Portál společnosti Intune. Pokračujte klepnutím na Přejít do obchodu.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Pokud chcete s touto aplikací používat svůj pracovní nebo školní účet, musíte si nainstalovat aplikaci Portál společnosti Intune z obchodu Google Play. Tento obchod teď není v tomto zařízení povolený. Povolte ho, nainstalujte si aplikaci a pak to zkuste znova.</string>
+  <string name="wg_offline_ssp_install_required_message">Pokud chcete s touto aplikací používat svůj pracovní nebo školní účet, musíte si nainstalovat aplikaci Portál společnosti Microsoft Intune. Pokračujte klepnutím na Přejít do Storu.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">Pokud chcete s touto aplikací používat svůj pracovní nebo školní účet, musíte si nainstalovat aplikaci Portál společnosti Microsoft Intune z obchodu Google Play. Tento obchod teď není v tomto zařízení povolený. Povolte ho, nainstalujte si aplikaci a pak to zkuste znovu.</string>
   <string name="wg_offline_ok">OK</string>
   <string name="wg_offline_must_restart">Oddělení IT vám teď pomáhá s ochranou pracovních nebo školních dat v této aplikaci. Pokračujte jejím restartováním.</string>
-  <string name="wg_offline_initialization_failure">Při spouštění vaší aplikace se objevil problém. Zkuste aplikaci (nebo aplikaci Portál společnosti Intune) aktualizovat. Pokud potřebujete pomoc, obraťte se na správce IT.</string>
-  <string name="wg_offline_ssp_removed_notify_wipe">Vaše organizace odebrala data přidružená k této aplikaci, protože byla odebrána aplikace nebo data Portálu společnosti Intune. Před opětovným připojením se musíte přihlásit pracovním nebo školním účtem.</string>
-  <string name="wg_offline_ssp_removed_notify_system_wipe">Vaše organizace odebrala data přidružená k této aplikaci, protože data Portálu společnosti Intune nebo aplikace byly odebrány. Tato aplikace se teď zavře. Před opětovným připojením se musíte přihlásit pomocí pracovního nebo školního účtu.</string>
+  <string name="wg_offline_initialization_failure">Při spouštění vaší aplikace se objevil problém. Zkuste aplikaci (nebo aplikaci Portál společnosti Microsoft Intune) aktualizovat. Pokud potřebujete pomoc, obraťte se na správce IT.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Vaše organizace odebrala data přidružená k této aplikaci, protože se odebrala aplikace nebo data Portálu společnosti Microsoft Intune. Abyste se mohli znovu připojit, musíte se přihlásit pomocí pracovního nebo školního účtu.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Vaše organizace odebrala data přidružená k této aplikaci, protože se odebrala data Portálu společnosti Microsoft Intune nebo aplikace. Tato aplikace se teď ukončí. Abyste se mohli znovu připojit, musíte se přihlásit pomocí pracovního nebo školního účtu.</string>
 </resources>

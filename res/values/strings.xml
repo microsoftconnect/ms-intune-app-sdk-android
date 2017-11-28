@@ -5,16 +5,17 @@
   <!-- When adding a new string, remove the '>' above and uncomment the below line -->
   <!-- tools:ignore="MissingTranslation" > -->
   
+  <!-- When updating strings, also update android\Test\MAMTests\MAMStrings.cs in the MDM repo -->
   <string name="wg_offline_branding_managed_by">Managed by your organization</string>
   <string name="wg_offline_go_back">Go back</string>
   <string name="wg_offline_cancel">Cancel</string>
   <string name="wg_offline_get_the_app">Go to store</string>
   <string name="wg_offline_policy_required_message">This app has not been set up for you to use. Contact your IT administrator for help.</string>
-  <string name="wg_offline_ssp_install_required_message"><!-- _locComment_text="Please preserve directional quotes to comply with Android typography guidelines." -->To use your work or school account with this app, you must install the Intune Company Portal app. Tap &#8220;Go to store&#8221; to continue.</string>
-  <string name="wg_offline_ssp_install_play_store_not_enabled_message">To use your work or school account with this app, you must install the Intune Company Portal app from the Google Play Store. The store is not currently enabled on this device. Install and enable the Google Play Store, and then try again.</string>
+  <string name="wg_offline_ssp_install_required_message"><!-- _locComment_text="Please preserve directional quotes to comply with Android typography guidelines." -->To use your work or school account with this app, you must install the Microsoft Intune Company Portal app. Tap &#8220;Go to store&#8221; to continue.</string>
+  <string name="wg_offline_ssp_install_play_store_not_enabled_message">To use your work or school account with this app, you must install the Microsoft Intune Company Portal app from the Google Play Store. The store is not currently enabled on this device. Install and enable the Google Play Store, and then try again.</string>
   <string name="wg_offline_ok">OK</string>
   <string name="wg_offline_must_restart">Your IT department is now helping you protect work or school data in this app. Restart the app to continue.</string>
-  <string name="wg_offline_initialization_failure">There was an issue launching your app. Try updating the app or the Intune Company Portal app. If you need help, contact your IT administrator.</string>
-  <string name="wg_offline_ssp_removed_notify_wipe">Your organization has removed its data associated with this app because the Intune Company Portal data or application was removed. To reconnect, you must sign-in with your work or school account.</string>
-  <string name="wg_offline_ssp_removed_notify_system_wipe">Your organization has removed its data associated with this app because the Intune Company Portal data or application was removed. This application will now close. To reconnect, you must sign-in with your work or school account.</string>
+  <string name="wg_offline_initialization_failure">There was an issue launching your app. Try updating the app or the Microsoft Intune Company Portal app. If you need help, contact your IT administrator.</string>
+  <string name="wg_offline_ssp_removed_notify_wipe">Your organization has removed its data associated with this app because the Microsoft Intune Company Portal data or application was removed. To reconnect, you must sign-in with your work or school account.</string>
+  <string name="wg_offline_ssp_removed_notify_system_wipe">Your organization has removed its data associated with this app because the Microsoft Intune Company Portal data or application was removed. This application will now close. To reconnect, you must sign-in with your work or school account.</string>
 </resources>
