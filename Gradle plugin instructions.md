@@ -122,7 +122,7 @@ plugin. No Javassist code will be added to your app.</p>
 <p>[!NOTE] You must be using version 3.0 or newer of the Android Gradle plugin and
 Gradle 4.1 or newer.</p>
 <h3 id="command-line-build-tool">Command Line Build Tool</h3>
-<p>If your build uses Gradle, skip to the <a href="https://docs.microsoft.com/en-us/intune/app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent">section on class replacements in the Microsoft Intune APP SDK for Android docs.</a>.</p>
+<p>If your build uses Gradle, skip to the <a href="https://docs.microsoft.com/en-us/intune/app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent">section on class replacements in the Microsoft Intune APP SDK for Android documentation</a>.</p>
 <p>The command-line build tool is available in the <code>BuildTool</code> folder of
 the SDK drop. It performs the same function as the Gradle plugin
 detailed above, but can be integrated into custom or non-Gradle build

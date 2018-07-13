@@ -9,3 +9,6 @@ Before you install and use Microsoft Intune App SDK for Android you **must**:
 * Print and retain a copy of the license terms for your records.
 
 By downloading and using Intune App SDK for Android you agree to such license terms.  If you do not accept them, do not use the software.
+
+See the updated [developer guide](https://github.com/msintuneappsdk/ms-intune-app-sdk-android-preview/blob/master/Gradle%20plugin%20instructions.md
+) that is not yet public
