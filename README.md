@@ -1,14 +1,15 @@
-# Intune App SDK for Android Preview
+# Microsoft Intune App SDK for Android 
+Version [5.1.0](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases)
 
-This is the location for Intune App SDK for Android preview builds. 
-
-> This is a preview build for testing purposes only. Please do not to deploy apps integrated with this drop widely within your organization.
+The Microsoft Intune App SDK for Android enables data protection features and mobile app management via Microsoft Intune.  
 
 Before you install and use Microsoft Intune App SDK for Android you **must**:
-* Review the [Microsoft License Terms Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android-preview/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20Android.pdf) license terms.
-* Print and retain a copy of the license terms for your records.
+* Review the [Microsoft License Terms Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20Android.pdf) license terms. Print and retain a copy of the license terms for your records. By downloading and using Intune App SDK for Android, you agree to such license terms. If you do not accept them, do not use the software.
+* Review the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement) for information on the privacy policy of the Intune App SDK for Android.
 
-By downloading and using Intune App SDK for Android you agree to such license terms.  If you do not accept them, do not use the software.
+See the updated [gradle plugin instructions](https://github.com/msintuneappsdk/ms-intune-app-sdk-android-preview/blob/master/Gradle%20plugin%20instructions.md) and the [Intune App SDK for Android Developer Guide](https://docs.microsoft.com/intune/develop/intune-app-sdk-android) on how to integrate the SDK into your Android app. 
 
-See the updated [developer guide](https://github.com/msintuneappsdk/ms-intune-app-sdk-android-preview/blob/master/Gradle%20plugin%20instructions.md
-) that is not yet public
+# Releases for the Microsoft Intune App SDK for Android 
+The Microsoft Intune App SDK for Android releases are less frequent than for the Microsoft Intune App SDK for iOS offering because a larger percentage of the new functionality is enabled through the Company Portal mobile application rather than the SDK integration.
+
+For more information on the Company Portal app requirements for data protection features and mobile app management on Android, see [Requirements](https://docs.microsoft.com/en-us/intune/app-sdk-android#requirements). 
