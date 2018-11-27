@@ -1,10 +1,12 @@
 # Microsoft Intune App SDK for Android 
 Version [5.0.2](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases)
 
+See [release notes](https://github.com/msintuneappsdk/intune-app-sdk-android/releases) for more information. GitHub users can recieve email notifications for new releases to this repo by clicking on **Releases only** from the "Watch" drop-down menu in the upper right-hand corner.
+
 The Microsoft Intune App SDK for Android enables data protection features and mobile app management via Microsoft Intune.  
 
 Before you install and use Microsoft Intune App SDK for Android you **must**:
-* Review the [Microsoft License Terms Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20Android.pdf)license terms. Print and retain a copy of the license terms for your records. By downloading and using Intune App SDK for Android, you agree to such license terms. If you do not accept them, do not use the software.
+* Review the [Microsoft License Terms Intune App SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20Android.pdf) license terms. Print and retain a copy of the license terms for your records. By downloading and using Intune App SDK for Android, you agree to such license terms. If you do not accept them, do not use the software.
 * Review the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement) for information on the privacy policy of the Intune App SDK for Android.
 
 See the updated [Gradle plugin instructions](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/blob/master/Gradle%20plugin%20instructions.md
