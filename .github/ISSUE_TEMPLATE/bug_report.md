@@ -22,7 +22,7 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots and logs:**
 - If applicable, add screenshots to help explain your problem. 
-- If your app is experiencing an issue during build, do you have app logs for the crash itself? 
+- If your app is experiencing an issue during build, do you have error logs?
 - If your app is experiencing an issue post build, do you have app logs for the crash itself?
 
 **Smartphone (please complete the following information):**
