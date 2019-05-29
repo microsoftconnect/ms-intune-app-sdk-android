@@ -16,3 +16,6 @@ See the updated [Gradle plugin instructions](https://github.com/msintuneappsdk/m
 The Microsoft Intune App SDK for Android releases are less frequent than for the Microsoft Intune App SDK for iOS offering because a larger percentage of the new functionality is enabled through the Company Portal mobile application rather than the SDK integration.
 
 For more information on the Company Portal app requirements for data protection features and mobile app management on Android, see [Requirements](https://docs.microsoft.com/en-us/intune/app-sdk-android#requirements). 
+
+# Microsoft Intune App SDK for Android Sample App
+See [Taskr-Sample-Intune-Android-App](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App) for a sample application that integrates the Intune App SDK for Android.
