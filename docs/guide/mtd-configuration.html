@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Android MTD + MAM Requirements </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Android MTD + MAM Requirements ">
+    <meta name="generator" content="docfx 2.13.1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="android-mtd--mam-requirements">Android MTD + MAM Requirements</h1>
+              
+<h2 id="client-app-requirements">Client app requirements</h2>
+<p>Your Mobile Threat Defense (MTD) app determines the risks that a mobile device poses and provides this context via the Intune connector to enable Intune policy enforcement. The passive and active methods below clarify the details that should be used to bootstrap this data flow. </p>
+<p>The passive approach allows for your app to check the state of the device without tightly coupling with MAM. The active approach requires your app to check for specific intent extras and a Google Play referrer URL.</p>
+<p><a href="https://docs.microsoft.com/en-us/intune/what-is-device-management">MDM</a> scenarios must use the passive method. <a href="https://docs.microsoft.com/en-us/intune/android-deployment-scenarios-app-protection-work-profiles">MAM</a> scenarios can use both the passive method; but, the user experience can be improved by leveraging the active approach.</p>
+<h3 id="passive-method">Passive Method</h3>
+<p>If either of the applications below are installed on the device your application should always try to activate the Intune connector. You should not additionally require the package to be device administrator, device policy manager, or profile owner:</p>
+<ul>
+<li><code>com.microsoft.windowsintune.companyportal</code></li>
+<li><code>com.microsoft.intune</code></li>
+</ul>
+<h3 id="active-method">Active Method</h3>
+<p>To improve the user experience your app can check for a new intent extra and Google Play referrer url data that the MAM SDK will set. If either of these pieces of data data is present then the Intune connector should be used.</p>
+<h4 id="intent-extra">Intent Extra</h4>
+<ol>
+<li><p>The MAM SDK will set the boolean <code>intune_activation</code> intent extra when calling <code>startActivityForResult()</code> to trigger the <code>getLaunchIntentForPackage()</code>.</p>
+<ul>
+<li>Check for the intent extras by reviewing <code>getIntent().getBooleanExtra(&quot;intune_activation&quot;)</code>.</li>
+<li>Test passing the extras with <code>adb shell am start -n &lt;your package&gt;/.MainActivity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER --ez &quot;intune_activation&quot; &quot;true&quot;</code></li>
+</ul>
+</li>
+<li><p>Once the user has completed activation the user must be seamlessly returned to the Intune managed app that they came from. Your app should call <code>finish()</code> and set <code>Activity.RESULT_OK</code> on successful activation and <code>Activity.RESULT_CANCELED</code> on any failures to successfully setup the connection.</p>
+</li>
+</ol>
+<h4 id="google-play-referrer">Google Play Referrer</h4>
+<p>This is a backup mechanism to handle if the user installs your app during a MAM workflow but launches it directly from the Google Play Store or apps list. If the Intent extra is provided then that flow should be followed since the referrer data will always be available if it was ever set.</p>
+<ol>
+<li>If your app is being installed for the first time we will add <code>intune_activation=true</code> and <code>intune_returning_package=&lt;packageName&gt;</code> to the Google Play referrer url.<ul>
+<li>Check for the referrer url data by creating an <a href="https://developers.google.com/android/reference/com/google/android/gms/tagmanager/InstallReferrerReceiver">InstallReferrerReceiver</a> and checking for <code>intune_activation</code> in the <code>referrer</code> data.</li>
+<li>Test setting the referrer with <code>adb shell am broadcast -n &lt;your package&gt;/.InstallReferrerReceiver -a com.android.vending.INSTALL_REFERRER --es &quot;referrer&quot; &quot;intune_activation=true\&amp;intune_returning_package=com.microsoft.office.outlook&quot;</code></li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>Once activation is completed return the user back to the the Intune managed app that they came from by checking the package name set in the <code>intune_returning_package</code> and using <code>getLaunchIntentForPackage()</code> to start the package.</li>
+</ol>
+<h2 id="testing">Testing</h2>
+<ul>
+<li><p>Confirm that the Intune activation in your app works when the device is not MDM enrolled. </p>
+</li>
+<li><p>Ensure that your reporting sites correctly show both enrolled and non-enrolled devices. IT admins need to be able to see all devices with and without threats. If there are any existing filtering for MDM only devices they should be removed.</p>
+</li>
+<li><p>The Intune team will need beta app versions with the above changes for verification that the experience is both functional and as seamless as can be for the user.</p>
+</li>
+</ul>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://msazure.visualstudio.com/Intune/_git/xplat-Android-MAM?path=obj/AnyCPU/SDKGuide/stage/mtd-configuration.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Microsoft Intune App SDK for Android developer testing guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Microsoft Intune App SDK for Android developer testing guide ">
+    <meta name="generator" content="docfx 2.13.1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="microsoft-intune-app-sdk-for-android-developers-testing-guide">Microsoft Intune App SDK for Android developers testing guide</h1>
+              
+<p>The Microsoft Intune App SDK for Android testing guide is designed to help you test your Intune-managed Android app.</p>
+<h2 id="demo-tenant-setup">Demo tenant setup</h2>
+<p>If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a <a href="https://partner.microsoft.com/en-us/business-opportunities/why-microsoft">Microsoft partner</a> to access Microsoft CDX. To create a new account:</p>
+<ol>
+<li>Navigate to the <a href="https://cdx.transform.microsoft.com/my-tenants/create-tenant">Microsoft CDX tenant creation site</a> and create a Microsoft 365 Enterprise tenant.</li>
+<li><a href="https://docs.microsoft.com/intune/setup-steps">Set up Intune</a> to enable mobile device management (MDM).</li>
+<li><a href="https://docs.microsoft.com/intune/users-add">Create users</a>.</li>
+<li><a href="https://docs.microsoft.com/intune/groups-add">Create groups</a>.</li>
+<li><a href="https://docs.microsoft.com/intune/licenses-assign">Assign licenses</a> as appropriate for your testing.</li>
+</ol>
+<h2 id="azure-portal-policy-configuration">Azure portal policy configuration</h2>
+<p><a href="https://docs.microsoft.com/intune/app-protection-policies">Create and assign app protection policies</a> in the <a href="https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview">Azure portal&#39;s Intune blade</a>. Your <a href="https://docs.microsoft.com/intune/app-configuration-policies-overview">app configuration policy</a> can also be created and assigned in the Intune blade.</p>
+<div class="NOTE"><h5>Note</h5><p>If your app is not listed in the Azure portal, you can target it with a policy by selecting the <strong>more apps</strong> option and providing the package name in the text box.</p>
+</div>
+<h2 id="test-cases">Test Cases</h2>
+<p>The following test cases provide configuration and confirmation steps. Use these tests to verify your newly integrated Android app.</p>
+<h3 id="required-pin-and-corporate-credentials">Required PIN and corporate credentials</h3>
+<p>You can require a pin to access corporate resources. Also, you can enforce corporate authentication before users can use managed apps. Use the following steps to set these requirements:</p>
+<ol>
+<li>Configure <strong>Require PIN for access</strong> and <strong>Require corporate credentials for access</strong> to <strong>Yes</strong>. For more information, see <a href="https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements">Android app protection policy settings in Microsoft Intune</a>.</li>
+<li>Confirm the following conditions:<ul>
+<li>App launch should present a prompt for PIN input/setup and/or the production user that was used during enrollment with the Company Portal.</li>
+<li>Failure to present a valid sign-in prompt could be due to an incorrectly configured Android manifest, specifically the values for ADAL integration (SkipBroker, ClientID, and Authority).</li>
+<li>Failure to present any prompt could be due to an incorrectly integrated <code>MAMActivity</code> value. For more information about <code>MAMActivity</code>, see <a href="app-sdk-android.html">Microsoft Intune App SDK for Android developer guide</a>.</li>
+</ul>
+</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>If the above test is not working, the tests below will likely also fail. Review <a href="app-sdk-android.html##sdk-integration">SDK</a> and <a href="app-sdk-android.html#configure-azure-active-directory-authentication-library-adal">ADAL</a> integration.</p>
+</div>
+<h3 id="restrict-transferring-and-receiving-data-with-other-apps">Restrict transferring and receiving data with other apps</h3>
+<p>You can control data transfer between corporate managed applications as follows:</p>
+<ol>
+<li>Set <strong>Allow app to transfer data to other apps</strong> to <strong>Policy-managed apps</strong>.</li>
+<li>Set <strong>Allow app to receive data from other apps</strong> to <strong>All apps</strong>. Use of intents and content providers will be impacted by these policies.</li>
+<li>Confirm the following conditions:<ul>
+<li>Opening from an unmanaged app into your app functions correctly.</li>
+<li>Sharing content between managed apps is allowed.</li>
+<li>Sharing from managed apps to non-managed apps (for example, Chrome) is blocked.</li>
+</ul>
+</li>
+</ol>
+<h3 id="restrict-cut-copy-and-paste">Restrict cut, copy, and paste</h3>
+<p>You can restrict the system clipboard to managed applications as follows:</p>
+<ol>
+<li>Set <strong>Restrict cut, copy, and paste with other apps</strong> to <strong>Policy managed with paste in</strong>.</li>
+<li>Confirm the following conditions:<ul>
+<li>Copying text from your app into a managed an unmanaged app (for example, Messages) is blocked.</li>
+</ul>
+</li>
+</ol>
+<h3 id="prevent-save-as">Prevent <strong>Save As</strong></h3>
+<p>You can control <strong>save as</strong> functionality as follows:</p>
+<ol>
+<li>If your app requires <a href="app-sdk-android.html#example-determine-if-saving-to-device-or-cloud-storage-is-permitted">integrated &#39;save as&#39; controls</a>, set <strong>Prevent &#39;Save As&#39;</strong> to <strong>Yes</strong>.</li>
+<li>Confirm the following conditions:<ul>
+<li>Save is restricted to only appropriate managed locations.</li>
+</ul>
+</li>
+</ol>
+<h3 id="file-encryption">File Encryption</h3>
+<p>You can encrypt data on the device as follows:</p>
+<ol>
+<li>Set <strong>Encrypt app data</strong> to <strong>Yes</strong>.</li>
+<li>Confirm the following conditions:<ul>
+<li>Normal application behavior is not impacted.</li>
+</ul>
+</li>
+</ol>
+<h3 id="prevent-android-backups">Prevent Android Backups</h3>
+<p>You can control app backup as follows:</p>
+<ol>
+<li>If you have set <a href="app-sdk-android.html#protecting-backup-data">integrated backup restrictions</a>, configure <strong>Prevent Android backups</strong> to <strong>Yes</strong>.</li>
+<li>Confirm the following conditions:<ul>
+<li>Backups are restricted.</li>
+</ul>
+</li>
+</ol>
+<h3 id="wipe">Wipe</h3>
+<p>You can remotely wipe managed apps from containing corporate email and documents and personal data is decrypted when it is no longer administered as follows:</p>
+<ol>
+<li>From the Azure portal, <a href="https://docs.microsoft.com/intune/apps-selective-wipe">issue a wipe</a>.</li>
+<li>If your app does not register for any wipe handlers confirm the following conditions:<ul>
+<li>A full wipe of the app occurs.</li>
+</ul>
+</li>
+<li>If your app has registered for <code>WIPE_USER_DATA</code> or <code>WIPE_USER_AUXILARY_DATA</code>, confirm the following conditions:<ul>
+<li>The managed content is removed from the app. For more information, see <a href="app-sdk-android.html#selective-wipe">Intune App SDK for Android developer guide - Selective Wipe</a>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="multi-identity">Multi-Identity</h3>
+<p>Integrating <a href="app-sdk-android.html#multi-identity-optional">multi-identity support</a> is a high risk change that needs to be thoroughly tested. The most common issues will be due to improper setting of the identity (<code>Context</code> vs. thread level) and also tracking files (<code>MAMFileProtectionManager</code>).</p>
+<p>Minimally the following scenarios for multi-identity should be revalidated:</p>
+<ul>
+<li><strong>Save As</strong> policy is working correctly for managed identities.</li>
+<li>Copy paste restrictions are correctly enforced from managed to personal.</li>
+<li>Only data belonging to the managed identity is encrypted and personal files are not modified.</li>
+<li>Selective wipe during unenrollment only removes the managed identity data.</li>
+<li>The end user is prompted for conditional launch when changing from unmanaged to managed account (first time only).</li>
+</ul>
+<h3 id="app-configuration-optional">App configuration (optional)</h3>
+<p>You can configure behavior of managed apps as follows:</p>
+<ol>
+<li>If your app consumes any app configuration settings, you should test that your app correctly handles all values that you (as the admin) can set. <a href="https://docs.microsoft.com/intune/app-configuration-policies-overview">App configuration policies</a> can be created and assigned in using Intune.</li>
+</ol>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://msazure.visualstudio.com/Intune/_git/xplat-Android-MAM?path=obj/AnyCPU/SDKGuide/stage/app-sdk-android-testing-guide.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

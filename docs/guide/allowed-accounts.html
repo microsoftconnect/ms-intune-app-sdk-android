@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Intune Allowed Accounts for Android developer guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Intune Allowed Accounts for Android developer guide ">
+    <meta name="generator" content="docfx 2.13.1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="intune-allowed-accounts-for-android-developer-guide">Intune Allowed Accounts for Android developer guide</h1>
+              
+<p>This document describes how to integrate the Allowed Accounts
+feature into your app. This feature enables a better protected work
+experience by restricting the addition of personal accounts within
+your app when running within a Org (Android Enterprise Work Profile 
+or Device Owner) or APP/MAM-WE managed environments.</p>
+<p><strong>Note:</strong> Per-Tenant onboarding is required for APP/MAM-WE environment support.</p>
+<p>The work to enable this feature must be performed in largest part by
+your app. The Intune APP/MAM SDK provides only facilities for retrieving
+the list of allowed accounts and for registering for notification on
+changes to this list. Because sign-in and account management function
+differently in each app, it is the app&#39;s responsibility to enforce the
+account restrictions presented by the SDK.</p>
+<h2 id="app-behavior-requirements">App Behavior Requirements</h2>
+<p>To integrate this feature, the app must enforce the following functional behaviors:</p>
+<ul>
+<li>Upon startup, the app (e.g. Outlook, Word, etc) will query the APP
+SDK to determine if account restrictions are in place. If
+<code>AllowedAccounts.getAllowedAccounts</code> returns null, then no
+restrictions are in place and the app will proceed as
+normal. Otherwise, the app will restrict the user to signing in with
+AAD-based accounts corresponding to UPNs listed by
+<code>AllowedAccounts.getAllowedAccounts()</code></li>
+<li>If exactly one account is allowed, the app must sign that account in
+automatically, or with as little user-interaction as possible. If
+more than one account is allowed, the app should sign-in
+the first one automatically.</li>
+<li>If the user attempts to add another account and allowed accounts
+exist which are not yet added, it is expected that the app will
+present the user with a list of accounts to choose from, rather than
+simply blocking the sign-in of an unapproved account and forcing the
+user to guess at what account might be allowed.</li>
+<li>The app will register a listener with the SDK to be informed of
+changes to the list of allowed accounts. It can do so using the
+method <code>AllowedAccounts.listenForChanges</code></li>
+<li>The app will immediately remove any accounts which are not in the allowed list.</li>
+</ul>
+<p>The following diagrams illustrate these flows</p>
+<h3 id="add-account-flow">Add Account Flow</h3>
+<p><img src="assets/AllowedAccounts_add.png" alt="Add account flow"></p>
+<h3 id="removing-non-compliant-accounts">Removing Non-Compliant Accounts</h3>
+<p><img src="assets/AllowedAccounts_remove.png" alt="Remove non-compliant flow"></p>
+<h3 id="multiple-accounts">Multiple Accounts</h3>
+<p>If the user is requesting to add an account and there are multiple
+allowed accounts, your app may present a screen such as the following.
+<img src="assets/AllowedAccounts_choose.png" alt="Choose account"></p>
+<h2 id="technical-integration">Technical Integration</h2>
+<h3 id="allowedaccounts-class">AllowedAccounts class</h3>
+<p>As mentioned above, information about allowed accounts can be
+retrieved from the <code>AllowedAccounts</code> class which is part of the APP
+SDK.</p>
+<pre><code class="lang-java">public final class AllowedAccounts {
+
+    /**
+     * Returns the list of allowed accounts or null if restrictions are not in place. 
+     * If the list is non-null, the app is expected to allow only AAD-based accounts 
+     * corresponding to the listed UPNs to sign in.
+     *
+     * @return list of allowed accounts or null if no restrictions
+     */
+    public static List&lt;AllowedAccountInfo&gt; getAllowedAccounts()
+
+    /**
+     * Check if the given UPN or AAD user id (both case-insensitive) is allowed to sign in.
+     *
+     * @param upnOrAADId
+     *         UPN or AAD id to check
+     *
+     * @return true if the given user is allowed to sign in, false otherwise
+     */
+    public static boolean isAccountAllowed(final String upnOrAADId)
+
+    /**
+     * Listen for changed to the allowed account list. The provided listener will be invoked 
+     * if and when changes occur.
+     *
+     * @param listener
+     *         listener to receive change notifications
+     */
+    public static void listenForChanges(AllowedAccountsListener listener)
+}
+</code></pre><pre><code class="lang-java">public interface AllowedAccountInfo {
+    /**
+     * @return The UPN of the user. Will always be non-null.
+     */
+    String getUPN();
+
+    /**
+     * @return The AAD object id of the user (a GUID). This may be null if unknown.
+     */
+    String getAADUserId();
+}
+</code></pre><pre><code class="lang-java">public interface AllowedAccountsListener {
+    void onAllowedAccountsChanged();
+}
+</code></pre><p>Information about an allowed account always contains the UPN. In most
+cases the AAD user id uniquely identifying the user will also be
+available, but the app must not rely on its existence. If present, the
+app may use it to identify the same account across a UPN change. For
+example, when your app checks each account which is already signed-in
+to ensure that it is allowed, it may make a call like
+<code>isAccountAllowed(account.upn)</code>. If this returns false, it can make
+the secondary check <code>isAccountAllowed(account.aadUserID)</code>, assuming
+the AAD user ID is known. If this returns true, then the account
+should be retained (the user is in fact the same, but the UPN has
+changed).</p>
+<ul>
+<li><code>getAllowedAccounts</code>: Returns null if no restrictions are in
+place. Otherwise returns the list of UPNs for accounts which are
+allowed to sign in. </li>
+</ul>
+<h3 id="examples">Examples</h3>
+<p>At startup, your app is expected to run code similar to the following</p>
+<pre><code class="lang-java">    AllowedAccounts.listenForChanges(new AllowedAccountsListener() {
+        @Override
+        public void onAllowedAccountsChanged() {
+            enforceRestrictions();
+        }
+    });
+
+    if (AllowedAccounts.getAllowedAccounts() != null) {
+        enforceRestrictions();
+
+        if (/*no accounts signed-in*/) {
+            //start sign-in for AllowedAccounts.getAllowedAccounts().get(0)
+        }
+    }
+</code></pre><p>where the <code>enforceRestrictions</code> method may be implemented similar to</p>
+<pre><code class="lang-java">    void enforceRestrictions() {
+        if (AllowedAccounts.getAllowedAccounts() == null)
+            return; // no limitations
+        List&lt;String&gt; allowedAccounts = AllowedAccounts.getAllowedAccounts();
+        for(/*each account in your app*/) {
+            if (!AllowedAccounts.isAccountAllowed(acct.getUPN()) &amp;&amp;
+                !AllowedAccounts.isAccountAllowed(acct.getAADUserId())) {
+                //remove the account
+            }
+        }
+    }
+</code></pre><h3 id="resource-changes">Resource Changes</h3>
+<p>The app must make a resource and manifest change to declare that it
+supports Allowed Accounts as an Android Enterprise (previously Android for Work or AfW) app config item.</p>
+<p>If the app did not previously support any Android Enterprise config
+items, you must take the following steps. Android Enterprise APIs refer to
+config items as &quot;restrictions&quot;.</p>
+<ol>
+<li>Create an xml resource file for restrictions (e.g. <code>res/xml/app_restrictions_config.xml</code>)</li>
+<li><p>The skeleton of this XML file should be</p>
+<pre><code>&lt;restrictions xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+&lt;!-- &lt;restriction&gt; elements go here --&gt;
+&lt;/restrictions&gt;
+</code></pre></li>
+<li><p>Create a meta-data item in the manifest to point to this config file</p>
+<pre><code>&lt;meta-data
+  android:name=&quot;android.content.APP_RESTRICTIONS&quot;
+  android:resource=&quot;@xml/app_restrictions_config&quot;/&gt;
+</code></pre></li>
+</ol>
+<p>For all apps, a new restriction element must be added to the restrictions xml.</p>
+<pre><code>&lt;restriction
+    android:defaultValue=&quot;&quot;
+    android:description=&quot;@string/intune_allowed_accounts_description&quot;
+    android:key=&quot;com.microsoft.intune.mam.AllowedAccountUPNs&quot;
+    android:restrictionType=&quot;string&quot;
+    android:title=&quot;@string/intune_allowed_accounts_title&quot;/&gt;
+</code></pre><h3 id="ui-guidelines">UI Guidelines</h3>
+<p>For consistency in messaging, the SDK provides the following string
+resources which your app can use when presenting messages to the
+user. These are not displayed automatically, they are for your app&#39;s
+use.</p>
+<ul>
+<li><code>@string/intune_allowed_account_explanation</code> Explains that only certain accounts are allowed to sign in.</li>
+<li><code>@string/intune_allowed_account_disallowed_fmt</code> Should be displayed if the user has tried to sign in with an account which is not allowed. Requires a single format parameter: a string naming the account being disallowed.</li>
+<li><code>@string/intune_allowed_account_removed_fmt</code> Should be displayed if an existing account is being removed due to not being included in the allowed list. Requires a single format parameter: a string naming the account(s) being removed.</li>
+<li><code>@string/intune_allowed_accounts_explanation_all_added</code> Should be displayed if the user wants to add another account and all allowed accounts have already been added.</li>
+</ul>
+<h4 id="blocking-account-sign-in">Blocking Account Sign-In</h4>
+<p>When blocking sign-in of a new account, it is recommended to display a dialog using the text returned by <code>getResources().getString(R.string.intune_allowed_account_disallowed_fmt, upn)</code>. The dialog should present a single OK button.</p>
+<p><img src="assets/AllowedAccounts_disallowed_dialog.png" alt="Account Disallowed Dialog"></p>
+<h4 id="removing-existing-accounts">Removing Existing Accounts</h4>
+<p>When removing existing accounts because they are not allowed, it is recommended to display a notification or dialog using the text returned by <code>getResources().getString(R.string.intune_allowed_account_removed_fmt, upn)</code></p>
+<p><img src="assets/AllowedAccounts_remove_dialog.png" alt="Account Removed Dialog"></p>
+<h2 id="testing">Testing</h2>
+<p>It will be necessary to test the allowed account logic which your app
+implements. </p>
+<p>Android Enterprise app config delivery can be performed
+independently of Intune by using the Google-provided TestDPC app. See
+<a href="https://developer.android.com/work/guide.html#testing">https://developer.android.com/work/guide.html#testing</a> for more
+details. Using the TestDPC app you can configure a value for the
+restricted accounts configuration item added to your app above. To
+access this setting, navigate to the &quot;Manage app restrictions&quot; page in
+TestDPC.</p>
+<p>To test a single allowed account, use a single UPN and it&#39;s AAD user
+ID separated by a colon, such as
+<code>bob@contoso.com:ee22a88f-dc89-4be0-92bc-1168254b58cb</code>. It is also
+permissable to use simply the UPN, <code>bob@contoso.com</code>. In this latter
+case, the AAD user ID will not be available in the
+<code>AllowedAccountInfo</code> struct.</p>
+<p>To test multiple allowed accounts, account info should be
+semicolon-delimited,
+e.g. <code>alice@contoso.com:69f7808f-d31b-433a-a541-5522e259c6b4;bob@contoso.com:ee22a88f-dc89-4be0-92bc-1168254b58cb</code>
+or <code>alice@contoso.com;bob@contoso.com</code>.</p>
+<h2 id="deployment">Deployment</h2>
+<p>Once your app exposes the xml restriction element and when running
+under a Work Profile, the Intune service will automatically restrict
+to the organization account owning that Work Profile (or owning the
+device in Android Enterprise Device Owner scenarios). No admin action
+is necessary. If a Work Profile is managed by a third-party EMM
+instead of Intune, that EMM may or may not send the setting or allow
+admin configuration of it.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://msazure.visualstudio.com/Intune/_git/xplat-Android-MAM?path=obj/AnyCPU/SDKGuide/stage/allowed-accounts.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
