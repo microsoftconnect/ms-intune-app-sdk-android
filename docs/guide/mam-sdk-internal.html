@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Intune App SDK Addendum for Internal Partners </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Intune App SDK Addendum for Internal Partners ">
+    <meta name="generator" content="docfx 2.13.1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="intune-app-sdk-addendum-for-internal-partners">Intune App SDK Addendum for Internal Partners</h1>
+              
+<p>This document is intended to describe a set of considerations for
+internal Microsoft teams incorporating the Intune MAM SDK on Android.
+The content in this document is an extension to the Intune Android MAM
+SDK API Guide.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>At least one person on your app team must join SG &quot;Intune MAM
+Android Release Notifications&quot; (from idweb). Members of this group
+receive notification of each Android MAM release and access to our
+prerelease build drops.</li>
+<li>You may also wish to request to be part of <a href="https://myaccess/identityiq/accessRequest/accessRequest.jsf#/accessRequest/review?role=Client+Management+Partners+FTE+%2815592%29&amp;autoSubmit=true">Client Management Partners FTE (15592)</a>
+This gives access to build drops, source code, bugs, and the <a href="https://msazure.visualstudio.com/Intune/_workitems/create/Bug?templateId=d2659d0c-a0d6-432c-847a-760ba59a5ef0&amp;ownerId=5be2f735-8720-47bd-9b94-29fe2154535d">MAM Partner Bug Template</a>. In the
+justification field, please mention the name of the Intune MAM
+contact you are working with.</li>
+<li>During the course of testing, you may need to create your own Intune
+tenant in a specific part of the Intune service (Prod, CTiP, OneDF) and deploy policy. 
+For this, please see <a href="#create-a-tenant">tenant creation</a></li>
+<li>For general MAM SDK integration testing review the UACs in the <a href="app-sdk-android-testing-guide.html#test">Testing Guide</a></li>
+</ul>
+<h2 id="adal-and-conditional-access">ADAL and Conditional Access</h2>
+<p>Do <em>not</em> follow the <a href="https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration">public documentation</a>
+for registering app redirect URIs. Instead, register redirect urls at <a href="https://aadonboardingsite.cloudapp.net">aadonboardingsite.cloudapp.net</a>. See also <a href="https://identitydocs.azurewebsites.net/static/aad/application_import.html">documentation from the Identity team</a>.</p>
+<p>You may skip the step (from the public docs) to send your AAD client
+ID to msintuneappsdk@microsoft.com.</p>
+<h2 id="maven">Maven</h2>
+<p>The MAM SDK may be consumed from an internal Maven feed. The feed should be configured in gradle as follows</p>
+<pre><code class="lang-groovy">maven {
+    name &quot;vsts-maven-intune&quot;
+    url &quot;https://msazure.pkgs.visualstudio.com/_packaging/Intune_App_SDK/maven/v1&quot;
+    credentials {
+        username = &quot;VSTS&quot;
+        password = VSTS_ACCESS_TOKEN
+    }
+}
+</code></pre><p>Where <code>VSTS_ACCESS_TOKEN</code> is a valid access token.</p>
+<p>VSTS provides instructions for obtaining the access token:</p>
+<ol>
+<li>Go to <a href="https://msazure.visualstudio.com/DefaultCollection/Intune/_packaging?feed=Intune_App_SDK">https://msazure.visualstudio.com/DefaultCollection/Intune/_packaging?feed=Intune_App_SDK</a></li>
+<li>Select <strong>&quot;Connect to feed&quot;</strong></li>
+<li>Select <strong>&quot;Gradle&quot;</strong></li>
+<li>Click <strong>&quot;Generate Gradle Credentials&quot;</strong></li>
+<li>Use the newly generated <code>vstsGradleAccessToken</code> in place of <code>VSTS_ACCESS_TOKEN</code></li>
+</ol>
+<p>The group id for all artifacts is <code>com.microsoft.intune.mam</code>. The following artifacts are available:</p>
+<ul>
+<li><code>android-sdk</code> is the core Android MAM SDK.</li>
+<li><code>android-sdk-support-v4</code> provides the replacements for Support V4 classes (if required).</li>
+<li><code>android-sdk-support-v7</code> provides the replacements for Support V7 classes (if required).</li>
+<li><code>android-sdk-support-v17</code> provides the replacements for Support V17 classes (if required).</li>
+<li><code>android-sdk-support-text</code> provides the replacements for Support Text classes (if required).</li>
+<li><code>android-downlevel-stubs</code> provides the downlevel stubs (if required).</li>
+<li><code>android-build-plugin</code> provides the <a href="app-sdk-android.html#gradle-build-plugin">build plugin</a>.</li>
+</ul>
+<h3 id="build-plugin">Build Plugin</h3>
+<p>You may omit the buildscript configuration from the <a href="app-sdk-android.html#gradle-build-plugin">public
+docs</a> to directly reference a jar
+file and instead consume from Maven.</p>
+<p>An example <code>build.gradle</code>:</p>
+<pre><code class="lang-groovy">buildscript {
+    repositories {
+      ...
+      maven {
+        // as described above
+      }
+    }
+    dependencies {
+        classpath &#39;com.microsoft.intune.mam:android-build-plugin:VERSION&#39;
+    }
+}
+allprojects {
+  repositories {
+    ...
+    maven {
+      // as described above
+    }
+  }
+}
+</code></pre><p>Note that the repository reference <strong>must</strong> be in the <code>buildscript</code>
+block for the plugin to be obtained <strong>and</strong> in the <code>allProjects</code> block
+for the SDK aar/jars to be obtained.</p>
+<h2 id="notice">Notice</h2>
+<h3 id="end-of-support-for-android-43-and-lower">End of Support for Android 4.3 and Lower</h3>
+<p>Managed apps and the Company Portal app for Android will require Android 4.4 and higher to access company resources. Devices that aren&#39;t updated before the beginning of October will no longer be able to access the Company Portal or those apps. By December, all enrolled devices will be force retired in December, resulting in loss of access to company resources. If you are using app protection policies without MDM, apps will not receive updates, and the quality of their experience will diminish over time.</p>
+<h2 id="open-source">Open Source</h2>
+<p>The SDK components compiled and shipped with your application make use of a limited set of open source software as described in our 3rd Party Notices text file.  This file is located in the SDK drop location and is called THIRDPARTYNOTICES.txt.  Please consult with LCA to ensure that the appropriate declarations are included in your release.</p>
+<h2 id="cryptography-usage">Cryptography Usage</h2>
+<p>This section contains information that should be passed onto your internal security champion for review.  The content here reflects cryptography usage in the SDK component that is compiled into and ships with your application.</p>
+<h3 id="securerandom-prng-fixes">SecureRandom PRNG Fixes</h3>
+<p>The Intune MAM SDK includes the SecureRandom fixes as described in the 3rd party notice and here.  This is a commonly distributed fix to address an issue in random number generation.</p>
+<h3 id="digital-signature-validation">Digital Signature Validation</h3>
+<p>The SDK that is compiled into your application performs a digital signature check on the Intune Company Portal package to ensure that it is communicating with a trusted application.  This check is done using the Java APIs provided by the platform.</p>
+<pre><code>PublicKey expectedPublicKey = KeyFactory.getInstance(&quot;RSA&quot;).generatePublic(new 
+X509EncodedKeySpec(AGENT_SIGNING_PUBLIC_KEY_SPEC));
+
+CertificateFactory cf = CertificateFactory.getInstance(&quot;X.509&quot;);
+X509Certificate cert = (X509Certificate) cf.generateCertificate(new 
+ByteArrayInputStream(signatures[0].toByteArray()));
+cert.verify(expectedPublicKey);
+</code></pre><h2 id="debugging-and-testing">Debugging and Testing</h2>
+<h3 id="create-a-tenant">Create a tenant</h3>
+<p>For general testing, new tenants with &quot;Microsoft 365&quot; should be created from <a href="https://demos.microsoft.com/environments/create/tenant">Microsoft Demos</a>.
+For tenants that must be provisioned in specific rings of the Intune Service (OneDF, CTiP, SH), use <a href="https://aka.ms/tenantmonkey">Tenant Monkey</a> with M365 (E5) trial licenses.</p>
+<h3 id="testagent">TestAgent</h3>
+<p>The Test Agent is an application that exposes application policy and
+allows a user to change that policy through a simple UI instead of
+through the actual Company Portal. The Test Agent is included in
+all build drops.</p>
+<p>In order for an app to request policy from the Test Agent instead of
+the Company Portal, both of the following must be true.</p>
+<ol>
+<li>The app must be built with the <code>android:testOnly=true</code> attribute on
+the <code>&lt;application&gt;</code> manifest element. This ensures that an app can
+never accidentally ship a production build connecting to the Test
+Agent. Note that debug builds installed directly from Android
+Studio will default to setting this attribute.</li>
+<li>The app must set the following meta-data in the manifest. 
+<code>xml
+&lt;meta-data
+    android:name=&quot;com.microsoft.intune.mam.Agent&quot;
+    android:value=&quot;test&quot; /&gt;</code></li>
+</ol>
+<p>For <code>testOnly</code> builds connecting to the Company Portal, the <code>Agent</code>
+meta-data can be omitted, or specified as &quot;prod&quot;.</p>
+<h3 id="adal-broker">ADAL Broker</h3>
+<p>Unlike the Intune Android company portal, the test agent does not function as an ADAL broker.  This means that some cross-application SSO scenarios can only be tested in dogfood.</p>
+<h2 id="app-we-v2-api-migration-guide">APP-WE V2 API Migration Guide</h2>
+<p>This section is intended for apps with an existing APP-WE integration using <code>enrollApplication()</code>
+and <code>unenrollApplication()</code> (the V1 API). To migrate from the V1 API to the V2 API:</p>
+<ol>
+<li>Existing calls to <code>enrollApplication()</code> and <code>unenrollApplication()</code> should be changed to call
+<code>registerAccountForMAM()</code> and <code>unregisterAccountForMAM()</code>, respectively. Because
+<code>enrollApplication()</code> was typically called after a succesful ADAL authentication to sign a user
+into the app, the AAD ID and tenant ID required by <code>registerAccount()</code> should be readily
+available.<ul>
+<li>If the app has existing calls to <code>enrollApplication()</code> upon getting a renewed refresh token,
+these should be removed. (This functionality will be replaced by the MAM SDK invoking the
+<code>MAMServiceAuthenticationCallback</code>.) The <code>registerAccountForMAM()</code> method only needs to be
+called once.</li>
+</ul>
+</li>
+<li>Any logic that begins a block or wait at the call to <code>enrollApplication()</code> that is finished when
+the enrollment result is received via notification should be rewritten or removed. There is no
+longer any guarantee that a <code>MAMEnrollmentNotification</code> will be received after calling
+<code>registerAccountForMAM()</code>.</li>
+</ol>
+<p>More information on the V2 API can be found in the
+<a href="app-sdk-android.html#app-protection-policy-without-device-enrollment">APP-WE</a> section of the
+SDK guide. The following is a quick reference list for V1 to V2 migrations:</p>
+<ol>
+<li>The app must implement and register an instance of the <code>MAMServiceAuthenticationCallback</code>
+interface. The callback instance should be registered as early as possible in the application’s
+lifecycle (typically in the <code>onMAMCreate()</code> method of the application class).</li>
+<li>An instance of <code>MAMNotificationReceiver</code> must be registered to handle enrollment result
+notifications. The receiver should handle the <code>AUTHORIZATION_NEEDED</code> result by asynchronously
+acquiring the necessary token and calling <code>updateToken()</code>. The app must also block access to
+protected content according to the <a href="app-sdk-android.html#result-and-status-codes">table of results and status
+codes</a>.</li>
+<li>When a user account is created and the user successfully signs in with ADAL, the app must call
+the <code>registerAccountForMAM()</code> method to give the SDK a chance to attempt enrollment and place the
+app under management.</li>
+<li>When a user account is completely removed, the app must call <code>unregisterAccountForMAM()</code> to
+remove the account from management by the SDK. If the user was enrolled and the app was under
+management, the call to <code>unregisterAccountForMAM()</code> may initiate a wipe to remove coporate data
+for the user.  Note that signing out of the app temporarily should not necessarily result in a
+call to <code>unregisterAccountForMAM()</code>. This call is intended to be used when the user wants to
+completely remove their account from the application.</li>
+</ol>
+<h2 id="allowed-accounts">Allowed Accounts</h2>
+<p>See the <a href="allowed-accounts.html">Allowed Accounts Guide</a>.</p>
+<h2 id="sovereign-cloud-support">Sovereign Cloud Support</h2>
+<h3 id="arlington">Arlington</h3>
+<p>The expected authority provided in <code>registerAccountForMAM()</code> starts with <code>https://login.microsoftonline.us/common</code>.</p>
+<h4 id="fxb--fairfax-beta">FXB / Fairfax Beta</h4>
+<p>To target FXB set the manifest meta-data fwlink to &quot;<a href="https://go.microsoft.com/fwlink/?linkid=851102">https://go.microsoft.com/fwlink/?linkid=851102</a>&quot; in addition to using the updated <code>registerAccountForMAM()</code> with the user authority.</p>
+<pre><code>&lt;meta-data
+    android:name=&quot;com.microsoft.intune.mam.policy.MAMServiceLookup.FWLinkOverride&quot;
+    android:value=&quot;https://go.microsoft.com/fwlink/?linkid=851102&quot; /&gt;
+</code></pre><h3 id="unsupported-clouds">Unsupported Clouds</h3>
+<p>Attempting to register for MAM with accounts in these environments will return <code>NOT_LICENSED</code>.</p>
+<ol>
+<li>Gallatin <code>https://login.chinacloudapi.cn/common</code></li>
+<li>Blackforest <code>https://login.microsoftonline.de/common</code></li>
+</ol>
+<h3 id="unknown-authority">Unknown Authority</h3>
+<p>All other <code>authority</code> values will result in the worldwide MAM service endpoints being used.</p>
+<h2 id="logging">Logging</h2>
+<p>To disable MAM logging in non Intune case, add this to your app&#39;s <code>AndroidManifest.xml</code> file.</p>
+<pre><code>&lt;meta-data
+    android:name=&quot;com.microsoft.intune.mam.DisableOfflineLogging&quot;
+    android:value=&quot;true&quot; /&gt;
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://msazure.visualstudio.com/Intune/_git/xplat-Android-MAM?path=obj/AnyCPU/SDKGuide/stage/mam-sdk-internal.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

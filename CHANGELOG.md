@@ -1,3 +1,17 @@
+Version 6.5.3
+-------------
+* Fix build plugin issue where not all libraries with dependencies on
+  processed libraries were properly included for processing. This fix
+  is necessary when upgrading to ADAL 3.0.1. Without this fix, if
+  `verify=true`, in `intunemam` configuration in `build.gradle`, the
+  issue would present as a build-time error. If verification is not in
+  use, this issue would present as a runtime error for overriding a
+  final method.
+
+Version 6.5.2
+-------------
+* Build plugin support for Gradle 5.6/Android Gradle Plugin 3.6
+
 Version 6.5.1
 -------------
 * Added support for a MAM Service feature to detect disabled AAD accounts.
