@@ -1,3 +1,56 @@
+Version 6.6.1
+-------------
+* Fix build plugin compile-time error when Android Gradle Plugin 4.0
+  is used with the Play Services Core library.
+
+Version 6.6.0
+-------------
+* Add `onMAMUserLeaveHint` to `MAMActivity` to ensure `onUserLeaveHint` is not called
+  if launch is blocked during `onCreate`
+* When an app throws an exception from an implementation of
+  `MAMNotificationReceiver` that exception is caught and the app is
+  regarded as having failed to handle the notification as if it had
+  returned `false` from `onReceive`. One impact of this is that if a
+  wipe handler throws, the default wipe behavior will be applied
+  rather than leaving the app in a crashing-and-not-wiped state.
+* Fix theming issue in certain policy enforcement dialogs which where shown with a black background instead of a
+  transparent background.
+* Extend redirection to the Intune web portal for all app installation scenarios where Google Play Services are not
+  available and links to market:// are not handled.
+* Point to per-environment specific FWLinks for Company Portal installation when Google Play Services and links to 
+  market:// are not available.
+* Use android.R.attr.colorForeground instead of android.R.attr.textColorPrimary to apply textColor on all dialogs successfully
+  when an app theme is given.
+
+Version 6.5.6
+-------------
+* Fix theming issue in "Install Company Portal" dialog which has a black background instead of a transparent background.
+  This regression was introduced in SDK 6.5.0"
+
+Version 6.5.5
+-------------
+* `MAMAppConfig` will read the following configs from both MAM app config and Android Enterprise.
+  * `com.microsoft.intune.mam.managedbrowser.bookmarks`
+  * `com.microsoft.intune.mam.managedbrowser.homepage`
+* `MAMAppConfig` will read the following configs from the MAM app config channel and not from Android Enterprise.
+  * `com.microsoft.intune.mam.managedbrowser.account.syncDisabled`
+  * `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`
+  * `com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar`
+  * `com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs`
+  * `com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO`
+  * `com.microsoft.intune.mam.managedbrowser.disableMvpn`
+  * `com.microsoft.intune.mam.managedbrowser.proxyPacUrl`
+* Mark Build Plugin Android Gradle Transform as cacheable for possible
+  performance improvements
+* Unconditionally register the Company Portal install receiver in Offline mode.
+  This will reduce user logins during APP-CA sign-ins when Company Portal is not
+  already installed on the device, at the expense of restarting MAM apps if the
+  Company Portal is installed for no reason.
+
+Version 6.5.4
+-------------
+* Add support for the Gallatin / Mooncake Sovereign Cloud.
+
 Version 6.5.3
 -------------
 * Fix build plugin issue where not all libraries with dependencies on

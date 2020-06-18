@@ -510,6 +510,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="switchMAMIdentity"
  return="void"
  abstract="true"
@@ -1302,6 +1313,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onNewIntent"
  return="void"
  abstract="false"
@@ -1772,6 +1794,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -2273,6 +2306,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -2830,6 +2874,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -4046,6 +4101,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onNewIntent"
  return="void"
  abstract="false"
@@ -5207,6 +5273,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onNewIntent"
  return="void"
  abstract="false"
@@ -5677,6 +5754,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -6718,6 +6806,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onNewIntent"
  return="void"
  abstract="false"
@@ -7511,6 +7610,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -12486,6 +12596,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onNewIntent"
  return="void"
  abstract="false"
@@ -14303,6 +14424,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
@@ -16414,6 +16546,17 @@
 </parameter>
 </method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
  return="void"
  abstract="false"
  native="false"
