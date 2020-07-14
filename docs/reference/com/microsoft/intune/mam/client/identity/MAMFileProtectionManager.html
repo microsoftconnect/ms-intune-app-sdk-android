@@ -1005,8 +1005,13 @@ From class
       
   <div class="jd-tagdata jd-tagdescr"><p>Protect a file or directory. This will synchronously trigger whatever protection is required for the file, and will tag the
  file for future protection changes. If an identity is set on a directory, it is set recursively on all files and
- subdirectories. New files or directories will inherit their parent directory's identity. If MAM is operating in offline mode,
- this method will silently do nothing.</p></div>
+ subdirectories. New files or directories will inherit their parent directory's identity. This method will silently do nothing
+ (neither change an identity nor throw) in the following conditions:
+
+ <ul>
+     <li>MAM is operating in offline mode</li>
+     <li>The file is exempted from MAM file protection (such as .so and .apk files)</li>
+ </ul></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">

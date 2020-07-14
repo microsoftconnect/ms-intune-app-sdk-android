@@ -414,6 +414,24 @@ Summary:
             
             static
             
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#bypassConditionalLaunchChecks(android.app.Activity)">bypassConditionalLaunchChecks</a></span>(Activity activity)
+        
+        <div class="jd-descrdiv">Allow the given Activity to bypass conditional launch checks.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
             String
         </td>
         <td class="jd-linkcol" width="100%">
@@ -425,7 +443,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -441,7 +459,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -459,7 +477,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -477,7 +495,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -495,7 +513,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -513,7 +531,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -531,7 +549,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -549,7 +567,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -562,24 +580,6 @@ Summary:
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setProcessIdentity(java.lang.String)">setProcessIdentity</a></span>(String identity)
         
         <div class="jd-descrdiv">Set the process-wide identity.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentity</a></span>(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
-        
-        <div class="jd-descrdiv">Set the associated identity with the Context.</div>
   
   </td></tr>
 
@@ -604,6 +604,24 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentity</a></span>(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
+        
+        <div class="jd-descrdiv">Set the associated identity with the Context.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -876,6 +894,51 @@ From class
 
 <h2>Public Methods</h2>
 
+
+
+<a id="bypassConditionalLaunchChecks(android.app.Activity)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">bypassConditionalLaunchChecks</span>
+      <span class="normal">(Activity activity)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Allow the given Activity to bypass conditional launch checks.  This must be called
+ before onMAMCreate, e.g. from the Activity's constructor or attachBaseContext() override.
+ Because this method allows the bypass of conditional launch policy checks, it should
+ only be used after consulting with Microsoft to confirm there is no other supported way
+ to achieve your appâ€™s desired behavior.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>The activity to exempt from the launch checks.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
 
 
 <a id="getCurrentThreadIdentity()"></a>
@@ -1257,6 +1320,55 @@ From class
 </div>
 
 
+<a id="setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUIPolicyIdentity</span>
+      <span class="normal">(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>Context to set the identity in.</td>
+        </tr>
+        <tr>
+          <th>identity</th>
+          <td>New identity to set. If null, the Context identity is cleared.</td>
+        </tr>
+        <tr>
+          <th>mamSetUIIdentityCallback</th>
+          <td>callback to notify the application the identity switch result. May be null.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -1301,55 +1413,6 @@ From class
         <tr>
           <th>options</th>
           <td>Identity switch options.
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setUIPolicyIdentity</span>
-      <span class="normal">(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>Context to set the identity in.</td>
-        </tr>
-        <tr>
-          <th>identity</th>
-          <td>New identity to set. If null, the Context identity is cleared.</td>
-        </tr>
-        <tr>
-          <th>mamSetUIIdentityCallback</th>
-          <td>callback to notify the application the identity switch result. May be null.
 </td>
         </tr>
       </table>

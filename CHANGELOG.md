@@ -1,3 +1,21 @@
+Version 6.7.0
+-------------
+* Refine proguard rules to reduce the size impact of the SDK.
+* Add `bypassConditionalLaunchChecks` to `MAMPolicyManager` interface
+  to allow special-purpose Activities to avoid conditional launch checks.
+* Suppress class format errors in plugin when `verify` option is enabled.
+  Some classes from the Android 11 build tools are built with the Java 9 class
+  format and cannot be verified when building with Java 8. These classes cannot
+  be verified because they cannot be parsed in a Java 8 JVM. Updating to Java 9+
+  will allow these classes to be verified.
+* The build plugin will now replace inheritance/instantiation of
+  `PopupWindow` with MAM equivalent `MAMPopupWindow`, `ListPopupWindow` with
+  MAM equivalent `MAMListPopupWindow`, and `PopupMenu` with MAM equivalent
+  `MAMPopupMenu`. This is used to enforce screenshot blocking policy when 
+  a screen recorder is in use.
+* If not using the build plugin, the replacements listed above must be made
+  manually. Using the build plugin is very strongly recommended.
+
 Version 6.6.1
 -------------
 * Fix build plugin compile-time error when Android Gradle Plugin 4.0

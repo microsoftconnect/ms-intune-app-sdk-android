@@ -11941,6 +11941,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<method name="bypassConditionalLaunchChecks"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+</method>
 <method name="getCurrentThreadIdentity"
  return="java.lang.String"
  abstract="false"
