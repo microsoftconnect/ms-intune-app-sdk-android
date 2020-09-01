@@ -401,6 +401,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="true"
@@ -1178,6 +1189,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -1346,6 +1368,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -1669,6 +1702,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -1837,6 +1881,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -2181,6 +2236,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -2349,6 +2415,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -2749,6 +2826,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -2917,6 +3005,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -3966,6 +4065,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -4134,6 +4244,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -5138,6 +5259,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -5306,6 +5438,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -5629,6 +5772,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -5797,6 +5951,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -6671,6 +6836,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -6839,6 +7015,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -7485,6 +7672,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -7653,6 +7851,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -9194,6 +9403,36 @@
 <parameter name="selectionArgs" type="java.lang.String[]">
 </parameter>
 </method>
+<method name="delete"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="deleteMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 <method name="insert"
  return="android.net.Uri"
  abstract="false"
@@ -9207,6 +9446,40 @@
 <parameter name="uri" type="android.net.Uri">
 </parameter>
 <parameter name="values" type="android.content.ContentValues">
+</parameter>
+</method>
+<method name="insert"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="insertMAM"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 <method name="isProvideContentAllowed"
@@ -9600,6 +9873,40 @@
 <parameter name="selectionArgs" type="java.lang.String[]">
 </parameter>
 </method>
+<method name="update"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="updateMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 </class>
 <class name="MAMContentProviderClientManagement"
  extends="java.lang.Object"
@@ -9733,6 +10040,25 @@
 <exception name="RemoteException" type="android.os.RemoteException">
 </exception>
 </method>
+<method name="delete"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentProviderClient">
+</parameter>
+<parameter name="url" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+<exception name="RemoteException" type="android.os.RemoteException">
+</exception>
+</method>
 <method name="getStreamTypes"
  return="java.lang.String[]"
  abstract="false"
@@ -9784,6 +10110,27 @@
 <parameter name="url" type="android.net.Uri">
 </parameter>
 <parameter name="values" type="android.content.ContentValues">
+</parameter>
+<exception name="RemoteException" type="android.os.RemoteException">
+</exception>
+</method>
+<method name="insert"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentProviderClient">
+</parameter>
+<parameter name="url" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 <exception name="RemoteException" type="android.os.RemoteException">
 </exception>
@@ -10068,6 +10415,27 @@
 <exception name="RemoteException" type="android.os.RemoteException">
 </exception>
 </method>
+<method name="update"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentProviderClient">
+</parameter>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+<exception name="RemoteException" type="android.os.RemoteException">
+</exception>
+</method>
 </class>
 <class name="MAMContentResolverManagement"
  extends="java.lang.Object"
@@ -10236,6 +10604,23 @@
 <parameter name="selectionArgs" type="java.lang.String[]">
 </parameter>
 </method>
+<method name="delete"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentResolver">
+</parameter>
+<parameter name="url" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 <method name="getStreamTypes"
  return="java.lang.String[]"
  abstract="false"
@@ -10283,6 +10668,25 @@
 <parameter name="url" type="android.net.Uri">
 </parameter>
 <parameter name="values" type="android.content.ContentValues">
+</parameter>
+</method>
+<method name="insert"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentResolver">
+</parameter>
+<parameter name="url" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 <method name="loadThumbnail"
@@ -10657,6 +11061,25 @@
 <parameter name="selectionArgs" type="java.lang.String[]">
 </parameter>
 </method>
+<method name="update"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="original" type="android.content.ContentResolver">
+</parameter>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 </class>
 <class name="MAMDocumentsProvider"
  extends="android.provider.DocumentsProvider"
@@ -10927,6 +11350,21 @@
 <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
 </exception>
 </method>
+<method name="delete"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 <method name="deleteDocument"
  return="void"
  abstract="false"
@@ -10963,7 +11401,7 @@
  native="false"
  synchronized="false"
  static="false"
- final="true"
+ final="false"
  deprecated="not deprecated"
  visibility="public"
 >
@@ -10972,6 +11410,21 @@
 <parameter name="selection" type="java.lang.String">
 </parameter>
 <parameter name="selectionArgs" type="java.lang.String[]">
+</parameter>
+</method>
+<method name="deleteMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 <method name="ejectRoot"
@@ -11034,7 +11487,7 @@
 <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
 </exception>
 </method>
-<method name="insertMAM"
+<method name="insert"
  return="android.net.Uri"
  abstract="false"
  native="false"
@@ -11047,6 +11500,40 @@
 <parameter name="uri" type="android.net.Uri">
 </parameter>
 <parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="insertMAM"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+</method>
+<method name="insertMAM"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 <method name="moveDocumentMAM"
@@ -11537,6 +12024,23 @@
 <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
 </exception>
 </method>
+<method name="update"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 <method name="updateMAM"
  return="int"
  abstract="false"
@@ -11554,6 +12058,23 @@
 <parameter name="selection" type="java.lang.String">
 </parameter>
 <parameter name="selectionArgs" type="java.lang.String[]">
+</parameter>
+</method>
+<method name="updateMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 </class>
@@ -12474,6 +12995,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -12642,6 +13174,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -14312,6 +14855,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -14480,6 +15034,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -15744,6 +16309,21 @@
 <parameter name="selectionArgs" type="java.lang.String[]">
 </parameter>
 </method>
+<method name="deleteMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
 <method name="insert"
  return="android.net.Uri"
  abstract="false"
@@ -15772,6 +16352,23 @@
 <parameter name="uri" type="android.net.Uri">
 </parameter>
 <parameter name="values" type="android.content.ContentValues">
+</parameter>
+</method>
+<method name="insertMAM"
+ return="android.net.Uri"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 <method name="onMAMIdentitySwitchRequired"
@@ -16057,6 +16654,23 @@
 <parameter name="selection" type="java.lang.String">
 </parameter>
 <parameter name="selectionArgs" type="java.lang.String[]">
+</parameter>
+</method>
+<method name="updateMAM"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="uri" type="android.net.Uri">
+</parameter>
+<parameter name="values" type="android.content.ContentValues">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
 </parameter>
 </method>
 </class>
@@ -16434,6 +17048,17 @@
  visibility="public"
 >
 </method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMPostCreate"
  return="void"
  abstract="false"
@@ -16602,6 +17227,17 @@
  final="true"
  deprecated="not deprecated"
  visibility="protected"
+>
+</method>
+<method name="onPictureInPictureRequestedReal"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
 >
 </method>
 <method name="onPostCreate"
@@ -16840,6 +17476,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="getIsOpenFromLocalStorageAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
+</parameter>
 </method>
 <method name="getIsOpenFromLocationAllowed"
  return="boolean"

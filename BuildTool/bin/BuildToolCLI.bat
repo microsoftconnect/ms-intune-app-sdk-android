@@ -79,7 +79,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\com.microsoft.intune.mam.build.cli.jar;%APP_HOME%\lib\com.microsoft.intune.mam.build.core.jar;%APP_HOME%\lib\com.microsoft.intune.mam.rewrite.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\javassist-3.22.0-GA.jar
+set CLASSPATH=%APP_HOME%\lib\com.microsoft.intune.mam.build.cli.jar;%APP_HOME%\lib\com.microsoft.intune.mam.build.core.jar;%APP_HOME%\lib\com.microsoft.intune.mam.rewrite.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\javassist-3.27.0-GA.jar
 
 @rem Execute BuildToolCLI
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %BUILD_TOOL_CLI_OPTS%  -classpath "%CLASSPATH%" com.microsoft.intune.mam.cli.MamifierMain %CMD_LINE_ARGS%

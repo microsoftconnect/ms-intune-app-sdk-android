@@ -1,3 +1,35 @@
+Version 7.0.0
+-------------
+* Android Gradle Plugin version 3.6.1 or higher is required.
+* Update Javassist dependency to 3.27.0-GA.
+* Remove `SecureBrowserPolicy` from the SDK. This class was exposed
+  but was not documented. It was previously used by the Intune Managed
+  Browser, which has since been superseded by Edge.
+* Support libraries no longer use AndroidX annotations due to tighter
+  restrictions in the Android build system around Support and AndroidX 
+  library coexistence.
+* Support for targeting API 30, including new ContentProvider,
+  ContentProviderClient, ContentResolver methods, and whitelist Company Portal against package visibility restrictions.
+* Add `onMAMPictureInPictureRequested` to `MAMActivity` to ensure `onPictureInPictureRequested`
+  is not called if launch if blocked during `onCreate`.
+* `StrictScopedDisable` now extends from Closeable as well as
+  AutoCloseable for compatibility with Kotlin's `use` extension
+  method.
+* The build plugin will now automatically include local AAR files
+  (i.e. as opposed to AAR dependencies retrieved via artifact
+  coordinates) for mamification. The Android Gradle Plugin transforms
+  these files into jars with names which are inconsistent across AGP
+  versions and often unrecognizable, making inclusion through
+  `includeExternalLibraries` specification difficult.
+* The build plugin will now replace inheritance/instantiation of
+  `MediaRecorder` with MAM equivalent `MAMMediaRecorder`.
+* The MAMBlobStoreManager replaces the BlobStoreManager with build plugin
+  support, to enable protection of shared data blobs.
+* Fix build plugin regression which could lead to bytecode
+  corruption. Backported to 6.7.1.
+* Expand `getIsOpenFromLocationAllowed` SDK method to handle a non-null username for identity-tagged files in local storage.
+  For convenience, add an SDK method `getIsOpenFromLocalStorageAllowed` that accepts a `File` parameter.
+
 Version 6.7.0
 -------------
 * Refine proguard rules to reduce the size impact of the SDK.
@@ -15,6 +47,7 @@ Version 6.7.0
   a screen recorder is in use.
 * If not using the build plugin, the replacements listed above must be made
   manually. Using the build plugin is very strongly recommended.
+
 
 Version 6.6.1
 -------------

@@ -774,6 +774,22 @@ android.content.ComponentCallbacks2
         <td class="jd-typecol">
             
             
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../../../com/microsoft/intune/mam/client/support/v4/content/MAMFileProvider.html#deleteMAM(android.net.Uri, android.os.Bundle)">deleteMAM</a></span>(Uri uri, Bundle extras)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
             final
             
             
@@ -781,6 +797,22 @@ android.content.ComponentCallbacks2
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../../../com/microsoft/intune/mam/client/support/v4/content/MAMFileProvider.html#insert(android.net.Uri, android.content.ContentValues)">insert</a></span>(Uri uri, ContentValues values)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            Uri
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../../../com/microsoft/intune/mam/client/support/v4/content/MAMFileProvider.html#insertMAM(android.net.Uri, android.content.ContentValues, android.os.Bundle)">insertMAM</a></span>(Uri uri, ContentValues values, Bundle extras)
         
   </td></tr>
 
@@ -1038,6 +1070,22 @@ android.content.ComponentCallbacks2
             int
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../../../com/microsoft/intune/mam/client/support/v4/content/MAMFileProvider.html#updateMAM(android.net.Uri, android.content.ContentValues, android.os.Bundle)">updateMAM</a></span>(Uri uri, ContentValues values, Bundle extras)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../../../com/microsoft/intune/mam/client/support/v4/content/MAMFileProvider.html#updateMAM(android.net.Uri, android.content.ContentValues, java.lang.String, java.lang.String[])">updateMAM</a></span>(Uri uri, ContentValues values, String selection, String[] selectionArgs)
         
   </td></tr>
@@ -1258,7 +1306,7 @@ From class
             ContentProviderResult[]
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">applyBatch</span>(ArrayList&lt;ContentProviderOperation&gt; arg0)
+        <span class="sympad">applyBatch</span>(String arg0, ArrayList&lt;ContentProviderOperation&gt; arg1)
         
   </td></tr>
 
@@ -1274,7 +1322,7 @@ From class
             ContentProviderResult[]
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">applyBatch</span>(String arg0, ArrayList&lt;ContentProviderOperation&gt; arg1)
+        <span class="sympad">applyBatch</span>(ArrayList&lt;ContentProviderOperation&gt; arg0)
         
   </td></tr>
 
@@ -1399,10 +1447,42 @@ From class
             
             
             
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">delete</span>(Uri arg0, Bundle arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
             void
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">dump</span>(FileDescriptor arg0, PrintWriter arg1, String[] arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getCallingAttributionTag</span>()
         
   </td></tr>
 
@@ -1431,6 +1511,22 @@ From class
             final
             
             
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getCallingPackageUnchecked</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
             Context
         </td>
         <td class="jd-linkcol" width="100%">
@@ -1440,7 +1536,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1456,7 +1552,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1472,7 +1568,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1488,7 +1584,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -1504,7 +1600,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1515,6 +1611,22 @@ From class
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">getWritePermission</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            Uri
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">insert</span>(Uri arg0, ContentValues arg1, Bundle arg2)
         
   </td></tr>
 
@@ -1562,13 +1674,29 @@ From class
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad">onConfigurationChanged</span>(Configuration arg0)
+        <span class="sympad">onCallingPackageChanged</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onConfigurationChanged</span>(Configuration arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -1584,7 +1712,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1600,7 +1728,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1616,7 +1744,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1632,7 +1760,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1648,7 +1776,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1664,7 +1792,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1680,7 +1808,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1696,7 +1824,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1707,22 +1835,6 @@ From class
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">openPipeHelper</span>(Uri arg0, String arg1, Bundle arg2, T arg3, PipeDataWriter&lt;T&gt; arg4)
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            AssetFileDescriptor
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad">openTypedAssetFile</span>(Uri arg0, String arg1, Bundle arg2)
         
   </td></tr>
 
@@ -1751,6 +1863,22 @@ From class
             
             
             
+            AssetFileDescriptor
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">openTypedAssetFile</span>(Uri arg0, String arg1, Bundle arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
             Cursor
         </td>
         <td class="jd-linkcol" width="100%">
@@ -1760,7 +1888,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1776,7 +1904,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -1792,7 +1920,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1803,6 +1931,22 @@ From class
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">refresh</span>(Uri arg0, Bundle arg1, CancellationSignal arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            Context
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">requireContext</span>()
         
   </td></tr>
 
@@ -1905,6 +2049,22 @@ From class
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">update</span>(Uri arg0, ContentValues arg1, Bundle arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -2523,10 +2683,74 @@ From interface
             
             
             
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">deleteMAM</span>(Uri arg0, Bundle arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">deleteReal</span>(Uri arg0, Bundle arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            Uri
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">insertMAM</span>(Uri arg0, ContentValues arg1, Bundle arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
             Uri
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad">insertMAM</span>(Uri arg0, ContentValues arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            Uri
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">insertReal</span>(Uri arg0, ContentValues arg1, Bundle arg2)
         
   </td></tr>
 
@@ -2814,7 +3038,39 @@ From interface
             int
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad">updateMAM</span>(Uri arg0, ContentValues arg1, Bundle arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad">updateMAM</span>(Uri arg0, ContentValues arg1, String arg2, String[] arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">updateReal</span>(Uri arg0, ContentValues arg1, Bundle arg2)
         
   </td></tr>
 
@@ -3458,6 +3714,37 @@ From interface
 </div>
 
 
+<a id="deleteMAM(android.net.Uri, android.os.Bundle)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">deleteMAM</span>
+      <span class="normal">(Uri uri, Bundle extras)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <a id="insert(android.net.Uri, android.content.ContentValues)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -3472,6 +3759,37 @@ From interface
       </span>
       <span class="sympad">insert</span>
       <span class="normal">(Uri uri, ContentValues values)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="insertMAM(android.net.Uri, android.content.ContentValues, android.os.Bundle)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        Uri
+      </span>
+      <span class="sympad">insertMAM</span>
+      <span class="normal">(Uri uri, ContentValues values, Bundle extras)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -4023,6 +4341,37 @@ From interface
       </span>
       <span class="sympad">update</span>
       <span class="normal">(Uri uri, ContentValues values, String selection, String[] selectionArgs)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="updateMAM(android.net.Uri, android.content.ContentValues, android.os.Bundle)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">updateMAM</span>
+      <span class="normal">(Uri uri, ContentValues values, Bundle extras)</span>
     </h4>
       <div class="api-level">
         <div>
