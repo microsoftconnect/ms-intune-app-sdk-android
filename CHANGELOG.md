@@ -1,3 +1,8 @@
+Version 7.0.1
+-------------
+* Fix build plugin NPE when entites that aren't full-fledged classes end up on the classpath.
+* Update certificate pins for connections to Intune services.
+
 Version 7.0.0
 -------------
 * Android Gradle Plugin version 3.6.1 or higher is required.
