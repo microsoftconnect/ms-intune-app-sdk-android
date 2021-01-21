@@ -1,3 +1,27 @@
+Version 7.2.2
+-------------
+* The build plugin will now replace inheritance/instantiation of
+  `ViewGroup` with `MAMViewGroup`. This is used to enforce editor policy restrictions on ViewGroup.
+
+Version 7.2.1
+-------------
+* Fix build plugin bug that misses super call rewrites when the calls target an
+  ancestor of the rewritten base class.
+
+Version 7.2.0
+-------------
+* Add new `DATA_FROM_INTENT` option to `IdentitySwitchOption`.
+* Improve build plugin classpath computation. This fixes missed
+  project dependencies with Android Gradle Plugin 3.6.1+ as well as an
+  illegal state exception during dependency calculation in Gradle 6.7.
+* Fix bug causing repeated prompts to install the Company Portal on Android 11
+* Correct enrollment retry logging.
+* Add MAMIdentityRunnable as a convenience. Wraps another Runnable to execute under the given identity.
+
+Version 7.1.0
+-------------
+* Updates `MAMAutoCompleteTextView` classes to enforce screenshot blocking policy when a screen recorder is in use.
+
 Version 7.0.1
 -------------
 * Fix build plugin NPE when entites that aren't full-fledged classes end up on the classpath.

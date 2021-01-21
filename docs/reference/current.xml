@@ -12540,6 +12540,40 @@
 </parameter>
 </method>
 </class>
+<class name="MAMIdentityRunnable"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.Runnable">
+</implements>
+<constructor name="MAMIdentityRunnable"
+ type="com.microsoft.intune.mam.client.identity.MAMIdentityRunnable"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="wrapped" type="java.lang.Runnable">
+</parameter>
+</constructor>
+<method name="run"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="MAMPolicyManager"
  extends="java.lang.Object"
  abstract="false"
