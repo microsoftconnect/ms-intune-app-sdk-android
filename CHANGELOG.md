@@ -33,12 +33,12 @@ Version 7.0.0
 * Update Javassist dependency to 3.27.0-GA.
 * Remove `SecureBrowserPolicy` from the SDK. This class was exposed
   but was not documented. It was previously used by the Intune Managed
-  Browser, which has since been superseded by Edge.
+  Browser, which has since been superseded by Microsoft Edge.
 * Support libraries no longer use AndroidX annotations due to tighter
   restrictions in the Android build system around Support and AndroidX 
   library coexistence.
 * Support for targeting API 30, including new ContentProvider,
-  ContentProviderClient, ContentResolver methods, and whitelist Company Portal against package visibility restrictions.
+  ContentProviderClient, ContentResolver methods, and allow-list Company Portal against package visibility restrictions.
 * Add `onMAMPictureInPictureRequested` to `MAMActivity` to ensure `onPictureInPictureRequested`
   is not called if launch if blocked during `onCreate`.
 * `StrictScopedDisable` now extends from Closeable as well as
