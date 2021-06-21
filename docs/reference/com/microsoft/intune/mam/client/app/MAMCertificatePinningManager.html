@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  AllowedAccounts
+  MAMCertificatePinningManager
 
 
 </title>
@@ -171,14 +171,14 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html">AllowedAccounts</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html">AllowedAccounts</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAccountAuthenticatorActivity.html">MAMAccountAuthenticatorActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivity.html">MAMActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityGroup.html">MAMActivityGroup</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAlertDialogBuilder.html">MAMAlertDialogBuilder</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAliasActivity.html">MAMAliasActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html">MAMApplication</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html">MAMCertificatePinningManager</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html">MAMCertificatePinningManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMComponents.html">MAMComponents</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html">MAMConfigOnly</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMDialog.html">MAMDialog</a></li>
@@ -293,7 +293,7 @@ Summary:
     final 
     
     class
-<h1>AllowedAccounts</h1>
+<h1>MAMCertificatePinningManager</h1>
 
 
 
@@ -326,7 +326,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.AllowedAccounts</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.MAMCertificatePinningManager</td>
     </tr>
     
 
@@ -342,10 +342,9 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Allows an app to find out whether the accounts allowed to be signed in are restricted and if so which accounts are allowed.
- The MAM SDK provides this, information but it does not perform any enforcement. If accounts are restricted,
- it is the app's responsibility to allow only the allowed accounts to sign in and to remove any accounts which are not in the
- allowed set. Allowed accounts are identified by UPN, and in most cases by AAD user id.
+<p>The MAMCertificatePinningManager has methods to enable certificate pinning
+ for apps, according to the Intune cert pinning configuration received
+ from the MAM Service.
 </p>
 
 
@@ -413,12 +412,12 @@ Summary:
             
             static
             
-            List&lt;AllowedAccountInfo&gt;
+            SSLContext
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#getAllowedAccounts()">getAllowedAccounts</a></span>()
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSSLContext(java.lang.String, java.net.URL)">getPinningSSLContext</a></span>(String identity, URL url)
         
-        <div class="jd-descrdiv">Returns the list of allowed accounts or null if restrictions are not in place.</div>
+        <div class="jd-descrdiv">Get a SSLContext that can be used with a custom SSLSocketFactory implementation.</div>
   
   </td></tr>
 
@@ -431,12 +430,12 @@ Summary:
             
             static
             
-            boolean
+            SSLSocketFactory
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#isAccountAllowed(java.lang.String)">isAccountAllowed</a></span>(String upnOrAADId)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactory(java.lang.String, java.net.URL)">getPinningSocketFactory</a></span>(String identity, URL url)
         
-        <div class="jd-descrdiv">Check if the given UPN or AAD user id (both case-insensitive) is allowed to sign in.</div>
+        <div class="jd-descrdiv">Get a SSLSocketFactory used to configure HTTPS connection objects.</div>
   
   </td></tr>
 
@@ -452,27 +451,9 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#listenForChanges(com.microsoft.intune.mam.client.app.AllowedAccountsListener)">listenForChanges</a></span>(AllowedAccountsListener listener)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#validatePins(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)">validatePins</a></span>(X509Certificate[] chain, String identity, URL url)
         
-        <div class="jd-descrdiv">Listen for changed to the allowed account list.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#unregisterListener(com.microsoft.intune.mam.client.app.AllowedAccountsListener)">unregisterListener</a></span>(AllowedAccountsListener listener)
-        
-        <div class="jd-descrdiv">Unregister a listener previously passed to listenForChanges.</div>
+        <div class="jd-descrdiv">Validate the given chain using the pinning configuration for the given identity and URL.</div>
   
   </td></tr>
 
@@ -735,7 +716,7 @@ From class
 
 
 
-<a id="getAllowedAccounts()"></a>
+<a id="getPinningSSLContext(java.lang.String, java.net.URL)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -745,10 +726,10 @@ From class
          
          
          
-        List&lt;AllowedAccountInfo&gt;
+        SSLContext
       </span>
-      <span class="sympad">getAllowedAccounts</span>
-      <span class="normal">()</span>
+      <span class="sympad">getPinningSSLContext</span>
+      <span class="normal">(String identity, URL url)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -760,95 +741,33 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns the list of allowed accounts or null if restrictions are not in place. If the list is non-null, the app is expected
- to allow only AAD-based accounts corresponding to the listed UPNs to sign in.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>list of allowed accounts or null if no restrictions
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="isAccountAllowed(java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        boolean
-      </span>
-      <span class="sympad">isAccountAllowed</span>
-      <span class="normal">(String upnOrAADId)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Check if the given UPN or AAD user id (both case-insensitive) is allowed to sign in.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Get a SSLContext that can be used with a custom SSLSocketFactory implementation.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>upnOrAADId</th>
-          <td>UPN or AAD id to check</td>
+          <th>identity</th>
+          <td>The identity of the account using the connection. Pass null to
+         use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the given user is allowed to sign in, false otherwise
-</li></ul>
+      <ul class="nolist"><li>a SSLContext instance configured for pinning.</li></ul>
   </div>
-
-    </div>
-</div>
-
-
-<a id="listenForChanges(com.microsoft.intune.mam.client.app.AllowedAccountsListener)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">listenForChanges</span>
-      <span class="normal">(AllowedAccountsListener listener)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Listen for changed to the allowed account list. The provided listener will be invoked if and when changes occur.</p></div>
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
         <tr>
-          <th>listener</th>
-          <td>listener to receive change notifications
+            <th>GeneralSecurityException</td>
+            <td>Thrown on failure to create the SSLContext. See Android docs for
+         SSLContext.getInstance() and SSLContext.init() for more details.
+
 </td>
         </tr>
       </table>
@@ -858,7 +777,7 @@ From class
 </div>
 
 
-<a id="unregisterListener(com.microsoft.intune.mam.client.app.AllowedAccountsListener)"></a>
+<a id="getPinningSocketFactory(java.lang.String, java.net.URL)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -868,10 +787,10 @@ From class
          
          
          
-        void
+        SSLSocketFactory
       </span>
-      <span class="sympad">unregisterListener</span>
-      <span class="normal">(AllowedAccountsListener listener)</span>
+      <span class="sympad">getPinningSocketFactory</span>
+      <span class="normal">(String identity, URL url)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -883,16 +802,92 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Unregister a listener previously passed to listenForChanges. Note that it is recommended to maintain a listener for the
- process lifetime to ensure that your app responds to changes in allowed account promptly, and therefore most apps are not
- expected to need this method. If you unregister all listeners, you must take care to check the value of getAllowedAccounts()
- to respond to changes as soon as possible.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Get a SSLSocketFactory used to configure HTTPS connection objects.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>listener</th>
-          <td>listener to unregister
+          <th>identity</th>
+          <td>The identity of the account using the connection. Pass null to
+         use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a SSLSocketFactory instance configured for pinning.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>Thrown on failure to create the underlying SSLContext. See Android docs for
+         SSLContext.getInstance() and SSLContext.init() for more details.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="validatePins(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">validatePins</span>
+      <span class="normal">(X509Certificate[] chain, String identity, URL url)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Validate the given chain using the pinning configuration for the given identity and URL.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>chain</th>
+          <td>The chain to validate.  Note that the network stack validations should already
+         have been performed.  This method only does the additional pinning validation.</td>
+        </tr>
+        <tr>
+          <th>identity</th>
+          <td>The identity of the account using the connection. Pass null to
+         use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>CertificateException</td>
+            <td>thrown if chain is not valid.
 </td>
         </tr>
       </table>

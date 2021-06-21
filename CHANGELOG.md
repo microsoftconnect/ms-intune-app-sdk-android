@@ -1,3 +1,103 @@
+Version 7.6.0
+-------------
+* Add MAM Strict Mode check: `CONTENT_INTENT_WITHOUT_IDENTITY` to
+  check for intents started to transfer content to another app without
+  an identity,while the foreground activity does have an identity
+  set. This would likely indicates a failure to plumb through the identity.
+* Add MAM Strict Mode check: `CONTENT_RESOLVER_NO_IDENTITY` to check
+  that multi-identity apps using content providers set an identity on
+  the context the resolver was retrieved from or on the
+  thread/process.  Failure to do so indicates likelihood that the app
+  is performing app-to-app communication on a background thread
+  without proper consideration of what account the operation is
+  running under.
+* Add MAM Strict Mode check: `UPDATE_TOKEN_WITHIN_ACQUIRE_TOKEN` to
+  check for calls to the MAMEnrollmentManager's updateToken() method
+  from within the app-provided MAMServiceAuthenticationCallback's
+  acquireToken() method. This is not the intended purpose of updateToken(),
+  and could cause a deadlock.
+* Add `MAMPolicyManager` method `getCurrentIdentity`. This is a
+  convience method to consider the process, UI, and thread identities
+  in priority order to allow the app to easily understand what MAM
+  views as the effective identity.
+* Remove ApplicationUpdateReceiver. This did not have relevance to
+  most apps and its functionality is now accomplished without
+  requiring a manifest-declared broadcast receiver.
+* Provide meaningful names to Intune MAM threads.
+
+Version 7.5.0
+-------------
+* Fix build-plugin issue where RC-suffixed Gradle versions would cause
+  build failure.
+* Add config mode for Microsoft Defender ATP.
+* The build plugin now automatically includes all external libraries
+  when used with Android Gradle Plugin 4.2 and higher. These versions
+  no longer expose the library names to the Transform API which our
+  plugin is built on. The `includeExternalLibraries` configuration
+  option will be removed in MAM SDK 8.0.
+* Add MAMCertificatePinningManager API for certificate pinning support.
+
+
+Version 7.4.1
+-------------
+* Fix NullPointerException in Allowed Accounts.
+* Fix an intermittent build plugin issue that impacts super calls
+  that target non-parent, non-system classes. We previously failed
+  to rewrite these super calls when the containing class is processed
+  before its ancestor classes.
+* Fix bounds-checking in MAMDataProtectionManager (small buffers could
+  previously result in an BufferUnderflowException).
+* The Build Tool CLI now supports incremental builds (via a new 
+  --processed option) for parity with the Gradle plugin.
+
+Version 7.4.0
+-------------
+* Report functionality is now supported in the command-line BuildTool,
+  via the `--report` parameter. This functionality has been available
+  in the Gradle plugin for some time.
+* Add `AppPolicy` methods `diagnosticHasSaveRestriction` and
+  `diagnosticHasOpenRestriction` which may be used by apps which (for
+  example) wish to warn the user in advance when some operations may
+  be prohibited by policy. They should not be used for enforcement --
+  please continue to use `getIsSaveToLocationAllowed` and
+  `getIsOpenFromLocationAllowed` for that purpose.
+  
+Version 7.3.1
+-------------
+* The build plugin will now replace inheritance/instantiation of
+  `RelativeLayout` with `MAMRelativeLayout`. This is used to enforce
+  keyboard restrictions in apps which create input connections from
+  custom layouts.
+
+Version 7.3.0
+-------------
+* Add MAM Strict Mode check: `AUTHENTICATION_CALLBACK_NOT_REGISTERED` to check that
+  the MAMServiceAuthenticationCallback is registered in Application.onCreate().
+* Reduce main-thread IO during app initialization.
+* Add `AppPolicy` method `getIsOpenFromContentUriAllowed` to allow an
+  app to test whether data ingress (receive) policy will block
+  receiving data from the given URI. This is intended primarily as a
+  convenience, it is not necessary for enforcement. MAM will continue
+  to automatically block prohibited content provider queries/opens.
+* Exclude all nested inner classes of classes excluded from mamificiation.
+* Add MAMKeyNotAvailableException which is thrown from MAMDataProtectionManager when a 
+  buffer cannot be decrypted due to the app no longer being managed.
+* Fix build plugin to rewrite all super calls that target a replaced base class at any
+  point in the inheritance chain. In v7.2.1, we introduced a similar fix to correctly
+  rewrite super calls, but that fix only applied to methods that were renamed
+  (e.g. onCreate() -> onMAMCreate()).
+* Add `MAMFileProtectionManager.getProtectionInfo` overload which
+  takes a content `Uri`. This should be used in preference to the
+  overload taking a `ParcelFileDescriptor` when it's necessary to
+  check a file's identity before reading it in order to perform the
+  read under the correct identity.
+* Replace MAM Strict Mode check `SAVE_TO_ODB_MISSING_UPN` with
+  `SAVE_TO_LOCATION_MISSING_UPN` to properly reflect that the check
+  covers scenarios beyond ODB and fix spurious error raised on empty
+  UPN for ACCOUNT_DOCUMENT, which is allowed.
+* Fix bug where we aren't correctly calling MAMBackupAgent.onMAMRestoreFinished()
+  in offline mode.
+  
 Version 7.2.2
 -------------
 * The build plugin will now replace inheritance/instantiation of

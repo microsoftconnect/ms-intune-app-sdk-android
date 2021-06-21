@@ -141,21 +141,13 @@
               <ul>
                 
     <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/package-summary.html">com.microsoft.intune.mam.client</a></li>
-    <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/app/package-summary.html">com.microsoft.intune.mam.client.app</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/app/backup/package-summary.html">com.microsoft.intune.mam.client.app.backup</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/app/startup/package-summary.html">com.microsoft.intune.mam.client.app.startup</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/app/ui/package-summary.html">com.microsoft.intune.mam.client.app.ui</a></li>
-    <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/content/package-summary.html">com.microsoft.intune.mam.client.content</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/identity/package-summary.html">com.microsoft.intune.mam.client.identity</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/notification/package-summary.html">com.microsoft.intune.mam.client.notification</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/os/package-summary.html">com.microsoft.intune.mam.client.os</a></li>
     <li class="api apilevel-">
@@ -170,28 +162,12 @@
   <a href="../../../../../../com/microsoft/intune/mam/client/support/v4/print/package-summary.html">com.microsoft.intune.mam.client.support.v4.print</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/support/v7/app/package-summary.html">com.microsoft.intune.mam.client.support.v7.app</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/log/package-summary.html">com.microsoft.intune.mam.log</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/policy/package-summary.html">com.microsoft.intune.mam.policy</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/package-summary.html">com.microsoft.intune.mam.policy.appconfig</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/policy/notification/package-summary.html">com.microsoft.intune.mam.policy.notification</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
           <div id="classes-nav">
             <ul>
               
-    <li><h2>Interfaces</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionInfo.html">MAMDataProtectionInfo</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionInfo.html">MAMFileProtectionInfo</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMProtectionInfo.html">MAMProtectionInfo</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a></li>
-      </ul>
-    </li>
               
     <li><h2>Classes</h2>
       <ul>
@@ -418,7 +394,7 @@ Summary:
             
             static
             
-            <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionInfo.html">MAMDataProtectionInfo</a>
+            MAMDataProtectionInfo
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#getProtectionInfo(byte[])">getProtectionInfo</a></span>(byte[] input)
@@ -436,7 +412,7 @@ Summary:
             
             static
             
-            <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionInfo.html">MAMDataProtectionInfo</a>
+            MAMDataProtectionInfo
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#getProtectionInfo(java.io.InputStream)">getProtectionInfo</a></span>(InputStream input)
@@ -822,7 +798,7 @@ From class
          
          
          
-        <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionInfo.html">MAMDataProtectionInfo</a>
+        MAMDataProtectionInfo
       </span>
       <span class="sympad">getProtectionInfo</span>
       <span class="normal">(byte[] input)</span>
@@ -877,7 +853,7 @@ From class
          
          
          
-        <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionInfo.html">MAMDataProtectionInfo</a>
+        MAMDataProtectionInfo
       </span>
       <span class="sympad">getProtectionInfo</span>
       <span class="normal">(InputStream input)</span>
@@ -1195,7 +1171,8 @@ From class
       <table class="jd-tagtable">  
         <tr>
             <th>IOException</td>
-            <td>If the data could not be unprotected
+            <td>If the data could not be unprotected. Will be MAMKeyNotAvailableException if the data is encrypted but the
+         app is no longer managed
 </td>
         </tr>
       </table>
@@ -1250,7 +1227,8 @@ From class
       <table class="jd-tagtable">  
         <tr>
             <th>IOException</td>
-            <td>If the data could not be unprotected.
+            <td>If the data could not be unprotected. Will be MAMKeyNotAvailableException if the data is encrypted but the
+         app is no longer managed
 </td>
         </tr>
       </table>
