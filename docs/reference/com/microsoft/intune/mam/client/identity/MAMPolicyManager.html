@@ -154,14 +154,6 @@
   <a href="../../../../../../com/microsoft/intune/mam/client/preference/package-summary.html">com.microsoft.intune.mam.client.preference</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../com/microsoft/intune/mam/client/strict/package-summary.html">com.microsoft.intune.mam.client.strict</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/support/v4/app/package-summary.html">com.microsoft.intune.mam.client.support.v4.app</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/support/v4/content/package-summary.html">com.microsoft.intune.mam.client.support.v4.content</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/support/v4/print/package-summary.html">com.microsoft.intune.mam.client.support.v4.print</a></li>
-    <li class="api apilevel-">
-  <a href="../../../../../../com/microsoft/intune/mam/client/support/v7/app/package-summary.html">com.microsoft.intune.mam.client.support.v7.app</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -445,6 +437,24 @@ Summary:
             
             static
             
+            AppPolicy
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadPolicy()">getCurrentThreadPolicy</a></span>()
+        
+        <div class="jd-descrdiv">Get the current app policy.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
@@ -454,7 +464,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -472,7 +482,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -484,13 +494,13 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicy()">getPolicy</a></span>()
         
-        <div class="jd-descrdiv">Get the current app policy.</div>
+        <div class="jd-descrdiv">Deprecated alias for getCurrentThreadPolicy.</div>
   
   </td></tr>
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -508,7 +518,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -526,7 +536,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -544,7 +554,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -562,7 +572,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -580,7 +590,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -598,7 +608,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -616,7 +626,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1021,6 +1031,43 @@ From class
 </div>
 
 
+<a id="getCurrentThreadPolicy()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        AppPolicy
+      </span>
+      <span class="sympad">getCurrentThreadPolicy</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the current app policy. This does NOT take the UI (Context) identity into account. To take UI identity into account, use
+ the override which takes a Context.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Policy for the current identity.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="getIsIdentityManaged(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -1136,11 +1183,10 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Get the current app policy. This does NOT take the UI (Context) identity into account. To take UI identity into account, use
- the override which takes a Context.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Deprecated alias for getCurrentThreadPolicy.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Policy for the current identity.
+      <ul class="nolist"><li>see getCurrentThreadPolicy
 </li></ul>
   </div>
 

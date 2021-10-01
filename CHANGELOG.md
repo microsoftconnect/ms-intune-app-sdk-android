@@ -1,3 +1,48 @@
+Version 8.0.0
+-------------
+* Enable Java 8 language feature support. SDK consumers must specify
+  'JavaVersion.VERSION_1_8' in 'compileOptions' if using an Android
+  Gradle Plugin version below 4.2.
+* Rename the `MAMPolicyManager` method `getPolicy()` to
+  `getCurrentThreadPolicy()` to avoid confusion. For a multi-identity
+  app, this is usually not the method you want to use, unless you have
+  set the thread (or process-wide) identity. The old name still exists
+  for now but is marked as deprecated.
+* `MAMAppConfig` will only read `com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled`
+  from the MAM app config channel and not from Android Enterprise.
+* The build plugin now automatically includes all external libraries
+  and the `includeExternalLibraries` configuration option has been
+  removed.  This change was prompted by Android Gradle Plugin 4.2,
+  which no longer exposes library names to the Transform API on which
+  our plugin is built.
+* The legacy Android Support Libraries are no longer supported. Apps
+  are expected to be using AndroidX, either directly or through
+  enabling the Jetifier.
+* Fix bug in log pii filtering so null and empty strings are no longer hashed.
+* Add MAM Strict Mode check: `CLEAR_PROTECTED_FLAG_SECURE` to
+  ensure FLAG_SECURE isn't cleared when policy restricts screenshots.
+* The build plugin will now wrap calls to various `AppSearchManager`
+  classes/methods. This allows us to enforce transfer policy on data
+  stored in the new centralized search index on Android 12.
+* Add MAM Strict Mode check: 'INVALID_MAM_SERVICE_TOKEN' to validate user
+  passed values for aadId & resourceId while acquiring MAMService token.
+* Remove `MANAGE_ACCOUNTS` and `USE_CREDENTIALS` permissions from the
+  SDK manifest. These permissions supported ADAL usage for auth policy
+  and default enrollment, but were removed by Android in API23, which
+  is the minimum supported version for MAM policy.
+* Add MAM handling for the Android S data extraction rules for backup
+  and restore. New `meta-data com.microsoft.intune.mam.DataExtractionRules`
+  introduced that mimics the android:dataExtractionRules manifest tag.
+
+Version 7.6.2
+-------------
+* Fix build plugin issue with methods which use a more-derived return
+  type than the superclass method.
+
+Version 7.6.1
+-------------
+* Fix authentication callback issue for Microsoft Defender.
+
 Version 7.6.0
 -------------
 * Add MAM Strict Mode check: `CONTENT_INTENT_WITHOUT_IDENTITY` to

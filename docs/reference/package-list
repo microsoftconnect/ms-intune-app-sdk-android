@@ -5,8 +5,4 @@ com.microsoft.intune.mam.client.identity
 com.microsoft.intune.mam.client.os
 com.microsoft.intune.mam.client.preference
 com.microsoft.intune.mam.client.strict
-com.microsoft.intune.mam.client.support.v4.app
-com.microsoft.intune.mam.client.support.v4.content
-com.microsoft.intune.mam.client.support.v4.print
-com.microsoft.intune.mam.client.support.v7.app
 
