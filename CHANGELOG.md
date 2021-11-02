@@ -1,3 +1,13 @@
+Version 8.1.1
+-------------
+* Ensure MAM component initialization before execution of a
+  `MAMContentProvider`.
+
+Version 8.1.0
+-------------
+* Add the MAMLayoutInflaterManagement with build plugin support to handle application
+  usage of custom LayoutInflator.Factory and LayoutInflator.Factory2 instances.
+
 Version 8.0.0
 -------------
 * Enable Java 8 language feature support. SDK consumers must specify
