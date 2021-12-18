@@ -1,6 +1,96 @@
 <api>
+<package name="com.microsoft.intune.mam.client"
+>
+<class name="MAMIdentitySwitchResult"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
 <package name="com.microsoft.intune.mam.client.app"
 >
+<interface name="AllowedAccountInfo"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAADUserId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUPN"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
 <class name="AllowedAccounts"
  extends="java.lang.Object"
  abstract="false"
@@ -60,6 +150,842 @@
 </parameter>
 </method>
 </class>
+<interface name="AllowedAccountsListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onAllowedAccountsChanged"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="AppIdentitySwitchReason"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AppIdentitySwitchResult"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.client.app.AppIdentitySwitchResult[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="AppIdentitySwitchResultCallback"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="reportIdentitySwitchResult"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="result" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResult">
+</parameter>
+</method>
+</interface>
+<interface name="HookedActivity"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.app.MAMActivityBlockingListener">
+</implements>
+<implements name="com.microsoft.intune.mam.client.app.MAMActivityIdentityRequirementListener">
+</implements>
+<implements name="com.microsoft.intune.mam.client.app.MAMActivityIdentitySwitchListener">
+</implements>
+<method name="onMAMActivityResult"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="resultCode" type="int">
+</parameter>
+<parameter name="data" type="android.content.Intent">
+</parameter>
+</method>
+<method name="onMAMCreate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMCreateView"
+ return="android.view.View"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.View">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="attrs" type="android.util.AttributeSet">
+</parameter>
+</method>
+<method name="onMAMDestroy"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMNewIntent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</method>
+<method name="onMAMPause"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMPictureInPictureRequested"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMPostCreate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMPostResume"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMPrepareOptionsMenu"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+</method>
+<method name="onMAMProvideReferrer"
+ return="android.net.Uri"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMRawProvideAssistContent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="content" type="java.lang.Object">
+</parameter>
+</method>
+<method name="onMAMRawSearchRequested"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="java.lang.Object">
+</parameter>
+</method>
+<method name="onMAMResume"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMSaveInstanceState"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="outState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMStateNotSaved"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMUserLeaveHint"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="switchMAMIdentity"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newIdentity" type="java.lang.String">
+</parameter>
+</method>
+<method name="switchMAMIdentity"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newIdentity" type="java.lang.String">
+</parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
+</method>
+</interface>
+<interface name="HookedApplication"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMAMCreate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="HookedDialogFragmentBase"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.app.HookedFragmentBase">
+</implements>
+<method name="onMAMCreateDialog"
+ return="android.app.Dialog"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+</interface>
+<interface name="HookedFragmentBase"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMAMActivityCreated"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMActivityResult"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="requestCode" type="int">
+</parameter>
+<parameter name="resultCode" type="int">
+</parameter>
+<parameter name="data" type="android.content.Intent">
+</parameter>
+</method>
+<method name="onMAMAttach"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+</method>
+<method name="onMAMAttach"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="onMAMCreate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMCreateAnimator"
+ return="android.animation.Animator"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transit" type="int">
+</parameter>
+<parameter name="enter" type="boolean">
+</parameter>
+<parameter name="nextAnim" type="int">
+</parameter>
+</method>
+<method name="onMAMCreateContextMenu"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.ContextMenu">
+</parameter>
+<parameter name="v" type="android.view.View">
+</parameter>
+<parameter name="menuInfo" type="android.view.ContextMenu.ContextMenuInfo">
+</parameter>
+</method>
+<method name="onMAMCreateOptionsMenu"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+<parameter name="inflater" type="android.view.MenuInflater">
+</parameter>
+</method>
+<method name="onMAMCreateView"
+ return="android.view.View"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inflater" type="android.view.LayoutInflater">
+</parameter>
+<parameter name="container" type="android.view.ViewGroup">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMDestroy"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMDestroyOptionsMenu"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMDestroyView"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMDetach"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMPause"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMResume"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMSaveInstanceState"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="outState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMStart"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMViewCreated"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="android.view.View">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onMAMViewStateRestored"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+</interface>
+<interface name="HookedJobIntentService"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.app.HookedService">
+</implements>
+<method name="onMAMHandleWork"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</method>
+</interface>
+<interface name="HookedService"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.app.MAMIdentityRequirementListener">
+</implements>
+<method name="onMAMBind"
+ return="android.os.IBinder"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</method>
+<method name="onMAMStart"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+<parameter name="startId" type="int">
+</parameter>
+</method>
+<method name="onMAMStartCommand"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+<parameter name="startId" type="int">
+</parameter>
+</method>
+</interface>
+<class name="IdentitySwitchOption"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.client.app.IdentitySwitchOption"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.client.app.IdentitySwitchOption[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="MAMAccountAuthenticatorActivity"
  extends="android.accounts.AccountAuthenticatorActivity"
  abstract="true"
@@ -68,6 +994,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMAccountAuthenticatorActivity"
  type="com.microsoft.intune.mam.client.app.MAMAccountAuthenticatorActivity"
  static="false"
@@ -579,6 +1507,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMActivity"
  type="com.microsoft.intune.mam.client.app.MAMActivity"
  static="false"
@@ -1082,6 +2012,27 @@
 </parameter>
 </method>
 </class>
+<interface name="MAMActivityBlockingListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMAMCompanyPortalRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+</interface>
 <class name="MAMActivityGroup"
  extends="android.app.ActivityGroup"
  abstract="true"
@@ -1090,6 +2041,8 @@
  deprecated="deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMActivityGroup"
  type="com.microsoft.intune.mam.client.app.MAMActivityGroup"
  static="false"
@@ -1593,6 +2546,52 @@
 </parameter>
 </method>
 </class>
+<interface name="MAMActivityIdentityRequirementListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+</interface>
+<interface name="MAMActivityIdentitySwitchListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onSwitchMAMIdentityComplete"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="result" type="com.microsoft.intune.mam.client.MAMIdentitySwitchResult">
+</parameter>
+</method>
+</interface>
 <class name="MAMAlertDialogBuilder"
  extends="android.app.AlertDialog.Builder"
  abstract="false"
@@ -1632,6 +2631,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMAliasActivity"
  type="com.microsoft.intune.mam.client.app.MAMAliasActivity"
  static="false"
@@ -2143,6 +3144,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedApplication">
+</implements>
 <constructor name="MAMApplication"
  type="com.microsoft.intune.mam.client.app.MAMApplication"
  static="false"
@@ -2955,6 +3958,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMExpandableListActivity"
  type="com.microsoft.intune.mam.client.app.MAMExpandableListActivity"
  static="false"
@@ -3992,6 +4997,29 @@
 </parameter>
 </method>
 </class>
+<interface name="MAMIdentityRequirementListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+</interface>
 <class name="MAMIntentService"
  extends="android.app.IntentService"
  abstract="true"
@@ -4124,6 +5152,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMLauncherActivity"
  type="com.microsoft.intune.mam.client.app.MAMLauncherActivity"
  static="false"
@@ -4635,6 +5665,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMListActivity"
  type="com.microsoft.intune.mam.client.app.MAMListActivity"
  static="false"
@@ -5680,6 +6712,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMNativeActivity"
  type="com.microsoft.intune.mam.client.app.MAMNativeActivity"
  static="false"
@@ -6403,6 +7437,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedService">
+</implements>
 <constructor name="MAMService"
  type="com.microsoft.intune.mam.client.app.MAMService"
  static="false"
@@ -6512,6 +7548,8 @@
  deprecated="deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMTabActivity"
  type="com.microsoft.intune.mam.client.app.MAMTabActivity"
  static="false"
@@ -7682,6 +8720,92 @@
 </exception>
 </method>
 </class>
+<interface name="MAMBackupDataInput"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="asBackupDataInput"
+ return="android.app.backup.BackupDataInput"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDataSize"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getKey"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="readEntityData"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="byte[]">
+</parameter>
+<parameter name="offset" type="int">
+</parameter>
+<parameter name="size" type="int">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="readNextHeader"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="skipEntityData"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</interface>
 <class name="MAMDefaultBackupAgent"
  extends="com.microsoft.intune.mam.client.app.backup.MAMBackupAgent"
  abstract="false"
@@ -7848,6 +8972,219 @@
 >
 </method>
 </class>
+</package>
+<package name="com.microsoft.intune.mam.client.app.startup"
+>
+<class name="ADALConnectionDetails"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<constructor name="ADALConnectionDetails"
+ type="com.microsoft.intune.mam.client.app.startup.ADALConnectionDetails"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authority" type="java.lang.String">
+</parameter>
+<parameter name="clientId" type="java.lang.String">
+</parameter>
+<parameter name="nonBrokerRedirectUri" type="java.lang.String">
+</parameter>
+<parameter name="skipBroker" type="boolean">
+</parameter>
+</constructor>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="fromJSON"
+ return="com.microsoft.intune.mam.client.app.startup.ADALConnectionDetails"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="json" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAuthority"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getClientId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNonBrokerRedirectUri"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSkipBroker"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="toJSON"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parcel" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="android.os.Parcelable.Creator"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_AUTHORITY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;https://login.windows.net/common/&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_CLIENT_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;6c7e8096-f593-4d72-807f-a5f86dcc9c77&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_NON_BROKER_REDIRECT_URI"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;urn:ietf:wg:oauth:2.0:oob&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_SKIP_BROKER_APP_ADAL"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ value="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_SKIP_BROKER_NO_APP_ADAL"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ value="true"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.microsoft.intune.mam.client.app.ui"
+>
+<interface name="MAMUIHelperBehavior"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="showSharingBlockedDialog"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+</method>
+</interface>
 </package>
 <package name="com.microsoft.intune.mam.client.content"
 >
@@ -10946,6 +12283,16 @@
 >
 </method>
 </class>
+<interface name="MAMDataProtectionInfo"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.identity.MAMProtectionInfo">
+</implements>
+</interface>
 <class name="MAMDataProtectionManager"
  extends="java.lang.Object"
  abstract="false"
@@ -11079,6 +12426,16 @@
 </exception>
 </method>
 </class>
+<interface name="MAMFileProtectionInfo"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.client.identity.MAMProtectionInfo">
+</implements>
+</interface>
 <class name="MAMFileProtectionManager"
  extends="java.lang.Object"
  abstract="false"
@@ -11280,6 +12637,25 @@
  visibility="public"
 >
 </method>
+</class>
+<class name="MAMKeyNotAvailableException"
+ extends="java.io.IOException"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MAMKeyNotAvailableException"
+ type="com.microsoft.intune.mam.client.identity.MAMKeyNotAvailableException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cause" type="java.lang.Throwable">
+</parameter>
+</constructor>
 </class>
 <class name="MAMPolicyManager"
  extends="java.lang.Object"
@@ -11487,6 +12863,108 @@
 </parameter>
 </method>
 </class>
+<interface name="MAMProtectionInfo"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getIdentity"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="MAMSetUIIdentityCallback"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="notifyIdentityResult"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identitySwitchResult" type="com.microsoft.intune.mam.client.MAMIdentitySwitchResult">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.microsoft.intune.mam.client.notification"
+>
+<interface name="MAMNotificationReceiver"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onReceive"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="notification" type="com.microsoft.intune.mam.policy.notification.MAMNotification">
+</parameter>
+</method>
+</interface>
+<interface name="MAMNotificationReceiverRegistry"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="registerReceiver"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="receiver" type="com.microsoft.intune.mam.client.notification.MAMNotificationReceiver">
+</parameter>
+<parameter name="handledType" type="com.microsoft.intune.mam.policy.notification.MAMNotificationType">
+</parameter>
+</method>
+<method name="unregisterReceiver"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="receiver" type="com.microsoft.intune.mam.client.notification.MAMNotificationReceiver">
+</parameter>
+<parameter name="handledType" type="com.microsoft.intune.mam.policy.notification.MAMNotificationType">
+</parameter>
+</method>
+</interface>
 </package>
 <package name="com.microsoft.intune.mam.client.os"
 >
@@ -11560,6 +13038,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="com.microsoft.intune.mam.client.app.HookedActivity">
+</implements>
 <constructor name="MAMPreferenceActivity"
  type="com.microsoft.intune.mam.client.preference.MAMPreferenceActivity"
  static="false"
@@ -12066,6 +13546,39 @@
 </package>
 <package name="com.microsoft.intune.mam.client.strict"
 >
+<class name="MAMStrictCheck"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.client.strict.MAMStrictCheck"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.client.strict.MAMStrictCheck[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="MAMStrictMode"
  extends="java.lang.Object"
  abstract="false"
@@ -12108,5 +13621,1382 @@
 >
 </method>
 </class>
+<interface name="MAMStrictViolationHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="checkFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="check" type="com.microsoft.intune.mam.client.strict.MAMStrictCheck">
+</parameter>
+<parameter name="detail" type="java.lang.String">
+</parameter>
+<parameter name="error" type="java.lang.Error">
+</parameter>
+</method>
+</interface>
+<interface name="StrictGlobalSettings"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="check" type="com.microsoft.intune.mam.client.strict.MAMStrictCheck">
+</parameter>
+</method>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checks" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.strict.MAMStrictCheck&gt;">
+</parameter>
+</method>
+<method name="enable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setHandler"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="com.microsoft.intune.mam.client.strict.MAMStrictViolationHandler">
+</parameter>
+</method>
+</interface>
+<interface name="StrictScopedDisable"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="close"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="StrictThreadSettings"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="check" type="com.microsoft.intune.mam.client.strict.MAMStrictCheck">
+</parameter>
+</method>
+<method name="disable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checks" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.strict.MAMStrictCheck&gt;">
+</parameter>
+</method>
+<method name="disableScoped"
+ return="com.microsoft.intune.mam.client.strict.StrictScopedDisable"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="disableScoped"
+ return="com.microsoft.intune.mam.client.strict.StrictScopedDisable"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="check" type="com.microsoft.intune.mam.client.strict.MAMStrictCheck">
+</parameter>
+</method>
+<method name="disableScoped"
+ return="com.microsoft.intune.mam.client.strict.StrictScopedDisable"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checks" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.strict.MAMStrictCheck&gt;">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.microsoft.intune.mam.log"
+>
+<interface name="MAMLogHandlerWrapper"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="addHandler"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="java.util.logging.Handler">
+</parameter>
+<parameter name="wantsPII" type="boolean">
+</parameter>
+</method>
+<method name="removeHandler"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="java.util.logging.Handler">
+</parameter>
+</method>
+<method name="setLogcatPII"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="wantsPII" type="boolean">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.microsoft.intune.mam.policy"
+>
+<interface name="AppPolicy"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="areIntentActivitiesAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="intent" type="android.content.Intent">
+</parameter>
+</method>
+<method name="diagnosticHasOpenRestriction"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="diagnosticHasSaveRestriction"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="diagnosticIsFileEncryptionInUse"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIsContactSyncAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIsManagedBrowserRequired"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIsOpenFromContentUriAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="android.net.Uri">
+</parameter>
+</method>
+<method name="getIsOpenFromLocalStorageAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
+</parameter>
+</method>
+<method name="getIsOpenFromLocationAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="com.microsoft.intune.mam.policy.OpenLocation">
+</parameter>
+<parameter name="username" type="java.lang.String">
+</parameter>
+</method>
+<method name="getIsPinRequired"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIsSaveToLocationAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="android.net.Uri">
+</parameter>
+</method>
+<method name="getIsSaveToLocationAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="service" type="com.microsoft.intune.mam.policy.SaveLocation">
+</parameter>
+<parameter name="username" type="java.lang.String">
+</parameter>
+</method>
+<method name="getIsSaveToPersonalAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIsScreenCaptureAllowed"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNotificationRestriction"
+ return="com.microsoft.intune.mam.policy.NotificationRestriction"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="toString"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="MAMCAComplianceStatus"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.MAMCAComplianceStatus"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.MAMCAComplianceStatus"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.MAMCAComplianceStatus[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="MAMComplianceManager"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="remediateCompliance"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="tenantId" type="java.lang.String">
+</parameter>
+<parameter name="authority" type="java.lang.String">
+</parameter>
+<parameter name="showUX" type="boolean">
+</parameter>
+</method>
+</interface>
+<interface name="MAMEnrollmentManager"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getRegisteredAccountStatus"
+ return="com.microsoft.intune.mam.policy.MAMEnrollmentManager.Result"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+</method>
+<method name="registerADALConnectionDetails"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="adalDetails" type="com.microsoft.intune.mam.client.app.startup.ADALConnectionDetails">
+</parameter>
+</method>
+<method name="registerAccountForMAM"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="tenantId" type="java.lang.String">
+</parameter>
+</method>
+<method name="registerAccountForMAM"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="tenantId" type="java.lang.String">
+</parameter>
+<parameter name="authority" type="java.lang.String">
+</parameter>
+</method>
+<method name="registerAuthenticationCallback"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="callback" type="com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback">
+</parameter>
+</method>
+<method name="unregisterAccountForMAM"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateToken"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="resourceId" type="java.lang.String">
+</parameter>
+<parameter name="token" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class name="MAMEnrollmentManager.Result"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.MAMEnrollmentManager.Result"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.MAMEnrollmentManager.Result"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.MAMEnrollmentManager.Result[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="MAMServiceAuthenticationCallback"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="acquireToken"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="resourceId" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<interface name="MAMUserInfo"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPrimaryUser"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="NotificationRestriction"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.NotificationRestriction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.NotificationRestriction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.NotificationRestriction[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="OpenLocation"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.OpenLocation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.OpenLocation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.OpenLocation[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="SaveLocation"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.SaveLocation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.SaveLocation"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.SaveLocation[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.microsoft.intune.mam.policy.appconfig"
+>
+<interface name="MAMAppConfig"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.appconfig.MAMAppConfigBase">
+</implements>
+<method name="getBooleanForKey"
+ return="java.lang.Boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="queryType" type="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.BooleanQueryType">
+</parameter>
+</method>
+<method name="getDoubleForKey"
+ return="java.lang.Double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="queryType" type="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.NumberQueryType">
+</parameter>
+</method>
+<method name="getIntegerForKey"
+ return="java.lang.Long"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="queryType" type="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.NumberQueryType">
+</parameter>
+</method>
+<method name="getStringForKey"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+<parameter name="queryType" type="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.StringQueryType">
+</parameter>
+</method>
+</interface>
+<class name="MAMAppConfig.BooleanQueryType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.BooleanQueryType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.BooleanQueryType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MAMAppConfig.NumberQueryType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.NumberQueryType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.NumberQueryType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MAMAppConfig.StringQueryType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.StringQueryType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig.StringQueryType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="MAMAppConfigBase"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAllBooleansForKey"
+ return="java.util.List&lt;java.lang.Boolean&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAllDoublesForKey"
+ return="java.util.List&lt;java.lang.Double&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAllIntegersForKey"
+ return="java.util.List&lt;java.lang.Long&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAllStringsForKey"
+ return="java.util.List&lt;java.lang.String&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+<method name="getFullData"
+ return="java.util.List&lt;java.util.Map&lt;java.lang.String, java.lang.String&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasConflict"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<interface name="MAMAppConfigManager"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAppConfig"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.microsoft.intune.mam.policy.notification"
+>
+<interface name="MAMComplianceNotification"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.notification.MAMUserNotification">
+</implements>
+<method name="getComplianceErrorMessage"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getComplianceErrorTitle"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getComplianceStatus"
+ return="com.microsoft.intune.mam.policy.MAMCAComplianceStatus"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="MAMEnrollmentNotification"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.notification.MAMUserNotification">
+</implements>
+<method name="getEnrollmentResult"
+ return="com.microsoft.intune.mam.policy.MAMEnrollmentManager.Result"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSessionId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="MAMNotification"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getType"
+ return="com.microsoft.intune.mam.policy.notification.MAMNotificationType"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="MAMNotificationType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromCode"
+ return="com.microsoft.intune.mam.policy.notification.MAMNotificationType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="code" type="int">
+</parameter>
+</method>
+<method name="getCode"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.microsoft.intune.mam.policy.notification.MAMNotificationType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.microsoft.intune.mam.policy.notification.MAMNotificationType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="MAMUserNotification"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.notification.MAMNotification">
+</implements>
+<method name="getUserIdentity"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
 </package>
 </api>

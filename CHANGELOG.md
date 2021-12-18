@@ -1,3 +1,45 @@
+Version 8.3.0
+-------------
+* Add new `com.microsoft.intune.mam.AllowIsolatedProcesses` manifest meta-data
+  item to allow isolated process execution. MAM cannot apply protections to
+  isolated processes. As the app developer, it is your responsibility to ensure
+  that your isolated processes cannot expose organization data.
+* Keep `MAMAppConfig` from being minified at build time.
+* Remove `GET_ACCOUNTS` permissions from the SDK manifest. This permission was
+  removed by Android in API23, which is the minimum supported version for MAM policy.
+
+Version 8.2.0
+-------------
+* The build plugin will now wrap calls to various `JobService` methods.
+  For multi-identity apps, the MAM SDK will not attempt to infer the
+  identity for a `JobService` or its individual jobs. Users of `JobService`
+  should take care to set an identity on the service context or background
+  thread as required by their `JobService` implementations. Relatedly, users
+  of `WorkManager` should take care to set a thread identity in
+  `Worker.doWork()` as required by their `Worker` implementations.
+  Avoid setting an identity on the `Worker` context, because this
+  context is shared across `Worker` instances.
+* Add `MAMUserStatusManager`, which may be used to check whether a
+  user is clocked out.
+* Add `CLOCK_STATUS_CHANGED` notification type. Apps may register for
+  this to be notified when Intune detects that a user has clocked out
+  or clocked-in again. No notifications will be delivered if policy
+  does not require the user to be clocked in. Handling this
+  notification is only necessary for apps which need to take extra
+  action to present a better user experience. Intune will
+  automatically apply any policies around clock-in regardless of
+  whether the app handles this notification.
+* Add `WIPE_COMPLETED` notification type. Apps may register for this
+  to be notified when Intune has finished processing a wipe, at least
+  as far as the current app process is concerned. Will be delivered
+  after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`. If the app
+  reports a failure from its handler for the above notifications, this
+  notification will *not* be sent. Listening for this notification is
+  optional.
+* Improved error messages for certain data decryption failures.
+* Improvements to dialogs prompting the user to install or update the
+  Company Portal in cases when the Play Store is not available.
+
 Version 8.1.1
 -------------
 * Ensure MAM component initialization before execution of a
