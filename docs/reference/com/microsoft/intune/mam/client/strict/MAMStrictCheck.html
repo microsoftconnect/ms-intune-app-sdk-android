@@ -570,6 +570,14 @@ Summary:
     
     <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
+        <td class="jd-linkcol">UNMANAGED_CONTEXT_FOUND&nbsp;</td>
+        <td class="jd-descrcol" width="100%">MAM was unable to locate a Context that would allow for policy enforcement within the specified
+ System Service/ContentResolver/ContentProviderClient.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
         <td class="jd-linkcol">UPDATE_TOKEN_WITHIN_ACQUIRE_TOKEN&nbsp;</td>
         <td class="jd-descrcol" width="100%">The MAMEnrollmentManager's updateToken() method was called from within the provided MAMServiceAuthenticationCallback's
  acquireToken() method.&nbsp;</td>
@@ -1780,6 +1788,46 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Ensure the app is not using a newer target Android SDK than the current MAMSDK version supports.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="UNMANAGED_CONTEXT_FOUND"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>
+      </span>
+        UNMANAGED_CONTEXT_FOUND
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>MAM was unable to locate a Context that would allow for policy enforcement within the specified
+ System Service/ContentResolver/ContentProviderClient.
+ This indicates one of the following:
+      1. The SDK surface included by the plugin for your app may be incorrect.
+          To remediate, please review your build plugin configuration for improperly excluded classes.
+          For example, an improperly excluded `Activity` class may be passing its `Context` into a rewritten
+          utility class, which would produce an unprotected System Service/ContentResolver/ContentProviderClient
+          based on the passed in `Context`.
+      2. The MAM SDK is missing surface coverage required by your app.
+          To remediate, please reach out to the MAM team.
 </p></div>
 
     

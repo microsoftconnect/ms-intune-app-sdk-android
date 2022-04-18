@@ -1,3 +1,30 @@
+Version 8.6.1
+-------------
+* The MAM SDK will attempt to validate tokens returned from the app's
+  MAMServiceAuthenticationCallback instance, and tokens acquired
+  with the wrong parameters may be rejected.
+* Add MAM Strict Mode check: 'UNMANAGED_CONTEXT_FOUND ' to validate that MAM found a managed `Context` to ensure policy enforcement.
+  This would likely indicate a failure in the SDK surface modified by the build plugin or missing MAM SDK surface.
+
+Version 8.5.0
+-------------
+* Expanded `getIsOpenFromLocationAllowed` and `getIsSaveToLocationAllowed` SDK method 
+  to include `PHOTO_LIBRARY` location.
+* Fix build plugin issue resuling in a `javassist.CannotCompileException` in
+  certain projects.
+
+Version 8.4.0
+-------------
+* The build plugin will now replace inheritance/instantiation of
+  `SurfaceView`, `GLSurfaceView` and `VideoView` with MAM-specific replacements.
+  These are used to enforce editor policy restrictions on SurfaceViews.
+* Add ProGuard rule to SDK to fix R8 optimizations involving interfaces that have
+  a single compile-time implementation. Currently, this is only known to impact
+  scenarios involving MAMBackupAgentHelper.
+* Fix synchronization issues arising when MAMServiceAuthenticationCallback instance is
+  registered on a background thread.
+* Add tracing and telemetry for monitoring and improving startup time.
+
 Version 8.3.0
 -------------
 * Add new `com.microsoft.intune.mam.AllowIsolatedProcesses` manifest meta-data
@@ -428,7 +455,7 @@ Version 6.0.0
   on `androidx.annotation:annotation:1.0.0`.
 * Remove DownlevelStubs JAR which was replaced by an AAR in 5.8.0.
 * Support for targeting API 29, including new `ContentProvider`,
-	`ContentProviderClient`, and `ContentResolver` methods.
+    `ContentProviderClient`, and `ContentResolver` methods.
 * Add override for `notifyAsPackage` method introduced in API 29.
 * Remove no-longer-necessary Proguard rules.
 * Fixed issue where enrollment would fail when apps used domain-specific
@@ -445,7 +472,7 @@ Version 5.9.0
   authentication completes.
 * Add incremental build support to build plugin.  Incremental build
   support is experimental, and is off by default. To enable it, specify
-	`incremental=true` in the `intunemam` configuration block in `build.gradle`.
+    `incremental=true` in the `intunemam` configuration block in `build.gradle`.
 * Add notification restriction policy. Apps must check the result of the
   `getNotificationRestriction` method in `AppPolicy` before showing a notification
   associated with a given user. If this method is not invoked, notifications
@@ -468,11 +495,11 @@ Version 5.8.0
   `MAMBroadcastReceiver`. This is a speculative fix for a rare crash.
 * Remove unneeded IPC calls related to identity persistence.
 * New build plugin configuration option: `verify`. This acts as a guard
-	to ensure many types of potential plugin bugs will produce
-	compilation failures instead of runtime failures. To use it, specify
-	`verify=true` in the `intunemam` configuration block in `build.gradle`. Verify
-	defaults to false, though this default may change in the
-	future.
+    to ensure many types of potential plugin bugs will produce
+    compilation failures instead of runtime failures. To use it, specify
+    `verify=true` in the `intunemam` configuration block in `build.gradle`. Verify
+    defaults to false, though this default may change in the
+    future.
 * Fix build plugin error where Jetified libraries with an undeclared
   support library dependency were not correctly processed.
 * The build plugin will now replace `NotificationManager.notify` calls with
@@ -535,12 +562,12 @@ Version 5.5.0
 * The default behavior of `MAMActivity.onSwitchMAMIdentityComplete` has
   changed. If the identity switch failed, the default behavior is now
   to finish the activity. The previous default of taking no action
-	made data leaks easy if the app did not pay close attention to the
-	asynchronous completion result of the switch. There is no change in
-	behavior for activities which do override
-	`onSwitchMAMIdentityComplete`. If your app expects identity switches
-	to be cancellable within the same activity, you must override
-	`onSwitchMAMIdentityComplete` and take appropriate action.
+    made data leaks easy if the app did not pay close attention to the
+    asynchronous completion result of the switch. There is no change in
+    behavior for activities which do override
+    `onSwitchMAMIdentityComplete`. If your app expects identity switches
+    to be cancellable within the same activity, you must override
+    `onSwitchMAMIdentityComplete` and take appropriate action.
 
 Version 5.4.0
 -------------
