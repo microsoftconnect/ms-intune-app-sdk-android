@@ -9324,6 +9324,115 @@
 </parameter>
 </method>
 </class>
+<class name="MAMCloudMediaProvider"
+ extends="android.provider.CloudMediaProvider"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MAMCloudMediaProvider"
+ type="com.microsoft.intune.mam.client.content.MAMCloudMediaProvider"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="onGetMediaCollectionInfo"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onOpenMedia"
+ return="android.os.ParcelFileDescriptor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="mediaId" type="java.lang.String">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+<parameter name="signal" type="android.os.CancellationSignal">
+</parameter>
+<exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+</exception>
+</method>
+<method name="onOpenPreview"
+ return="android.content.res.AssetFileDescriptor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="mediaId" type="java.lang.String">
+</parameter>
+<parameter name="size" type="android.graphics.Point">
+</parameter>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+<parameter name="signal" type="android.os.CancellationSignal">
+</parameter>
+<exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+</exception>
+</method>
+<method name="onQueryAlbumsMAM"
+ return="android.database.Cursor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onQueryDeletedMedia"
+ return="android.database.Cursor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onQueryMedia"
+ return="android.database.Cursor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extras" type="android.os.Bundle">
+</parameter>
+</method>
+</class>
 <class name="MAMContentProvider"
  extends="android.content.ContentProvider"
  abstract="true"

@@ -1028,7 +1028,11 @@ From class
       <table class="jd-tagtable">
         <tr>
           <th>file</th>
-          <td>File to protect.</td>
+          <td>File to protect. This descriptor must be open for both read and write. Additionally, due to limitations in the
+ 		encrypted filesystem view if the identity is one for which policy may be present, then the app should not be holding
+ 		any other file descriptors on the same file which are open for write-only. If such descriptors are found, MAM will
+ 		attempt to reopen them for read-write, but this will not be possible for descriptors obtained over a content
+ 		provider or where the name in the filesystem has been unlinked.</td>
         </tr>
         <tr>
           <th>identity</th>

@@ -448,7 +448,8 @@ Summary:
     <tr class="alt-color api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../com/microsoft/intune/mam/policy/SaveLocation.html">SaveLocation</a>&nbsp;</td>
         <td class="jd-linkcol">LOCAL&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Local device storage outside of private app storage.&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Local device storage for use with
+ 1.&nbsp;</td>
     </tr>
     
     
@@ -1207,7 +1208,12 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Local device storage outside of private app storage.
+  <div class="jd-tagdata jd-tagdescr"><p>Local device storage for use with
+ 1. Files saved outside of private app storage.
+ 2. Files downloaded to private app storage that are not necessary for app operation (e.g. user deliberately choosing to
+    download to the device).
+ Files necessary for app operation or downloaded temporarily for display are always allowed and should not check policy for
+ permission.
 </p></div>
 
     

@@ -1,3 +1,28 @@
+Version 9.0.0
+-------------
+* Support for API 33 targeting.
+* Add build plugin support for missing PackageManager method
+  `getPackageInfo(VersionedPackage versionedPackage, int flags)`
+* The Build Tool CLI now supports accepting a plain-text file for the input
+  and output parameters.
+* Include API 33 Photo Picker tool in the `PHOTO_LIBRARY` location 
+  of `getIsOpenFromLocationAllowed` and `getIsSaveToLocationAllowed` SDK methods.
+* The build plugin will now replace instantiation of `CloudMediaProvider` with
+`MAMCloudMediaProvider`.
+* Support predictive back gestures in MAM-owned activities.
+
+Version 8.6.3
+-------------
+* Minor logging improvements to Gradle plugin.
+* Add version check to Gradle plugin to prevent mamification when using
+  Android Gradle Plugin 7.2.0/7.2.1 due to
+  https://issuetracker.google.com/issues/232438924. Use AGP 7.1.3 and below or
+  7.2.2 and above.
+
+Version 8.6.2
+-------------
+* Update documentation for SaveLocation.LOCAL.
+
 Version 8.6.1
 -------------
 * The MAM SDK will attempt to validate tokens returned from the app's
