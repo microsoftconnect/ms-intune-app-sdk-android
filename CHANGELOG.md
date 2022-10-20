@@ -1,3 +1,7 @@
+Version 9.0.1
+-------------
+* Fix offline behavior for `PackageManager` methods added in API 33.
+
 Version 9.0.0
 -------------
 * Support for API 33 targeting.
