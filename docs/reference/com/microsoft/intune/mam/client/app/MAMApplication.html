@@ -1472,6 +1472,42 @@ android.content.ComponentCallbacks2
         <td class="jd-typecol">
             
             
+            
+            static
+            
+            Application.ActivityLifecycleCallbacks
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html#offlineRegisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks, boolean)">offlineRegisterActivityLifecycleCallbacks</a></span>(Application.ActivityLifecycleCallbacks callbacks, boolean isActivityCallback)
+        
+        <div class="jd-descrdiv">Wrap activity lifecycle callbacks in offline mode.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            Application.ActivityLifecycleCallbacks
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html#offlineUnregisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)">offlineUnregisterActivityLifecycleCallbacks</a></span>(Application.ActivityLifecycleCallbacks callbacks)
+        
+        <div class="jd-descrdiv">Unregister activity lifecycle callbacks in offline mode.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
             final
             
             
@@ -1498,6 +1534,38 @@ android.content.ComponentCallbacks2
         
         <div class="jd-descrdiv">MAM version of onCreate.</div>
   
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html#registerActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)">registerActivityLifecycleCallbacks</a></span>(Application.ActivityLifecycleCallbacks callbacks)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html#unregisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)">unregisterActivityLifecycleCallbacks</a></span>(Application.ActivityLifecycleCallbacks callbacks)
+        
   </td></tr>
 
 
@@ -6587,6 +6655,100 @@ From interface
 </div>
 
 
+<a id="offlineRegisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks, boolean)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        Application.ActivityLifecycleCallbacks
+      </span>
+      <span class="sympad">offlineRegisterActivityLifecycleCallbacks</span>
+      <span class="normal">(Application.ActivityLifecycleCallbacks callbacks, boolean isActivityCallback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Wrap activity lifecycle callbacks in offline mode.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>callbacks</th>
+          <td>Callbacks to wrap.</td>
+        </tr>
+        <tr>
+          <th>isActivityCallback</th>
+          <td>If true, callbacks are being registered on an Activity.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Wrapped callback
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="offlineUnregisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        Application.ActivityLifecycleCallbacks
+      </span>
+      <span class="sympad">offlineUnregisterActivityLifecycleCallbacks</span>
+      <span class="normal">(Application.ActivityLifecycleCallbacks callbacks)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Unregister activity lifecycle callbacks in offline mode.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>callbacks</th>
+          <td>Callbacks to unregister.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Wrapped callback
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="onCreate()"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -6645,6 +6807,68 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>MAM version of onCreate.
 </p></div>
+
+    </div>
+</div>
+
+
+<a id="registerActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">registerActivityLifecycleCallbacks</span>
+      <span class="normal">(Application.ActivityLifecycleCallbacks callbacks)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="unregisterActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">unregisterActivityLifecycleCallbacks</span>
+      <span class="normal">(Application.ActivityLifecycleCallbacks callbacks)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     </div>
 </div>

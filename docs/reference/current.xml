@@ -3154,6 +3154,34 @@
  visibility="public"
 >
 </constructor>
+<method name="offlineRegisterActivityLifecycleCallbacks"
+ return="android.app.Application.ActivityLifecycleCallbacks"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="callbacks" type="android.app.Application.ActivityLifecycleCallbacks">
+</parameter>
+<parameter name="isActivityCallback" type="boolean">
+</parameter>
+</method>
+<method name="offlineUnregisterActivityLifecycleCallbacks"
+ return="android.app.Application.ActivityLifecycleCallbacks"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="callbacks" type="android.app.Application.ActivityLifecycleCallbacks">
+</parameter>
+</method>
 <method name="onCreate"
  return="void"
  abstract="false"

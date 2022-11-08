@@ -1,3 +1,12 @@
+Version 9.1.0
+-------------
+* The build plugin will now replace inheritance of `FileBackupHelper` with
+  `MAMFileBackupHelper` and `SharedPreferencesBackupHelper` with `MAMSharedPreferencesBackupHelper`.
+* Fix incompatibility with `androidx.lifecycle:lifecycle-runtime:2.5.0+` that caused crash due to
+  missing hooks for ActivityLifecycleCallbacks.
+* Fix ProGuard rule in SDK to keep only MAM classes that implement `@Keep` annotated 
+  interfaces.
+
 Version 9.0.1
 -------------
 * Fix offline behavior for `PackageManager` methods added in API 33.
