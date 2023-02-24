@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  AllowedAccounts
+  MAMTrustedRootCertsManager
 
 
 </title>
@@ -196,7 +196,7 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html">AllowedAccounts</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html">AllowedAccounts</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAccountAuthenticatorActivity.html">MAMAccountAuthenticatorActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivity.html">MAMActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityGroup.html">MAMActivityGroup</a></li>
@@ -222,7 +222,7 @@
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTabActivity.html">MAMTabActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTaskStackBuilder.html">MAMTaskStackBuilder</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMThemeManager.html">MAMThemeManager</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html">MAMTrustedRootCertsManager</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html">MAMTrustedRootCertsManager</a></li>
       </ul>
     </li>
               
@@ -325,7 +325,7 @@ Summary:
     final 
     
     class
-<h1>AllowedAccounts</h1>
+<h1>MAMTrustedRootCertsManager</h1>
 
 
 
@@ -358,7 +358,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.AllowedAccounts</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.MAMTrustedRootCertsManager</td>
     </tr>
     
 
@@ -374,10 +374,38 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Allows an app to find out whether the accounts allowed to be signed in are restricted and if so which accounts are allowed.
- The MAM SDK provides this, information but it does not perform any enforcement. If accounts are restricted,
- it is the app's responsibility to allow only the allowed accounts to sign in and to remove any accounts which are not in the
- allowed set. Allowed accounts are identified by UPN, and in most cases by AAD user id.
+<p>A utility class that provides methods for receiving trusted root certificates from the MAM service
+ and leveraging these certificates in your application to verify a server host on client SSL/TLS connections.
+
+ This class delegates to Android TrustManager instances for client authentication checks and the trusted root certificates
+ received from the MAM service are unsupported to perform client authentication checks.
+
+ This class provides methods to create javax.net.ssl.SSLContext, javax.net.ssl.SSLSocketFactory,
+ and javax.net.ssl.X509TrustManager objects that can be used to perform server trust checks.
+
+ The <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContext(java.lang.String, java.lang.String)">createSSLContext(String, String)</a></code> method creates an SSL context that uses the specified protocol
+ and trusted root certificates for the specified identity.
+
+ The <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactory(java.lang.String, java.lang.String)">createSSLSocketFactory(String, String)</a></code> method creates an SSL socket factory that uses the specified
+ protocol and trusted root certificates for the specified identity.
+
+ The <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagers(java.lang.String)">createX509TrustManagers(String)</a></code> method creates an array of javax.net.ssl.X509TrustManager
+ instances that use the trusted root certificates from the MAM service for the specified identity.
+
+ Note that the `identity` parameter is expected to be a string identifier for a particular user running the application
+ such as their UPN. In the case the user identifier is unknown beforehand, a value of null can be passed in and MAM will
+ attempt to discover the correct identity from the thread or process in which this class is running.
+
+ When using this class, you should call the appropriate methods, such as
+ <code><a href="null#createSocket(java.net.Socket, java.lang.String, int, boolean)">createSocket(java.net.Socket, String, int, boolean)</a></code> to use the returned socket
+ factory in your application.
+
+ You can also configure HTTPS clients that are configurable with javax.net.ssl.SSLContext or
+ javax.net.ssl.X509TrustManager instances using the returned objects from this class.
+
+ You don't need to to initialize the obtained javax.net.ssl.SSLContext from this class with the returned
+ javax.net.ssl.X509TrustManager instances since the returned context is already initialized correctly for the
+ trusted root certificates received from the MAM service.
 </p>
 
 
@@ -445,12 +473,12 @@ Summary:
             
             static
             
-            List&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountInfo.html">AllowedAccountInfo</a>&gt;
+            SSLContext
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#getAllowedAccounts()">getAllowedAccounts</a></span>()
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContext(java.lang.String, java.lang.String)">createSSLContext</a></span>(String identity, String protocol)
         
-        <div class="jd-descrdiv">Returns the list of allowed accounts or null if restrictions are not in place.</div>
+        <div class="jd-descrdiv">Creates an SSL context that uses the specified protocol and trusted root certificates for the specified identity.</div>
   
   </td></tr>
 
@@ -463,12 +491,12 @@ Summary:
             
             static
             
-            boolean
+            SSLSocketFactory
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#isAccountAllowed(java.lang.String)">isAccountAllowed</a></span>(String upnOrAADId)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactory(java.lang.String, java.lang.String)">createSSLSocketFactory</a></span>(String identity, String protocol)
         
-        <div class="jd-descrdiv">Check if the given UPN or AAD user id (both case-insensitive) is allowed to sign in.</div>
+        <div class="jd-descrdiv">Creates an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</div>
   
   </td></tr>
 
@@ -481,30 +509,12 @@ Summary:
             
             static
             
-            void
+            TrustManager[]
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#listenForChanges(com.microsoft.intune.mam.client.app.AllowedAccountsListener)">listenForChanges</a></span>(<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountsListener.html">AllowedAccountsListener</a> listener)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagers(java.lang.String)">createX509TrustManagers</a></span>(String identity)
         
-        <div class="jd-descrdiv">Listen for changed to the allowed account list.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccounts.html#unregisterListener(com.microsoft.intune.mam.client.app.AllowedAccountsListener)">unregisterListener</a></span>(<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountsListener.html">AllowedAccountsListener</a> listener)
-        
-        <div class="jd-descrdiv">Unregister a listener previously passed to listenForChanges.</div>
+        <div class="jd-descrdiv">Creates an array of X509TrustManager that uses the trusted root certificates from the MAM service for the specified identity.</div>
   
   </td></tr>
 
@@ -767,7 +777,7 @@ From class
 
 
 
-<a id="getAllowedAccounts()"></a>
+<a id="createSSLContext(java.lang.String, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -777,10 +787,10 @@ From class
          
          
          
-        List&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountInfo.html">AllowedAccountInfo</a>&gt;
+        SSLContext
       </span>
-      <span class="sympad">getAllowedAccounts</span>
-      <span class="normal">()</span>
+      <span class="sympad">createSSLContext</span>
+      <span class="normal">(String identity, String protocol)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -792,95 +802,43 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns the list of allowed accounts or null if restrictions are not in place. If the list is non-null, the app is expected
- to allow only AAD-based accounts corresponding to the listed UPNs to sign in.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>list of allowed accounts or null if no restrictions
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="isAccountAllowed(java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        boolean
-      </span>
-      <span class="sympad">isAccountAllowed</span>
-      <span class="normal">(String upnOrAADId)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Check if the given UPN or AAD user id (both case-insensitive) is allowed to sign in.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL context that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>upnOrAADId</th>
-          <td>UPN or AAD id to check</td>
+          <th>identity</th>
+          <td>an optional string identifier for a particular user running the application that is expected to receive
+                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
+                 is running.</td>
+        </tr>
+        <tr>
+          <th>protocol</th>
+          <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
+                 is not provided, MAM will determine the highest supported protocol for the current level of Android
+                 at runtime.</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the given user is allowed to sign in, false otherwise
-</li></ul>
+      <ul class="nolist"><li>an SSLContext that uses the specified protocol and trusted root certificates for the specified identity.</li></ul>
   </div>
-
-    </div>
-</div>
-
-
-<a id="listenForChanges(com.microsoft.intune.mam.client.app.AllowedAccountsListener)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">listenForChanges</span>
-      <span class="normal">(<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountsListener.html">AllowedAccountsListener</a> listener)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Listen for changed to the allowed account list. The provided listener will be invoked if and when changes occur.</p></div>
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
         <tr>
-          <th>listener</th>
-          <td>listener to receive change notifications
+            <th>NoSuchAlgorithmException</td>
+            <td>if the specified protocol is not available.</td>
+        </tr>  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>KeyManagementException</td>
+            <td>if the SSL context cannot be created.
 </td>
         </tr>
       </table>
@@ -890,7 +848,7 @@ From class
 </div>
 
 
-<a id="unregisterListener(com.microsoft.intune.mam.client.app.AllowedAccountsListener)"></a>
+<a id="createSSLSocketFactory(java.lang.String, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -900,10 +858,10 @@ From class
          
          
          
-        void
+        SSLSocketFactory
       </span>
-      <span class="sympad">unregisterListener</span>
-      <span class="normal">(<a href="../../../../../../com/microsoft/intune/mam/client/app/AllowedAccountsListener.html">AllowedAccountsListener</a> listener)</span>
+      <span class="sympad">createSSLSocketFactory</span>
+      <span class="normal">(String identity, String protocol)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -915,16 +873,105 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Unregister a listener previously passed to listenForChanges. Note that it is recommended to maintain a listener for the
- process lifetime to ensure that your app responds to changes in allowed account promptly, and therefore most apps are not
- expected to need this method. If you unregister all listeners, you must take care to check the value of getAllowedAccounts()
- to respond to changes as soon as possible.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>listener</th>
-          <td>listener to unregister
+          <th>identity</th>
+          <td>an optional string identifier for a particular user running the application that is expected to receive
+                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
+                 is running.</td>
+        </tr>
+        <tr>
+          <th>protocol</th>
+          <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
+                 is not provided, MAM will determine the highest supported protocol for the current level of Android
+                 at runtime.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the specified protocol is not available on Android where the application is running.</td>
+        </tr>  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>KeyManagementException</td>
+            <td>if the SSL context cannot be created.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="createX509TrustManagers(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        TrustManager[]
+      </span>
+      <span class="sympad">createX509TrustManagers</span>
+      <span class="normal">(String identity)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an array of X509TrustManager that uses the trusted root certificates from the MAM service for the specified identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>identity</th>
+          <td>an optional string identifier for a particular user running the application that is expected to receive
+                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
+                 is running.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an array of X509TrustManager instances that use the trusted root certificates from the MAM service for the specified
+ identity.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the algorithm for creating trust managers is not available.
 </td>
         </tr>
       </table>

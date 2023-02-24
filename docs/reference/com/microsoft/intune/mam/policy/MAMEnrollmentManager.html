@@ -404,6 +404,24 @@
             
             
             
+            <a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html">MAMEnrollmentManager.Result</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String, java.lang.String)">getRegisteredAccountStatus</a></span>(String upn, String aadId)
+        
+        <div class="jd-descrdiv">Returns the status of the given account if it is registered for MAM.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
             void
         </td>
         <td class="jd-linkcol" width="100%">
@@ -415,7 +433,7 @@
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -433,7 +451,7 @@
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -451,7 +469,7 @@
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -464,7 +482,25 @@
         <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)">registerAuthenticationCallback</a></span>(<a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html">MAMServiceAuthenticationCallback</a> callback)
         
         <div class="jd-descrdiv">This is the mechanism whereby the application provides its
- AuthenticationCallback instance to the SDK.</div>
+ MAMServiceAuthenticationCallback instance to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String, java.lang.String)">unregisterAccountForMAM</a></span>(String upn, String aadId)
+        
+        <div class="jd-descrdiv">Remove the registration for the given account.</div>
   
   </td></tr>
 
@@ -601,6 +637,55 @@
 </div>
 
 
+<a id="getRegisteredAccountStatus(java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html">MAMEnrollmentManager.Result</a>
+      </span>
+      <span class="sympad">getRegisteredAccountStatus</span>
+      <span class="normal">(String upn, String aadId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the status of the given account if it is registered for MAM.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>the UPN of the account.</td>
+        </tr>
+        <tr>
+          <th>aadId</th>
+          <td>the AAD Id (OID) of the account.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>status of the account if it is registered, null otherwise.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="registerADALConnectionDetails(java.lang.String, com.microsoft.intune.mam.client.app.startup.ADALConnectionDetails)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -688,7 +773,7 @@
         </tr>
         <tr>
           <th>aadId</th>
-          <td>the AAD Id of the account.  Can be found after successful
+          <td>the AAD Id (OID) of the account. Can be found after successful
  		ADAL authentication from AuthenticationResult.getUserInfo().getUserId()</td>
         </tr>
         <tr>
@@ -749,7 +834,7 @@
         </tr>
         <tr>
           <th>aadId</th>
-          <td>the AAD Id of the account.  Can be found after successful
+          <td>the AAD Id (OID) of the account. Can be found after successful
  		ADAL authentication from AuthenticationResult.getUserInfo().getUserId()</td>
         </tr>
         <tr>
@@ -793,7 +878,7 @@
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>This is the mechanism whereby the application provides its
- AuthenticationCallback instance to the SDK.  This should be
+ MAMServiceAuthenticationCallback instance to the SDK. This should be
  called as soon as possible during app execution, (e.g. in override
  to MAMApplication.onMAMCreate) in case any registered accounts require
  enrollment retries, and to support token requests for policy checkins.</p></div>
@@ -802,7 +887,57 @@
       <table class="jd-tagtable">
         <tr>
           <th>callback</th>
-          <td>instance of the AuthenticationCallback interface
+          <td>a callback instance that implements either MAMServiceAuthenticationCallback or
+ 	    MAMServiceAuthenticationCallbackExtended.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="unregisterAccountForMAM(java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">unregisterAccountForMAM</span>
+      <span class="normal">(String upn, String aadId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the registration for the given account.  If the account is
+ MAM enrolled, it will be unenrolled, and if it is also managed the app
+ will be wiped.  Periodic enrollment retries for non-enrolled accounts
+ will stop.  Status of the account and unenrollment request will
+ be provided to the app via notifications. This method is idempotent.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>the UPN of the account.</td>
+        </tr>
+        <tr>
+          <th>aadId</th>
+          <td>the AAD Id (OID) of the account.
 </td>
         </tr>
       </table>
@@ -841,7 +976,7 @@
  MAM enrolled, it will be unenrolled, and if it is also managed the app
  will be wiped.  Periodic enrollment retries for non-enrolled accounts
  will stop.  Status of the account and unenrollment request will
- be provided to the app via notifications.  This method is idempotent.</p></div>
+ be provided to the app via notifications. This method is idempotent.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -895,7 +1030,7 @@
         </tr>
         <tr>
           <th>aadId</th>
-          <td>the ADAL Id of the account requested in the callback.</td>
+          <td>the AAD Id (OID) of the account requested in the callback.</td>
         </tr>
         <tr>
           <th>resourceId</th>
