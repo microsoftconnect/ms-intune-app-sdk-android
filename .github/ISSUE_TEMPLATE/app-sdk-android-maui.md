@@ -1,3 +1,11 @@
+---
+name: App SDK for Android - .NET MAUI
+about: Open an issue relating to the `Microsoft.Intune.Maui.Essentials.android` NuGet package.
+title: "[.NET MAUI] TODO"
+labels: ''
+assignees: ''
+---
+
 # Intune Android App SDK for .NET MAUI Issue
 
 ## Summary
