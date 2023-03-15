@@ -204,6 +204,7 @@
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAliasActivity.html">MAMAliasActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html">MAMApplication</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html">MAMCertificatePinningManager</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html">MAMCertTrustWebViewClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMComponents.html">MAMComponents</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html">MAMConfigOnly</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMDialog.html">MAMDialog</a></li>
@@ -809,15 +810,15 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
-                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
-                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
-                 is running.</td>
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
         </tr>
         <tr>
           <th>protocol</th>
           <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
-                 is not provided, MAM will determine the highest supported protocol for the current level of Android
-                 at runtime.</td>
+         is not provided, MAM will use the default supported protocol for the current level of Android
+         at runtime.</td>
         </tr>
       </table>
   </div>
@@ -838,7 +839,11 @@ From class
         </tr>  
         <tr>
             <th>KeyManagementException</td>
-            <td>if the SSL context cannot be created.
+            <td>if the SSL context cannot be created.</td>
+        </tr>  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.
 </td>
         </tr>
       </table>
@@ -880,15 +885,15 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
-                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
-                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
-                 is running.</td>
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
         </tr>
         <tr>
           <th>protocol</th>
           <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
-                 is not provided, MAM will determine the highest supported protocol for the current level of Android
-                 at runtime.</td>
+         is not provided, MAM will use the default supported protocol for the current level of Android
+         at runtime.</td>
         </tr>
       </table>
   </div>
@@ -909,7 +914,11 @@ From class
         </tr>  
         <tr>
             <th>KeyManagementException</td>
-            <td>if the SSL context cannot be created.
+            <td>if the SSL context cannot be created.</td>
+        </tr>  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.
 </td>
         </tr>
       </table>
@@ -951,9 +960,9 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
-                 trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
-                 in and MAM will attempt to discover the correct identity from the thread or process in which this class
-                 is running.</td>
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
         </tr>
       </table>
   </div>
@@ -966,12 +975,16 @@ From class
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the algorithm for creating trust managers is not available.</td>
+        </tr>  
+        <tr>
             <th>KeyStoreException</td>
             <td>if the keystore has not been initialized.</td>
         </tr>  
         <tr>
-            <th>NoSuchAlgorithmException</td>
-            <td>if the algorithm for creating trust managers is not available.
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.
 </td>
         </tr>
       </table>

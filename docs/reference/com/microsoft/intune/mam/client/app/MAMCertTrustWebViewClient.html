@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  MAMPendingIntent
+  MAMCertTrustWebViewClient
 
 
 </title>
@@ -204,7 +204,7 @@
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMAliasActivity.html">MAMAliasActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMApplication.html">MAMApplication</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html">MAMCertificatePinningManager</a></li>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html">MAMCertTrustWebViewClient</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html">MAMCertTrustWebViewClient</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMComponents.html">MAMComponents</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html">MAMConfigOnly</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMDialog.html">MAMDialog</a></li>
@@ -218,7 +218,7 @@
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMListFragment.html">MAMListFragment</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMNativeActivity.html">MAMNativeActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMNotificationManagement.html">MAMNotificationManagement</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html">MAMPendingIntent</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html">MAMPendingIntent</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMService.html">MAMService</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTabActivity.html">MAMTabActivity</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTaskStackBuilder.html">MAMTaskStackBuilder</a></li>
@@ -278,6 +278,15 @@
    
   
   
+   
+  
+  
+  
+
+  
+   
+  
+  
   
   
 
@@ -292,12 +301,18 @@ Summary:
 
 
 
+  <a href="#inhconstants">Inherited Constants</a>
+  
 
 
 
 
+  &#124; <a href="#pubctors">Ctors</a>
+  
 
-  <a href="#pubmethods">Methods</a>
+
+
+  &#124; <a href="#pubmethods">Methods</a>
   
 
 
@@ -323,15 +338,19 @@ Summary:
 <div id="jd-header">
     public
      
-    final 
+     
     
     class
-<h1>MAMPendingIntent</h1>
+<h1>MAMCertTrustWebViewClient</h1>
 
 
 
   
-    extends Object<br/>
+  
+  
+
+  
+    extends WebViewClient<br/>
   
   
   
@@ -351,7 +370,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -359,7 +378,17 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.MAMPendingIntent</td>
+        <td colspan="2" class="jd-inheritance-class-cell">android.webkit.WebViewClient</td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;</td>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.app.MAMCertTrustWebViewClient</td>
     </tr>
     
 
@@ -375,8 +404,17 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>MAM wrapper around PendingIntentFactory. It is recommended to call into PendingIntentFactory as normal and allow the Build Plugin
- to apply this wrapper.
+<p>MAMCertTrustWebViewClient is a custom implementation of the class android.webkit.WebViewClient that
+ provides a way to handle the SSL error android.net.http.SslError.SSL_UNTRUSTED in a WebView.
+
+ The class overrides the method <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html#onReceivedSslError(android.webkit.WebView, android.webkit.SslErrorHandler, android.net.http.SslError)">onReceivedSslError(WebView, SslErrorHandler, SslError)</a></code> and handles the SSL
+ error android.net.http.SslError.SSL_UNTRUSTED only. In handling the error, the class uses trusted root
+ certificates that are configured in Intune and received from the MAM service to check the trustworthiness
+ of the host from the target URL that generated the error in WebView.
+
+ If the custom behavior does not handle the SSL error, the default behavior inherited from the superclass will be executed.
+ When using this class, you should create an instance of it and then call <code><a href="null#setWebViewClient(android.webkit.WebViewClient)">setWebViewClient(WebViewClient)</a></code>
+ to register it with the WebView instance.
 </p>
 
 
@@ -420,11 +458,217 @@ Summary:
 
 
 
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-android.webkit.WebViewClient" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-android.webkit.WebViewClient-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+android.webkit.WebViewClient
+<div id="inherited-constants-android.webkit.WebViewClient">
+  <div id="inherited-constants-android.webkit.WebViewClient-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-android.webkit.WebViewClient-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_AUTHENTICATION</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_BAD_URL</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_CONNECT</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_FAILED_SSL_HANDSHAKE</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_FILE</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_FILE_NOT_FOUND</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_HOST_LOOKUP</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_IO</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_PROXY_AUTHENTICATION</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_REDIRECT_LOOP</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_TIMEOUT</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_TOO_MANY_REQUESTS</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_UNKNOWN</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_UNSAFE_RESOURCE</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_UNSUPPORTED_AUTH_SCHEME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">ERROR_UNSUPPORTED_SCHEME</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">SAFE_BROWSING_THREAT_BILLING</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">SAFE_BROWSING_THREAT_MALWARE</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">SAFE_BROWSING_THREAT_PHISHING</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">SAFE_BROWSING_THREAT_UNKNOWN</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol">SAFE_BROWSING_THREAT_UNWANTED_SOFTWARE</td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
 
 
 
 
 
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html#MAMCertTrustWebViewClient()">MAMCertTrustWebViewClient</a></span>()
+        
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -442,122 +686,16 @@ Summary:
             
             
             
-            static
             
-            PendingIntent
+            
+            void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getActivities(android.content.Context, int, android.content.Intent[], int, android.os.Bundle)">getActivities</a></span>(Context context, int requestCode, Intent[] intents, int flags, Bundle options)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html#onReceivedSslError(android.webkit.WebView, android.webkit.SslErrorHandler, android.net.http.SslError)">onReceivedSslError</a></span>(WebView view, SslErrorHandler handler, SslError error)
         
-        <div class="jd-descrdiv">See PendingIntent.getActivities.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getActivities(android.content.Context, int, android.content.Intent[], int)">getActivities</a></span>(Context context, int requestCode, Intent[] intents, int flags)
-        
-        <div class="jd-descrdiv">See PendingIntent.getActivities.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getActivity(android.content.Context, int, android.content.Intent, int)">getActivity</a></span>(Context context, int requestCode, Intent intent, int flags)
-        
-        <div class="jd-descrdiv">See PendingIntent.getActivity.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getActivity(android.content.Context, int, android.content.Intent, int, android.os.Bundle)">getActivity</a></span>(Context context, int requestCode, Intent intent, int flags, Bundle options)
-        
-        <div class="jd-descrdiv">See PendingIntent.getActivity.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getBroadcast(android.content.Context, int, android.content.Intent, int)">getBroadcast</a></span>(Context context, int requestCode, Intent intent, int flags)
-        
-        <div class="jd-descrdiv">See PendingIntent.getBroadcast.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getForegroundService(android.content.Context, int, android.content.Intent, int)">getForegroundService</a></span>(Context context, int requestCode, Intent intent, int flags)
-        
-        <div class="jd-descrdiv">See PendingIntent.getForegroundService.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            PendingIntent
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMPendingIntent.html#getService(android.content.Context, int, android.content.Intent, int)">getService</a></span>(Context context, int requestCode, Intent intent, int flags)
-        
-        <div class="jd-descrdiv">See PendingIntent.getService.</div>
+        <div class="jd-descrdiv">Handles the SSL error android.net.http.SslError.SSL_UNTRUSTED by extracting the host, the error
+ certificate, and the authentication type needed to be used by MAM's custom TrustManager instances that
+ have been configured with trusted root certificates received from the MAM service.</div>
   
   </td></tr>
 
@@ -575,6 +713,400 @@ Summary:
 <table id="inhmethods" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-android.webkit.WebViewClient" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-android.webkit.WebViewClient-trigger"
+          src="../../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  android.webkit.WebViewClient
+
+<div id="inherited-methods-android.webkit.WebViewClient">
+  <div id="inherited-methods-android.webkit.WebViewClient-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-android.webkit.WebViewClient-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">doUpdateVisitedHistory</span>(WebView arg0, String arg1, boolean arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onFormResubmission</span>(WebView arg0, Message arg1, Message arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onLoadResource</span>(WebView arg0, String arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onPageCommitVisible</span>(WebView arg0, String arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onPageFinished</span>(WebView arg0, String arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onPageStarted</span>(WebView arg0, String arg1, Bitmap arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedClientCertRequest</span>(WebView arg0, ClientCertRequest arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedError</span>(WebView arg0, int arg1, String arg2, String arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedError</span>(WebView arg0, WebResourceRequest arg1, WebResourceError arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedHttpAuthRequest</span>(WebView arg0, HttpAuthHandler arg1, String arg2, String arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedHttpError</span>(WebView arg0, WebResourceRequest arg1, WebResourceResponse arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedLoginRequest</span>(WebView arg0, String arg1, String arg2, String arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onReceivedSslError</span>(WebView arg0, SslErrorHandler arg1, SslError arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onRenderProcessGone</span>(WebView arg0, RenderProcessGoneDetail arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onSafeBrowsingHit</span>(WebView arg0, WebResourceRequest arg1, int arg2, SafeBrowsingResponse arg3)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onScaleChanged</span>(WebView arg0, float arg1, float arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onTooManyRedirects</span>(WebView arg0, Message arg1, Message arg2)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">onUnhandledKeyEvent</span>(WebView arg0, KeyEvent arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            WebResourceResponse
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">shouldInterceptRequest</span>(WebView arg0, WebResourceRequest arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            WebResourceResponse
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">shouldInterceptRequest</span>(WebView arg0, String arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">shouldOverrideKeyEvent</span>(WebView arg0, KeyEvent arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">shouldOverrideUrlLoading</span>(WebView arg0, WebResourceRequest arg1)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">shouldOverrideUrlLoading</span>(WebView arg0, String arg1)
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
 
 
 <tr class="api apilevel-" >
@@ -807,6 +1339,44 @@ From class
 <!-- Public ctors -->
 
 
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<a id="MAMCertTrustWebViewClient()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">MAMCertTrustWebViewClient</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+
+
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <!-- Protected ctors -->
@@ -820,20 +1390,20 @@ From class
 
 
 
-<a id="getActivities(android.content.Context, int, android.content.Intent[], int, android.os.Bundle)"></a>
+<a id="onReceivedSslError(android.webkit.WebView, android.webkit.SslErrorHandler, android.net.http.SslError)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
-        static 
          
          
          
-        PendingIntent
+         
+        void
       </span>
-      <span class="sympad">getActivities</span>
-      <span class="normal">(Context context, int requestCode, Intent[] intents, int flags, Bundle options)</span>
+      <span class="sympad">onReceivedSslError</span>
+      <span class="normal">(WebView view, SslErrorHandler handler, SslError error)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -845,382 +1415,30 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getActivities.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Handles the SSL error android.net.http.SslError.SSL_UNTRUSTED by extracting the host, the error
+ certificate, and the authentication type needed to be used by MAM's custom TrustManager instances that
+ have been configured with trusted root certificates received from the MAM service.
+
+ The method calls android.webkit.SslErrorHandler.proceed only when MAM's TrustManager instances
+ have determined the trustworthiness of the host. When the host trust check fails, the method defers
+ to the default behavior inherited from the superclass.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>context</th>
-          <td>See PendingIntent.getActivities.</td>
+          <th>view</th>
+          <td>The WebView instance that is raising the SSL error.</td>
         </tr>
         <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getActivities.</td>
+          <th>handler</th>
+          <td>An SslErrorHandler that will proceed when the host passes MAM's TrustManager instances host checks.</td>
         </tr>
         <tr>
-          <th>intents</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-        <tr>
-          <th>options</th>
-          <td>See PendingIntent.getActivities.</td>
+          <th>error</th>
+          <td>The SSL error object generated in the WebView instance.
+</td>
         </tr>
       </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getActivities.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getActivities(android.content.Context, int, android.content.Intent[], int)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getActivities</span>
-      <span class="normal">(Context context, int requestCode, Intent[] intents, int flags)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getActivities.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-        <tr>
-          <th>intents</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getActivities.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getActivities.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getActivity(android.content.Context, int, android.content.Intent, int)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getActivity</span>
-      <span class="normal">(Context context, int requestCode, Intent intent, int flags)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getActivity.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>intent</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getActivity.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getActivity(android.content.Context, int, android.content.Intent, int, android.os.Bundle)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getActivity</span>
-      <span class="normal">(Context context, int requestCode, Intent intent, int flags, Bundle options)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getActivity.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>intent</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-        <tr>
-          <th>options</th>
-          <td>See PendingIntent.getActivity.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getActivity.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getBroadcast(android.content.Context, int, android.content.Intent, int)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getBroadcast</span>
-      <span class="normal">(Context context, int requestCode, Intent intent, int flags)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getBroadcast.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getBroadcast.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getBroadcast.</td>
-        </tr>
-        <tr>
-          <th>intent</th>
-          <td>See PendingIntent.getBroadcast.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getBroadcast.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getBroadcast.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getForegroundService(android.content.Context, int, android.content.Intent, int)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getForegroundService</span>
-      <span class="normal">(Context context, int requestCode, Intent intent, int flags)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getForegroundService.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getForegroundService.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getForegroundService.</td>
-        </tr>
-        <tr>
-          <th>intent</th>
-          <td>See PendingIntent.getForegroundService.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getForegroundService.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getForegroundService.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="getService(android.content.Context, int, android.content.Intent, int)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        PendingIntent
-      </span>
-      <span class="sympad">getService</span>
-      <span class="normal">(Context context, int requestCode, Intent intent, int flags)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>See PendingIntent.getService.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</th>
-          <td>See PendingIntent.getService.</td>
-        </tr>
-        <tr>
-          <th>requestCode</th>
-          <td>See PendingIntent.getService.</td>
-        </tr>
-        <tr>
-          <th>intent</th>
-          <td>See PendingIntent.getService.</td>
-        </tr>
-        <tr>
-          <th>flags</th>
-          <td>See PendingIntent.getService.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>See PendingIntent.getService.
-</li></ul>
   </div>
 
     </div>

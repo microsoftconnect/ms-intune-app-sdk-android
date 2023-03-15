@@ -3205,6 +3205,23 @@
 >
 </method>
 </class>
+<class name="MAMCertTrustWebViewClient"
+ extends="android.webkit.WebViewClient"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MAMCertTrustWebViewClient"
+ type="com.microsoft.intune.mam.client.app.MAMCertTrustWebViewClient"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
 <class name="MAMCertificatePinningManager"
  extends="java.lang.Object"
  abstract="false"
@@ -8352,6 +8369,8 @@
 </parameter>
 <parameter name="protocol" type="java.lang.String">
 </parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
 <exception name="KeyManagementException" type="java.security.KeyManagementException">
 </exception>
 <exception name="KeyStoreException" type="java.security.KeyStoreException">
@@ -8373,6 +8392,8 @@
 </parameter>
 <parameter name="protocol" type="java.lang.String">
 </parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
 <exception name="KeyManagementException" type="java.security.KeyManagementException">
 </exception>
 <exception name="KeyStoreException" type="java.security.KeyStoreException">
@@ -8392,6 +8413,8 @@
 >
 <parameter name="identity" type="java.lang.String">
 </parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
 <exception name="KeyStoreException" type="java.security.KeyStoreException">
 </exception>
 <exception name="NoSuchAlgorithmException" type="java.security.NoSuchAlgorithmException">

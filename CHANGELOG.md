@@ -1,3 +1,8 @@
+Version 9.5.0
+-------------
+* Add MAMTrustedRootCertsManager and MAMCertTrustWebViewClient APIs for trusted root certificates support.
+* Fix SecurityException in isolated processes on devices with API 27 or under.
+
 Version 9.4.0
 -------------
 * Add new preview build plugin to support Android Gradle Plugin 8.0.
