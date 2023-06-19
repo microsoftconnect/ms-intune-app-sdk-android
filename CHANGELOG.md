@@ -1,3 +1,25 @@
+Version 9.7.0
+-------------
+* Remove no-longer-necessary ProGuard rules targeting the legacy Android
+  Support Libraries. SDK support for these was removed in `8.0.0`.
+* Fix configuration cache and incremental build issues with new build plugin.
+  The new plugin is now fully supported for AGP 8.
+
+Version 9.6.1
+-------------
+* Fix handling of int, float, and short in `MAMAppConfig` when
+  returning config from Android Enterprise (rather than the MAM
+  channel)
+
+Version 9.6.0
+-------------
+* Deprecate ADALConnectionDetails and remove obsolete meta-data authentication configurations.
+* Preview build plugin is now part of the main artifact.
+  Apply `com.microsoft.intune.mam-preview` to use the new behavior with
+  Android Gradle Plugin 7.4. The preview plugin is applied automatically
+  for AGP 8.
+* Add missing hooks for onActivityDestroyed in ActivityLifecycleCallbacks.
+
 Version 9.5.0
 -------------
 * Add MAMTrustedRootCertsManager and MAMCertTrustWebViewClient APIs for trusted root certificates support.

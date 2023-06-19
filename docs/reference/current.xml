@@ -9099,7 +9099,7 @@
  abstract="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <implements name="android.os.Parcelable">
