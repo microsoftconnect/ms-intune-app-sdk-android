@@ -1,3 +1,28 @@
+Version 10.0.0
+-------------
+* Support for Android 14 targeting.
+* Update Javassist dependency to 3.29.2-GA.
+* Update minimum supported MAM SDK version to Android 4.1 (API level 16).
+
+Version 9.7.4
+-------------
+* Fix for MAM error logging.
+* Update strings to fix support for accessibility tools.
+
+Version 9.7.3
+-------------
+* Fix behavior for `onQueryDeletedMedia` and `onQueryMedia` in `MAMCloudMediaProvider`
+* Miscellaneous code cleanup for obsolete enrollment cache items.
+* Fix `ClassNotFoundException` in `OfflineActivityBehavior`.
+
+Version 9.7.2
+-------------
+* Error telemetry improvements.
+
+Version 9.7.1
+-------------
+* Add Gradle build cache support for MAM plugin on AGP 7.4+.
+
 Version 9.7.0
 -------------
 * Remove no-longer-necessary ProGuard rules targeting the legacy Android
