@@ -68,7 +68,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\com.microsoft.intune.mam.build.cli.jar;%APP_HOME%\lib\com.microsoft.intune.mam.build.core.jar;%APP_HOME%\lib\com.microsoft.intune.mam.rewrite.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\javassist-3.27.0-GA.jar
+set CLASSPATH=%APP_HOME%\lib\com.microsoft.intune.mam.build.cli.jar;%APP_HOME%\lib\com.microsoft.intune.mam.build.core.jar;%APP_HOME%\lib\com.microsoft.intune.mam.rewrite.jar;%APP_HOME%\lib\commons-cli-1.4.jar;%APP_HOME%\lib\javassist-3.29.2-GA.jar
 
 
 @rem Execute BuildToolCLI

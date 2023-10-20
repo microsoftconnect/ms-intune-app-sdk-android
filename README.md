@@ -1,6 +1,6 @@
 # Microsoft Intune App SDK for Android
 
-Version [9.7.0](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases)
+Version [10.0.0](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases)
 
 See [release notes](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases) for more information. GitHub users can receive email notifications for new releases to this repo by clicking on **Releases only** from the "Watch" drop-down menu in the upper right-hand corner.
 

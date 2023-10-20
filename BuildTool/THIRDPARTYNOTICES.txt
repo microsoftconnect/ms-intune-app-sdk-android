@@ -5,17 +5,17 @@ This file is based on or incorporates material from the projects listed below (T
 
 Third Party Code: 
 
-1. org.javassist:javassist v. 3.27 (https://github.com/jboss-javassist/javassist)
+1. org.javassist:javassist v. 3.29.2 (https://github.com/jboss-javassist/javassist)
 2. code from https://github.com/turn/RedefineClassAgent
 3. commons-cli:commons-cli v. 1.4 (http://commons.apache.org/proper/commons-cli/download_cli.cgi)
 
 As the recipient of the above Third-Party Code, Microsoft sets forth a copy of the notices and other information below.
 Provided for Informational Purposes Only 
 
-%% org.javassist:javassist v. 3.27 NOTICES AND INFORMATION BEGIN HERE
+%% org.javassist:javassist v. 3.29.2 NOTICES AND INFORMATION BEGIN HERE
 =========================================
 
-Copyright (c) 1999-2020 Shigeru Chia
+Copyright (c) 1999-2023 Shigeru Chia
 
 Apache 2.0 License
 
@@ -26,7 +26,7 @@ THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF A
 See the Apache Version 2.0 License for specific language governing permissions and limitations under the License.
 
 
-END OF org.javassist:javassist v. 3.27 NOTICES AND INFORMATION
+END OF org.javassist:javassist v. 3.29.2 NOTICES AND INFORMATION
 =========================================
 
 %% RedefineClassAgent NOTICES AND INFORMATION BEGIN HERE
