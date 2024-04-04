@@ -486,6 +486,28 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread.</div>
   
   </td></tr>
@@ -563,7 +585,12 @@ Summary:
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchResultCallback)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread. The application
  must call <code>callback.reportIdentitySwitchResult</code> to tell MAM whether the identity switch is allowed. In general,
  applications should allow identity switches. The default implementation allows all identity switches.
@@ -579,7 +606,64 @@ Summary:
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>identity being switched to</td>
+          <td>UPN of the identity being switched to.</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>must be called to notify MAM whether to allow the switch.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onMAMIdentitySwitchRequired</span>
+      <span class="normal">(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread. The application
+ must call <code>callback.reportIdentitySwitchResult</code> to tell MAM whether the identity switch is allowed. In general,
+ applications should allow identity switches. The default implementation allows all identity switches.
+
+ Service calls will block until the callback is made. For services which run on the UI thread, the callback must be made
+ before this function returns, otherwise the application will be nonresponsive. If a FAILED result is reported,
+ then the service operation that initiated the identity switch will be cancelled.
+
+ Activities should instead override the four-argument version of this method from
+ <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html">MAMActivityIdentityRequirementListener</a></code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN of the identity being switched to.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity being switched to.</td>
         </tr>
         <tr>
           <th>callback</th>

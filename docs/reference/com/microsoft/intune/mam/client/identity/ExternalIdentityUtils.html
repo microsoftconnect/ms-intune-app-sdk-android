@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  MAMIdentityExecutors
+  ExternalIdentityUtils
 
 
 </title>
@@ -187,11 +187,11 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html">ExternalIdentityUtils</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html">ExternalIdentityUtils</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMAsyncTask.html">MAMAsyncTask</a>&lt;Params,&nbsp;Progress,&nbsp;Result&gt;</li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html">MAMDataProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html">MAMFileProtectionManager</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html">MAMIdentityExecutors</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html">MAMIdentityExecutors</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityOIDRunnable.html">MAMIdentityOIDRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityRunnable.html">MAMIdentityRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html">MAMPolicyManager</a></li>
@@ -295,7 +295,7 @@ Summary:
     final 
     
     class
-<h1>MAMIdentityExecutors</h1>
+<h1>ExternalIdentityUtils</h1>
 
 
 
@@ -328,7 +328,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.identity.MAMIdentityExecutors</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.client.identity.ExternalIdentityUtils</td>
     </tr>
     
 
@@ -344,7 +344,8 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Wrap executors to automatically copy a MAM identity to any started tasks.
+<p>Utility functions for converting String parameters to MAMIdentities, for
+ use in External code.
 </p>
 
 
@@ -412,12 +413,13 @@ Summary:
             
             static
             
-            Executor
+            MAMIdentity
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html#wrapExecutor(java.util.concurrent.Executor, android.content.Context)">wrapExecutor</a></span>(Executor executor, Context context)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html#fromUpnAndOid(java.lang.String, java.lang.String)">fromUpnAndOid</a></span>(String upn, String oid)
         
-        <div class="jd-descrdiv">Wrap an Executor to copy the MAM identity.</div>
+        <div class="jd-descrdiv">This is used to convert UPN and OID parameters from API calls that take
+ both into the corresponding MAMIdentity.</div>
   
   </td></tr>
 
@@ -430,48 +432,12 @@ Summary:
             
             static
             
-            Executor
+            MAMIdentity
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html#wrapExecutor(java.util.concurrent.Executor)">wrapExecutor</a></span>(Executor executor)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html#identityFromOID(java.lang.String)">identityFromOID</a></span>(String oid)
         
-        <div class="jd-descrdiv">Wrap an Executor to copy the MAM identity.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            ExecutorService
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html#wrapExecutorService(java.util.concurrent.ExecutorService)">wrapExecutorService</a></span>(ExecutorService executorService)
-        
-        <div class="jd-descrdiv">Wrap an ExecutorService to copy the MAM identity.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            static
-            
-            ExecutorService
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html#wrapExecutorService(java.util.concurrent.ExecutorService, android.content.Context)">wrapExecutorService</a></span>(ExecutorService executorService, Context context)
-        
-        <div class="jd-descrdiv">Wrap an ExecutorService to copy the MAM identity.</div>
+        <div class="jd-descrdiv">Convert an OID parameter into a MAMIdentity.</div>
   
   </td></tr>
 
@@ -734,7 +700,7 @@ From class
 
 
 
-<a id="wrapExecutor(java.util.concurrent.Executor, android.content.Context)"></a>
+<a id="fromUpnAndOid(java.lang.String, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -744,10 +710,10 @@ From class
          
          
          
-        Executor
+        MAMIdentity
       </span>
-      <span class="sympad">wrapExecutor</span>
-      <span class="normal">(Executor executor, Context context)</span>
+      <span class="sympad">fromUpnAndOid</span>
+      <span class="normal">(String upn, String oid)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -759,23 +725,25 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Wrap an Executor to copy the MAM identity.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>This is used to convert UPN and OID parameters from API calls that take
+ both into the corresponding MAMIdentity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>executor</th>
-          <td>Object to wrap.</td>
+          <th>upn</th>
+          <td>the provided UPN.</td>
         </tr>
         <tr>
-          <th>context</th>
-          <td>Current Context.</td>
+          <th>oid</th>
+          <td>the provided OID.</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New object that wraps <code>executor</code>.
+      <ul class="nolist"><li>MAMIdentity based on the parameters, MAMIdentity.EMPTY if they are
+ both empty, and null if they are both null.
 </li></ul>
   </div>
 
@@ -783,7 +751,7 @@ From class
 </div>
 
 
-<a id="wrapExecutor(java.util.concurrent.Executor)"></a>
+<a id="identityFromOID(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -793,10 +761,10 @@ From class
          
          
          
-        Executor
+        MAMIdentity
       </span>
-      <span class="sympad">wrapExecutor</span>
-      <span class="normal">(Executor executor)</span>
+      <span class="sympad">identityFromOID</span>
+      <span class="normal">(String oid)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -808,113 +776,20 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Wrap an Executor to copy the MAM identity.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Convert an OID parameter into a MAMIdentity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>executor</th>
-          <td>Object to wrap.</td>
+          <th>oid</th>
+          <td>An OID representing an identity.</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New object that wraps <code>executor</code>.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="wrapExecutorService(java.util.concurrent.ExecutorService)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        ExecutorService
-      </span>
-      <span class="sympad">wrapExecutorService</span>
-      <span class="normal">(ExecutorService executorService)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Wrap an ExecutorService to copy the MAM identity.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>executorService</th>
-          <td>Object to wrap.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New object that wraps <code>executorService</code>.
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="wrapExecutorService(java.util.concurrent.ExecutorService, android.content.Context)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        ExecutorService
-      </span>
-      <span class="sympad">wrapExecutorService</span>
-      <span class="normal">(ExecutorService executorService, Context context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Wrap an ExecutorService to copy the MAM identity.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>executorService</th>
-          <td>Object to wrap.</td>
-        </tr>
-        <tr>
-          <th>context</th>
-          <td>Current Context.</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New object that wraps <code>executorService</code>.
+      <ul class="nolist"><li>MAMIdentity found or created from the given OID, MAMIdentity.EMPTY
+ if the OID is empty, or null if the OID is null.
 </li></ul>
   </div>
 

@@ -1,3 +1,33 @@
+Version 10.2.1
+-------------
+* Ensure that app always connects to Company Portal if App Config policy is in use.
+
+Version 10.2.0
+-------------
+* MAM SDK API methods that take UPNs to specify identities are deprecated.
+  They will be removed completely at the next major version increment.
+  New methods that specify identities by OID (also known as AAD User ID,
+  AAD ID or Entra ID) should be used instead. See the MAM SDK integration
+  guide and javadocs for details.
+
+Version 10.1.2
+-------------
+* Remove single identity assumptions from implicit wipe behavior.
+* Handle `ClassNotFoundException` and `BadParcelableException` thrown when un-parceling intent extras in offline mode.
+
+Version 10.1.1
+-------------
+* Fix `NullPointerException` in MAM logger initialization.
+
+Version 10.1.0
+-------------
+* Remove single identity assumptions in the enrolled identity and MAM service URL caches.
+  * IMPORTANT: this update performs cache migrations that are **not compatible for rollback**.
+    After updating to 9.7.5 and deploying, your app cannot downgrade to an earlier SDK version in a subsequent release. 
+* Remove redundant offline enrollment status caching.
+* Improve heuristic for primary offline identity.
+* Add MAMDiagnosticLogManager and MAMLogCollectionNotification to support M365 log collection feature.
+
 Version 10.0.0
 -------------
 * Support for Android 14 targeting.

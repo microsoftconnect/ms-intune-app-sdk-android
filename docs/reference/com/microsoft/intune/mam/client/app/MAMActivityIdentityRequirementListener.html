@@ -516,6 +516,29 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use
+ <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity.</div>
   
   </td></tr>
@@ -593,7 +616,13 @@ Summary:
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use
+ <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity. This can occur during
  activity creation or when a new intent is sent to an existing activity. The application must call
  callback.reportIdentitySwitchResult to tell MAM whether the identity switch is allowed. In general, applications should
@@ -615,6 +644,72 @@ Summary:
         <tr>
           <th>identity</th>
           <td>identity being switched to</td>
+        </tr>
+        <tr>
+          <th>reason</th>
+          <td>reason identity is being switched</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>must be called to notify MAM whether to allow the switch.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onMAMIdentitySwitchRequired</span>
+      <span class="normal">(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity. This can occur during
+ activity creation or when a new intent is sent to an existing activity. The application must call
+ callback.reportIdentitySwitchResult to tell MAM whether the identity switch is allowed. In general, applications should
+ allow identity switches. The default implementation allows all identity switches. When using the build plugin,
+ the default implementation can be accessed by calling <code>MAMctivity.defaultOnMAMIdentitySwitchRequired</code>.
+
+ The most common case for this method to be called is before onMAMCreate. The application is allowed to show UI to confirm
+ the identity switch, but it must show the UI using a different activity as onMAMCreate will not be called for this activity
+ until the identity switch is allowed.
+
+ Special care must be taken with single-top activities when a new intent can cause an identity switch. If a new intent causes
+ an identity switch, after the switch is approved by this method, onMAMNewIntent will be called and then recreate() will be
+ called which is necessary to enforce screenshot restrictions from the new policy. It is strongly recommended that the
+ implementation of onMAMNewIntent call setIntent, as otherwise the following recreate may cause the original intent rather
+ than the new intent to be displayed.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN of the identity being switched to</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity being switched to</td>
         </tr>
         <tr>
           <th>reason</th>

@@ -187,10 +187,12 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html">ExternalIdentityUtils</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMAsyncTask.html">MAMAsyncTask</a>&lt;Params,&nbsp;Progress,&nbsp;Result&gt;</li>
           <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html">MAMDataProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html">MAMFileProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html">MAMIdentityExecutors</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityOIDRunnable.html">MAMIdentityOIDRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityRunnable.html">MAMIdentityRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html">MAMPolicyManager</a></li>
       </ul>
@@ -492,7 +494,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protect(byte[], java.lang.String)">protect</a></span>(byte[] input, String identity)
         
-        <div class="jd-descrdiv">Protect a byte array.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(byte[], java.lang.String)">protectForOID(byte[], String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -510,7 +516,47 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protect(java.io.InputStream, java.lang.String)">protect</a></span>(InputStream input, String identity)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(java.io.InputStream, java.lang.String)">protectForOID(InputStream, String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            InputStream
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(java.io.InputStream, java.lang.String)">protectForOID</a></span>(InputStream input, String oid)
+        
         <div class="jd-descrdiv">Protect a stream.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            byte[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(byte[], java.lang.String)">protectForOID</a></span>(byte[] input, String oid)
+        
+        <div class="jd-descrdiv">Protect a byte array.</div>
   
   </td></tr>
 
@@ -1052,7 +1098,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(byte[], java.lang.String)">protectForOID(byte[], String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Protect a byte array. This will return protected bytes.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1063,7 +1114,7 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>Identity to set.</td>
+          <td>UPN of identity to set.</td>
         </tr>
       </table>
   </div>
@@ -1076,8 +1127,7 @@ From class
       <table class="jd-tagtable">  
         <tr>
             <th>IOException</td>
-            <td>If the data could not be protected.
-</td>
+            <td>If the data could not be protected.</td>
         </tr>
       </table>
   </div>
@@ -1110,7 +1160,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html#protectForOID(java.io.InputStream, java.lang.String)">protectForOID(InputStream, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Protect a stream. This will return a stream containing the protected input.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1124,7 +1179,125 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>Identity to set.</td>
+          <td>UPN of identity to set.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Protected input data.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If the data could not be protected.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="protectForOID(java.io.InputStream, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        InputStream
+      </span>
+      <span class="sympad">protectForOID</span>
+      <span class="normal">(InputStream input, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Protect a stream. This will return a stream containing the protected input.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>input</th>
+          <td>Input data to protect, read sequentially. This function will change the position of the stream but may not have
+ 		read the entire stream by the time it returns. The returned stream will wrap this one. Calls to read on the
+ 		returned stream may cause further reads on the original input stream. Callers should not expect to read directly
+ 		from the input stream after passing it to this method. Calling close on the returned stream will close this one.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of identity to set.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Protected input data.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If the data could not be protected.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="protectForOID(byte[], java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        byte[]
+      </span>
+      <span class="sympad">protectForOID</span>
+      <span class="normal">(byte[] input, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Protect a byte array. This will return protected bytes.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>input</th>
+          <td>Input data to protect.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of identity to set.</td>
         </tr>
       </table>
   </div>

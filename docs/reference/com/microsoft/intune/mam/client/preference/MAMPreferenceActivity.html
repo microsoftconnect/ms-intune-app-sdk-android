@@ -1924,13 +1924,35 @@ android.app.Activity
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#defaultOnMAMIdentitySwitchRequired(android.app.Activity, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">defaultOnMAMIdentitySwitchRequired</a></span>(Activity activity, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
-        <div class="jd-descrdiv">Expose default behavior for notifying the app that an incoming intent requires an identity switch for this Activity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#defaultOnMAMIdentitySwitchRequired(android.app.Activity, java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">defaultOnMAMIdentitySwitchRequired(Activity, String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#defaultOnMAMIdentitySwitchRequired(android.app.Activity, java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">defaultOnMAMIdentitySwitchRequired</a></span>(Activity activity, String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
+        <div class="jd-descrdiv">Expose default behavior for notifying the app that an incoming intent requires an identity switch for this Activity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1946,7 +1968,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1962,7 +1984,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1975,25 +1997,6 @@ android.app.Activity
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMActivityResult(int, int, android.content.Intent)">onMAMActivityResult</a></span>(int requestCode, int resultCode, Intent data)
         
         <div class="jd-descrdiv">MAM version of onActivityResult.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
-        
-        <div class="jd-descrdiv">Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
- required for the identity currently in use.</div>
   
   </td></tr>
 
@@ -2063,7 +2066,7 @@ android.app.Activity
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity.</div>
   
@@ -2081,6 +2084,24 @@ android.app.Activity
             void
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
+        <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#onMAMNewIntent(android.content.Intent)">onMAMNewIntent</a></span>(Intent intent)
         
         <div class="jd-descrdiv">MAM version of onNewIntent.</div>
@@ -2089,7 +2110,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2107,7 +2128,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2125,7 +2146,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2143,7 +2164,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2161,7 +2182,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2179,7 +2200,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2197,7 +2218,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2215,7 +2236,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2233,7 +2254,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2251,7 +2272,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2269,7 +2290,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2287,7 +2308,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2305,7 +2326,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2323,7 +2344,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2341,7 +2362,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2357,7 +2378,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2373,7 +2394,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2389,7 +2410,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2405,7 +2426,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2421,7 +2442,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2437,7 +2458,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2453,7 +2474,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2469,7 +2490,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2487,7 +2508,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2503,7 +2524,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2519,7 +2540,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2535,7 +2556,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2551,7 +2572,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2567,7 +2588,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2583,7 +2604,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2599,7 +2620,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2615,7 +2636,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2633,7 +2654,7 @@ android.app.Activity
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2643,7 +2664,7 @@ android.app.Activity
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#switchMAMIdentity(java.lang.String)">switchMAMIdentity</a></span>(String newIdentity)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID</a></span>(String newOid, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
         
         <div class="jd-descrdiv">Set new identity.</div>
   
@@ -2651,7 +2672,7 @@ android.app.Activity
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -14394,7 +14415,11 @@ From interface
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentity(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentity</a></span>(String newIdentity, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
         
-        <div class="jd-descrdiv">Set new identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID(String, EnumSet)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -14411,6 +14436,46 @@ From interface
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentity(java.lang.String)">switchMAMIdentity</a></span>(String newIdentity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String)">switchMAMIdentityOID(String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID</a></span>(String newOid, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
+        
+        <div class="jd-descrdiv">Set new identity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String)">switchMAMIdentityOID</a></span>(String newOid)
         
         <div class="jd-descrdiv">Set new identity.</div>
   
@@ -14454,10 +14519,32 @@ From interface
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired</a></span>(String upn, String oid)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
  required for the identity currently in use.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired(String, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -14500,6 +14587,29 @@ From interface
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use
+ <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity.</div>
   
@@ -14660,7 +14770,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/preference/MAMPreferenceActivity.html#defaultOnMAMIdentitySwitchRequired(android.app.Activity, java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">defaultOnMAMIdentitySwitchRequired(Activity, String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Expose default behavior for notifying the app that an incoming intent requires an identity switch for this Activity.
  The Activity will be checked if it is MAM-integrated and, if so,
  the default onMAMIdentitySwitchRequired behavior will be called.</p></div>
@@ -14674,6 +14789,64 @@ From interface
         <tr>
           <th>identity</th>
           <td>identity being switched to</td>
+        </tr>
+        <tr>
+          <th>reason</th>
+          <td>reason identity is being switched.</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>must be called to notify MAM whether to allow the switch.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="defaultOnMAMIdentitySwitchRequired(android.app.Activity, java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">defaultOnMAMIdentitySwitchRequired</span>
+      <span class="normal">(Activity activity, String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Expose default behavior for notifying the app that an incoming intent requires an identity switch for this Activity.
+ The Activity will be checked if it is MAM-integrated and, if so,
+ the default onMAMIdentitySwitchRequired behavior will be called.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>The activity to perform an identity switch for.</td>
+        </tr>
+        <tr>
+          <th>upn</th>
+          <td>UPN of the identity being switched to.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity being switched to.</td>
         </tr>
         <tr>
           <th>reason</th>
@@ -14793,53 +14966,6 @@ From interface
         <tr>
           <th>data</th>
           <td>Intent data.
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<a id="onMAMCompanyPortalRequired(java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">onMAMCompanyPortalRequired</span>
-      <span class="normal">(String identity)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
- required for the identity currently in use. The app may wish to use this notification to prompt the user to remove the
- account if the user doesn't want to install the Company Portal. This may be called before onMAMCreate.
-
- If the app changes the activity identity or finishes the activity, the blocking UI will not be displayed. If the app wishes
- to display UI to the user in response to this event, it must either use a different activity or change the identity of this
- one (and avoid displaying information from the potentially corporate identity).</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>identity</th>
-          <td>UPN being blocked. This is the same as the activity's current identity.
 </td>
         </tr>
       </table>
@@ -14979,6 +15105,73 @@ From interface
 </div>
 
 
+<a id="onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">onMAMIdentitySwitchRequired</span>
+      <span class="normal">(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity. This can occur during
+ activity creation or when a new intent is sent to an existing activity. The application must call
+ callback.reportIdentitySwitchResult to tell MAM whether the identity switch is allowed. In general, applications should
+ allow identity switches. The default implementation allows all identity switches. When using the build plugin,
+ the default implementation can be accessed by calling <code>MAMctivity.defaultOnMAMIdentitySwitchRequired</code>.
+
+ The most common case for this method to be called is before onMAMCreate. The application is allowed to show UI to confirm
+ the identity switch, but it must show the UI using a different activity as onMAMCreate will not be called for this activity
+ until the identity switch is allowed.
+
+ Special care must be taken with single-top activities when a new intent can cause an identity switch. If a new intent causes
+ an identity switch, after the switch is approved by this method, onMAMNewIntent will be called and then recreate() will be
+ called which is necessary to enforce screenshot restrictions from the new policy. It is strongly recommended that the
+ implementation of onMAMNewIntent call setIntent, as otherwise the following recreate may cause the original intent rather
+ than the new intent to be displayed.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN of the identity being switched to</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity being switched to</td>
+        </tr>
+        <tr>
+          <th>reason</th>
+          <td>reason identity is being switched</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>must be called to notify MAM whether to allow the switch.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -15032,8 +15225,7 @@ From interface
         </tr>
         <tr>
           <th>callback</th>
-          <td>must be called to notify MAM whether to allow the switch.
-</td>
+          <td>must be called to notify MAM whether to allow the switch.</td>
         </tr>
       </table>
   </div>
@@ -16189,8 +16381,7 @@ From interface
         </tr>
         <tr>
           <th>options</th>
-          <td>Identity switch options.
-</td>
+          <td>Identity switch options.</td>
         </tr>
       </table>
   </div>
@@ -16199,7 +16390,7 @@ From interface
 </div>
 
 
-<a id="switchMAMIdentity(java.lang.String)"></a>
+<a id="switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -16211,8 +16402,8 @@ From interface
          
         void
       </span>
-      <span class="sympad">switchMAMIdentity</span>
-      <span class="normal">(String newIdentity)</span>
+      <span class="sympad">switchMAMIdentityOID</span>
+      <span class="normal">(String newOid, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -16229,8 +16420,12 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>newIdentity</th>
-          <td>New identity
+          <th>newOid</th>
+          <td>AAD OID of the new identity.</td>
+        </tr>
+        <tr>
+          <th>options</th>
+          <td>Identity switch options.
 </td>
         </tr>
       </table>

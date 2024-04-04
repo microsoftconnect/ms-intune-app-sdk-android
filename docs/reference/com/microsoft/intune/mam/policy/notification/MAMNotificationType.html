@@ -180,6 +180,7 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html">MAMComplianceNotification</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html">MAMEnrollmentNotification</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMLogCollectionNotification.html">MAMLogCollectionNotification</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotification.html">MAMNotification</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMUserNotification.html">MAMUserNotification</a></li>
       </ul>
@@ -421,54 +422,61 @@ Summary:
     
     <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
+        <td class="jd-linkcol">COLLECT_APP_DIAGNOSTIC_LOG&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Notify the app that it needs to upload its own diagnostic logs to the log service of their choice (e.g.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">COMPLIANCE_STATUS&nbsp;</td>
         <td class="jd-descrcol" width="100%">Notify the app of the compliance status after an attempt to remediate compliance for App Protection CA.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">MAM_ENROLLMENT_RESULT&nbsp;</td>
         <td class="jd-descrcol" width="100%">Notify the app of the MAM Service enrollment result.&nbsp;</td>
     </tr>
     
     
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">MANAGEMENT_REMOVED&nbsp;</td>
         <td class="jd-descrcol" width="100%">Notify that the app is about to become unmanaged.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">REFRESH_APP_CONFIG&nbsp;</td>
         <td class="jd-descrcol" width="100%">Notify that the app has new App Config data.&nbsp;</td>
     </tr>
     
     
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">REFRESH_POLICY&nbsp;</td>
         <td class="jd-descrcol" width="100%">App policy has been updated.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">WIPE_COMPLETED&nbsp;</td>
         <td class="jd-descrcol" width="100%">Intune has fully finished processing a wipe, at least as far as the current app process is concerned..&nbsp;</td>
     </tr>
     
     
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">WIPE_USER_AUXILIARY_DATA&nbsp;</td>
         <td class="jd-descrcol" width="100%">Notify the app that it should wipe auxiliary (non-file) data.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>&nbsp;</td>
         <td class="jd-linkcol">WIPE_USER_DATA&nbsp;</td>
         <td class="jd-descrcol" width="100%">Request to wipe user data.&nbsp;</td>
@@ -1079,6 +1087,39 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>The user clocked in or out. The notification will be an instance of MAMUserNotification.
  Use MAMUserStatusManager.getUserStatus to obtain the new status for the provided user.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="COLLECT_APP_DIAGNOSTIC_LOG"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../com/microsoft/intune/mam/policy/notification/MAMNotificationType.html">MAMNotificationType</a>
+      </span>
+        COLLECT_APP_DIAGNOSTIC_LOG
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Notify the app that it needs to upload its own diagnostic logs to the log service of their choice (e.g. PowerLift).
+ The notification will be an instance of MAMLogCollectionNotification. Use MAMLogCollectionNotification.getSessionId()
+ to obtain the MAM session ID that uniquely identifies a log collection request.
 </p></div>
 
     

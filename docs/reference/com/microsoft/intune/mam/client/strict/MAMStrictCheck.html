@@ -527,16 +527,32 @@ Summary:
     
     <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
+        <td class="jd-linkcol">OPEN_FROM_LOCATION_MISSING_OID&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Use of getIsOpenFromLocationAllowedForOID for OneDrive for Business/SharePoint/an account document,
+ but there was no OID provided for the account.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
         <td class="jd-linkcol">OPEN_FROM_LOCATION_MISSING_UPN&nbsp;</td>
         <td class="jd-descrcol" width="100%">Use of getIsOpenFromLocationAllowed for OneDrive for Business/SharePoint/an account document,
  but there was no UPN provided for the account.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
         <td class="jd-linkcol">REGISTER_ACCOUNT_WRONG_USER&nbsp;</td>
         <td class="jd-descrcol" width="100%">registerAccountForMAM was called on an account which is already in the WRONG_USER state.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
+        <td class="jd-linkcol">SAVE_TO_LOCATION_MISSING_OID&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Use of getIsSaveToLocationAllowedForOID for OneDrive for Business/Sharepoint/an account document,
+ but there was no OID provided for the account.&nbsp;</td>
     </tr>
     
     
@@ -589,6 +605,13 @@ Summary:
         <td class="jd-linkcol">UPDATE_TOKEN_WITHIN_ACQUIRE_TOKEN&nbsp;</td>
         <td class="jd-descrcol" width="100%">The MAMEnrollmentManager's updateToken() method was called from within the provided MAMServiceAuthenticationCallback's
  acquireToken() method.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>&nbsp;</td>
+        <td class="jd-linkcol">UPN_IDENTITY_PARAM&nbsp;</td>
+        <td class="jd-descrcol" width="100%">The app called a MAM SDK API method taking an identity by UPN instead of the corresponding OID-based method.&nbsp;</td>
     </tr>
     
     
@@ -1616,6 +1639,38 @@ From interface
 
 
 
+<a id="OPEN_FROM_LOCATION_MISSING_OID"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>
+      </span>
+        OPEN_FROM_LOCATION_MISSING_OID
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Use of getIsOpenFromLocationAllowedForOID for OneDrive for Business/SharePoint/an account document,
+ but there was no OID provided for the account.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
 <a id="OPEN_FROM_LOCATION_MISSING_UPN"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -1672,6 +1727,38 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>registerAccountForMAM was called on an account which is already in the WRONG_USER state. Apps should remove accounts in the
  WRONG_USER state (or at least block them).
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="SAVE_TO_LOCATION_MISSING_OID"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>
+      </span>
+        SAVE_TO_LOCATION_MISSING_OID
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Use of getIsSaveToLocationAllowedForOID for OneDrive for Business/Sharepoint/an account document,
+ but there was no OID provided for the account.
 </p></div>
 
     
@@ -1900,6 +1987,37 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>The MAMEnrollmentManager's updateToken() method was called from within the provided MAMServiceAuthenticationCallback's
  acquireToken() method.  This is not the intended purpose of updateToken(), and could cause a deadlock.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<a id="UPN_IDENTITY_PARAM"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../com/microsoft/intune/mam/client/strict/MAMStrictCheck.html">MAMStrictCheck</a>
+      </span>
+        UPN_IDENTITY_PARAM
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>The app called a MAM SDK API method taking an identity by UPN instead of the corresponding OID-based method.
 </p></div>
 
     

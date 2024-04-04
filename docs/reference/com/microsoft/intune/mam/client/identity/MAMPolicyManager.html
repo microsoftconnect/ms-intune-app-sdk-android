@@ -187,10 +187,12 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html">ExternalIdentityUtils</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMAsyncTask.html">MAMAsyncTask</a>&lt;Params,&nbsp;Progress,&nbsp;Result&gt;</li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html">MAMDataProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html">MAMFileProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html">MAMIdentityExecutors</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityOIDRunnable.html">MAMIdentityOIDRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityRunnable.html">MAMIdentityRunnable</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html">MAMPolicyManager</a></li>
       </ul>
@@ -435,7 +437,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentIdentity(android.content.Context)">getCurrentIdentity</a></span>(Context context)
         
-        <div class="jd-descrdiv">Computes the current effective identity that will be used for policy.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentIdentityOID(android.content.Context)">getCurrentIdentityOID(Context)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -451,9 +457,49 @@ Summary:
             String
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentIdentityOID(android.content.Context)">getCurrentIdentityOID</a></span>(Context context)
+        
+        <div class="jd-descrdiv">Computes the current effective identity that will be used for policy and returns its AAD OID.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadIdentity()">getCurrentThreadIdentity</a></span>()
         
-        <div class="jd-descrdiv">Get the current thread identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadIdentityOID()">getCurrentThreadIdentityOID()</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadIdentityOID()">getCurrentThreadIdentityOID</a></span>()
+        
+        <div class="jd-descrdiv">Get the AAD OID of the current thread identity.</div>
   
   </td></tr>
 
@@ -489,11 +535,33 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityManaged(java.lang.String)">getIsIdentityManaged</a></span>(String identity)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityOIDManaged(java.lang.String)">getIsIdentityOIDManaged(String)</a></code>.
+</em></div>
+  
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityOIDManaged(java.lang.String)">getIsIdentityOIDManaged</a></span>(String oid)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -511,7 +579,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -523,7 +591,33 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicy()">getPolicy</a></span>()
         
-        <div class="jd-descrdiv">Deprecated alias for getCurrentThreadPolicy.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadPolicy()">getCurrentThreadPolicy()</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            <a href="../../../../../../com/microsoft/intune/mam/policy/AppPolicy.html">AppPolicy</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicyForIdentity(java.lang.String)">getPolicyForIdentity</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicyForIdentityOID(java.lang.String)">getPolicyForIdentityOID(String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -539,7 +633,7 @@ Summary:
             <a href="../../../../../../com/microsoft/intune/mam/policy/AppPolicy.html">AppPolicy</a>
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicyForIdentity(java.lang.String)">getPolicyForIdentity</a></span>(String identity)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicyForIdentityOID(java.lang.String)">getPolicyForIdentityOID</a></span>(String oid)
         
         <div class="jd-descrdiv">Get the applicable app policy for a given identity.</div>
   
@@ -559,7 +653,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getProcessIdentity()">getProcessIdentity</a></span>()
         
-        <div class="jd-descrdiv">Get the process-wide identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getProcessIdentityOID()">getProcessIdentityOID()</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -575,9 +673,49 @@ Summary:
             String
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getProcessIdentityOID()">getProcessIdentityOID</a></span>()
+        
+        <div class="jd-descrdiv">Get the AAD OID of the process-wide identity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getUIPolicyIdentity(android.content.Context)">getUIPolicyIdentity</a></span>(Context context)
         
-        <div class="jd-descrdiv">Get the current UI identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getUIPolicyIdentityOID(android.content.Context)">getUIPolicyIdentityOID(Context)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getUIPolicyIdentityOID(android.content.Context)">getUIPolicyIdentityOID</a></span>(Context context)
+        
+        <div class="jd-descrdiv">Get the AAD OID of the current UI identity.</div>
   
   </td></tr>
 
@@ -595,7 +733,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setCurrentThreadIdentity(java.lang.String)">setCurrentThreadIdentity</a></span>(String identity)
         
-        <div class="jd-descrdiv">Set the current thread identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setCurrentThreadIdentityOID(java.lang.String)">setCurrentThreadIdentityOID(String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -611,7 +753,47 @@ Summary:
             <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
         </td>
         <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setCurrentThreadIdentityOID(java.lang.String)">setCurrentThreadIdentityOID</a></span>(String oid)
+        
+        <div class="jd-descrdiv">Set the current thread identity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setProcessIdentity(java.lang.String)">setProcessIdentity</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setProcessIdentityOID(java.lang.String)">setProcessIdentityOID(String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setProcessIdentityOID(java.lang.String)">setProcessIdentityOID</a></span>(String oid)
         
         <div class="jd-descrdiv">Set the process-wide identity.</div>
   
@@ -631,7 +813,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentity</a></span>(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)
         
-        <div class="jd-descrdiv">Set the associated identity with the Context.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentityOID(Context, String, MAMSetUIIdentityCallback)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -648,6 +834,46 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentity(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentity</a></span>(Context context, String identity, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentityOID(Context, String, MAMSetUIIdentityCallback, EnumSet)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentityOID</a></span>(Context context, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)
+        
+        <div class="jd-descrdiv">Set the associated identity with the Context.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentityOID</a></span>(Context context, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
         
         <div class="jd-descrdiv">Set the associated identity with the Context.</div>
   
@@ -999,8 +1225,14 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Computes the current effective identity that will be used for policy. The following identity sources are considered in order
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentIdentityOID(android.content.Context)">getCurrentIdentityOID(Context)</a></code>.
+
+  </p>
+  <div class="jd-tagdata jd-tagdescr"><p>Computes the current effective identity that will be used for policy and returns its UPN.
+ The following identity sources are considered in order:
  1. Thread
  2. Context (UI identity)
  3. Process
@@ -1016,7 +1248,56 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>effective identity
+      <ul class="nolist"><li>effective identity's UPN.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getCurrentIdentityOID(android.content.Context)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">getCurrentIdentityOID</span>
+      <span class="normal">(Context context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Computes the current effective identity that will be used for policy and returns its AAD OID.
+ The following identity sources are considered in order:
+ 1. Thread
+ 2. Context (UI identity)
+ 3. Process
+ 4. Default (empty string for multi-identity apps or apps with no policy, managed user for single-identity apps)</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>context to check identity on for (2) above</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>effective identity's OID.
 </li></ul>
   </div>
 
@@ -1048,11 +1329,51 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Get the current thread identity.</p></div>
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadIdentityOID()">getCurrentThreadIdentityOID()</a></code>.
+
+  </p>
+  <div class="jd-tagdata jd-tagdescr"><p>Get the UPN of the current thread identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Current thread identity.
+      <ul class="nolist"><li>Current thread identity UPN.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getCurrentThreadIdentityOID()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">getCurrentThreadIdentityOID</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the AAD OID of the current thread identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Current thread identity OID.
 </li></ul>
   </div>
 
@@ -1121,7 +1442,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityOIDManaged(java.lang.String)">getIsIdentityOIDManaged(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1129,6 +1455,50 @@ From class
         <tr>
           <th>identity</th>
           <td>identity</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the identity has policy</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getIsIdentityOIDManaged(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">getIsIdentityOIDManaged</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity.</td>
         </tr>
       </table>
   </div>
@@ -1211,12 +1581,16 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getCurrentThreadPolicy()">getCurrentThreadPolicy()</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Deprecated alias for getCurrentThreadPolicy.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>see getCurrentThreadPolicy
-</li></ul>
+      <ul class="nolist"><li>see getCurrentThreadPolicy</li></ul>
   </div>
 
     </div>
@@ -1247,7 +1621,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getPolicyForIdentityOID(java.lang.String)">getPolicyForIdentityOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Get the applicable app policy for a given identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1255,6 +1634,50 @@ From class
         <tr>
           <th>identity</th>
           <td>Identity to get policy for.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Policy for the identity.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getPolicyForIdentityOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../../com/microsoft/intune/mam/policy/AppPolicy.html">AppPolicy</a>
+      </span>
+      <span class="sympad">getPolicyForIdentityOID</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the applicable app policy for a given identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity to get policy for.</td>
         </tr>
       </table>
   </div>
@@ -1292,11 +1715,51 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Get the process-wide identity.</p></div>
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getProcessIdentityOID()">getProcessIdentityOID()</a></code>.
+
+  </p>
+  <div class="jd-tagdata jd-tagdescr"><p>Get the UPN of the process-wide identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Current process-wide identity.
+      <ul class="nolist"><li>Current process-wide identity UPN.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getProcessIdentityOID()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">getProcessIdentityOID</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the AAD OID of the process-wide identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Current process-wide identity OID.
 </li></ul>
   </div>
 
@@ -1328,8 +1791,13 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Get the current UI identity.</p></div>
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getUIPolicyIdentityOID(android.content.Context)">getUIPolicyIdentityOID(Context)</a></code>.
+
+  </p>
+  <div class="jd-tagdata jd-tagdescr"><p>Get the UPN of the current UI identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1341,7 +1809,51 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Current UI identity.
+      <ul class="nolist"><li>Current UI identity UPN.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getUIPolicyIdentityOID(android.content.Context)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">getUIPolicyIdentityOID</span>
+      <span class="normal">(Context context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the AAD OID of the current UI identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>Context to get the identity from.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Current UI identity OID.
 </li></ul>
   </div>
 
@@ -1373,14 +1885,63 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setCurrentThreadIdentityOID(java.lang.String)">setCurrentThreadIdentityOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set the current thread identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>Identity to set. If null, the current thread identity is cleared.</td>
+          <td>UPN of identity to set. If null, the current thread identity is cleared.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>SUCCEEDED after thread identity is set correctly. FAILED if the app is not MI-enabled.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setCurrentThreadIdentityOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
+      </span>
+      <span class="sympad">setCurrentThreadIdentityOID</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the current thread identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of identity to set. If null, the current thread identity is cleared.</td>
         </tr>
       </table>
   </div>
@@ -1418,14 +1979,63 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setProcessIdentityOID(java.lang.String)">setProcessIdentityOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set the process-wide identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>New process-wide identity. If null, the process identity is cleared.</td>
+          <td>UPN of new process-wide identity. If null, the process identity is cleared.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>SUCCEEDED after process identity is set correctly. FAILED if the app is not MI-enabled.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setProcessIdentityOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
+      </span>
+      <span class="sympad">setProcessIdentityOID</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the process-wide identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of new process-wide identity. If null, the process identity is cleared.</td>
         </tr>
       </table>
   </div>
@@ -1463,7 +2073,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentityOID(Context, String, MAMSetUIIdentityCallback)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1474,12 +2089,11 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>New identity to set. If null, the Context identity is cleared.</td>
+          <td>UPN of new identity to set. If null, the Context identity is cleared.</td>
         </tr>
         <tr>
           <th>mamSetUIIdentityCallback</th>
-          <td>callback to notify the application the identity switch result. May be null.
-</td>
+          <td>callback to notify the application the identity switch result. May be null.</td>
         </tr>
       </table>
   </div>
@@ -1512,7 +2126,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentityOID(Context, String, MAMSetUIIdentityCallback, EnumSet)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1523,7 +2142,108 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>New identity to set. If null, the Context identity is cleared.</td>
+          <td>UPN of new identity to set. If null, the Context identity is cleared.</td>
+        </tr>
+        <tr>
+          <th>mamSetUIIdentityCallback</th>
+          <td>callback to notify the application the identity switch result. May be null.</td>
+        </tr>
+        <tr>
+          <th>options</th>
+          <td>Identity switch options.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUIPolicyIdentityOID</span>
+      <span class="normal">(Context context, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>Context to set the identity in.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of new identity to set. If null, the Context identity is cleared.</td>
+        </tr>
+        <tr>
+          <th>mamSetUIIdentityCallback</th>
+          <td>callback to notify the application the identity switch result. May be null.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUIPolicyIdentityOID</span>
+      <span class="normal">(Context context, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set the associated identity with the Context.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>Context to set the identity in.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of new identity to set. If null, the Context identity is cleared.</td>
         </tr>
         <tr>
           <th>mamSetUIIdentityCallback</th>
