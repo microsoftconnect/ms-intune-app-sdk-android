@@ -514,10 +514,32 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired</a></span>(String upn, String oid)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
  required for the identity currently in use.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired(String, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -570,6 +592,57 @@ Summary:
 
 
 
+<a id="onMAMCompanyPortalRequired(java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">onMAMCompanyPortalRequired</span>
+      <span class="normal">(String upn, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
+ required for the identity currently in use. The app may wish to use this notification to prompt the user to remove the
+ account if the user doesn't want to install the Company Portal. This may be called before onMAMCreate.
+
+ If the app changes the activity identity or finishes the activity, the blocking UI will not be displayed. If the app wishes
+ to display UI to the user in response to this event, it must either use a different activity or change the identity of this
+ one (and avoid displaying information from the potentially corporate identity).</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN of the identity being blocked. This is the same as the activity's current identity.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity being blocked. This is the same as the activity's current identity.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="onMAMCompanyPortalRequired(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -594,7 +667,12 @@ Summary:
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired(String, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
  required for the identity currently in use. The app may wish to use this notification to prompt the user to remove the
  account if the user doesn't want to install the Company Portal. This may be called before onMAMCreate.
@@ -607,8 +685,7 @@ Summary:
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>UPN being blocked. This is the same as the activity's current identity.
-</td>
+          <td>UPN being blocked. This is the same as the activity's current identity.</td>
         </tr>
       </table>
   </div>

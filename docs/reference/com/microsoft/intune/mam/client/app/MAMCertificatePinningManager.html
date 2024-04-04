@@ -450,7 +450,51 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSSLContext(java.lang.String, java.net.URL)">getPinningSSLContext</a></span>(String identity, URL url)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSSLContextForOID(java.lang.String, java.net.URL)">getPinningSSLContextForOID(String, URL)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            SSLContext
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSSLContextForOID(java.lang.String, java.net.URL)">getPinningSSLContextForOID</a></span>(String oid, URL url)
+        
         <div class="jd-descrdiv">Get a SSLContext that can be used with a custom SSLSocketFactory implementation.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            SSLSocketFactory
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactory(java.lang.String, java.net.URL)">getPinningSocketFactory</a></span>(String identity, URL url)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactoryForOID(java.lang.String, java.net.URL)">getPinningSocketFactoryForOID(String, URL)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -466,7 +510,7 @@ Summary:
             SSLSocketFactory
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactory(java.lang.String, java.net.URL)">getPinningSocketFactory</a></span>(String identity, URL url)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactoryForOID(java.lang.String, java.net.URL)">getPinningSocketFactoryForOID</a></span>(String oid, URL url)
         
         <div class="jd-descrdiv">Get a SSLSocketFactory used to configure HTTPS connection objects.</div>
   
@@ -485,6 +529,28 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#validatePins(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)">validatePins</a></span>(X509Certificate[] chain, String identity, URL url)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#validatePinsForOID(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)">validatePinsForOID(X509Certificate[], String, URL)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#validatePinsForOID(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)">validatePinsForOID</a></span>(X509Certificate[] chain, String oid, URL url)
         
         <div class="jd-descrdiv">Validate the given chain using the pinning configuration for the given identity and URL.</div>
   
@@ -773,15 +839,80 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSSLContextForOID(java.lang.String, java.net.URL)">getPinningSSLContextForOID(String, URL)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Get a SSLContext that can be used with a custom SSLSocketFactory implementation.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>The identity of the account using the connection. Pass null to
+          <td>UPN of the identity of the account using the connection. Pass null to
          use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a SSLContext instance configured for pinning.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>Thrown on failure to create the SSLContext. See Android docs for
+         SSLContext.getInstance() and SSLContext.init() for more details.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getPinningSSLContextForOID(java.lang.String, java.net.URL)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        SSLContext
+      </span>
+      <span class="sympad">getPinningSSLContextForOID</span>
+      <span class="normal">(String oid, URL url)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get a SSLContext that can be used with a custom SSLSocketFactory implementation.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity of the account using the connection. Pass null to
+         use the current thread identity. Pass an empty string for any account that
+         doesn't have an OID (e.g. personal accounts).</td>
         </tr>
         <tr>
           <th>url</th>
@@ -834,15 +965,80 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#getPinningSocketFactoryForOID(java.lang.String, java.net.URL)">getPinningSocketFactoryForOID(String, URL)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Get a SSLSocketFactory used to configure HTTPS connection objects.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>The identity of the account using the connection. Pass null to
+          <td>UPN of the identity of the account using the connection. Pass null to
          use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a SSLSocketFactory instance configured for pinning.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>Thrown on failure to create the underlying SSLContext. See Android docs for
+         SSLContext.getInstance() and SSLContext.init() for more details.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getPinningSocketFactoryForOID(java.lang.String, java.net.URL)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        SSLSocketFactory
+      </span>
+      <span class="sympad">getPinningSocketFactoryForOID</span>
+      <span class="normal">(String oid, URL url)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get a SSLSocketFactory used to configure HTTPS connection objects.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity of the account using the connection. Pass null to
+         use the current thread identity. Pass an empty string for any account that
+         doesn't have an OID (e.g. personal accounts).</td>
         </tr>
         <tr>
           <th>url</th>
@@ -894,7 +1090,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMCertificatePinningManager.html#validatePinsForOID(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)">validatePinsForOID(X509Certificate[], String, URL)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Validate the given chain using the pinning configuration for the given identity and URL.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -906,8 +1107,68 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>The identity of the account using the connection. Pass null to
+          <td>UPN of the identity of the account using the connection. Pass null to
          use the current thread identity.</td>
+        </tr>
+        <tr>
+          <th>url</th>
+          <td>The URL to be connected, used to choose the correct pins.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>CertificateException</td>
+            <td>thrown if chain is not valid.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="validatePinsForOID(java.security.cert.X509Certificate[], java.lang.String, java.net.URL)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">validatePinsForOID</span>
+      <span class="normal">(X509Certificate[] chain, String oid, URL url)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Validate the given chain using the pinning configuration for the given identity and URL.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>chain</th>
+          <td>The chain to validate.  Note that the network stack validations should already
+         have been performed.  This method only does the additional pinning validation.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity of the account using the connection. Pass null to
+         use the current thread identity. Pass an empty string for any account that
+         doesn't have an OID (e.g. personal accounts).</td>
         </tr>
         <tr>
           <th>url</th>

@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  MAMUserInfo
+  MAMServiceAuthenticationCallbackExtended
 
 
 </title>
@@ -182,8 +182,8 @@
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMComplianceManager.html">MAMComplianceManager</a></li>
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html">MAMEnrollmentManager</a></li>
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html">MAMServiceAuthenticationCallback</a></li>
-          <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html">MAMServiceAuthenticationCallbackExtended</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html">MAMUserInfo</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html">MAMServiceAuthenticationCallbackExtended</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html">MAMUserInfo</a></li>
       </ul>
     </li>
               
@@ -237,9 +237,37 @@
 
 
 
+  
+   
+  
+  
+  
+  
+
 
 <div class="sum-details-links">
 
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
 
 </div><!-- end sum-details-links -->
 <div class="api-level">
@@ -261,11 +289,16 @@
      
     
     interface
-<h1>MAMUserInfo</h1>
+<h1>MAMServiceAuthenticationCallbackExtended</h1>
 
 
 
   
+  
+      implements 
+      
+        <a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html">MAMServiceAuthenticationCallback</a> 
+      
   
   
 
@@ -280,7 +313,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.policy.MAMUserInfo</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallbackExtended</td>
     </tr>
     
 
@@ -296,7 +329,9 @@
 
 
 <h2>Class Overview</h2>
-<p>Information about the managed user, if any.
+<p>An extension to the MAMServiceAuthenticationCallback interface to add an acquireToken overload that
+ takes the authority parameter. Apps can implement and register this interface in preference to
+ MAMServiceAuthenticationCallback and register it with <code><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html">MAMEnrollmentManager</a></code>.
 </p>
 
 
@@ -367,8 +402,10 @@
             String
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html#getPrimaryUser()">getPrimaryUser</a></span>()
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html#acquireToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">acquireToken</a></span>(String upn, String aadId, String tenantId, String authority, String resourceId)
         
+        <div class="jd-descrdiv">Acquire a token for the requested resource, for the requested user.</div>
+  
   </td></tr>
 
 
@@ -383,8 +420,11 @@
             String
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html#getPrimaryUserOID()">getPrimaryUserOID</a></span>()
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html#acquireToken(java.lang.String, java.lang.String, java.lang.String)">acquireToken</a></span>(String upn, String aadId, String resourceId)
         
+        <div class="jd-descrdiv">Default implementation of MAMServiceAuthenticationCallback's acquireToken
+ method.</div>
+  
   </td></tr>
 
 
@@ -395,6 +435,58 @@
 
 
 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html">com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback</a>
+
+<div id="inherited-methods-com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback">
+  <div id="inherited-methods-com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            String
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String, java.lang.String, java.lang.String)">acquireToken</a></span>(String upn, String aadId, String resourceId)
+        
+        <div class="jd-descrdiv">Acquire a token for the requested resource, for the requested user.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
 
 
 </div><!-- jd-descr (summary) -->
@@ -436,7 +528,7 @@
 
 
 
-<a id="getPrimaryUser()"></a>
+<a id="acquireToken(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -448,8 +540,8 @@
          
         String
       </span>
-      <span class="sympad">getPrimaryUser</span>
-      <span class="normal">()</span>
+      <span class="sympad">acquireToken</span>
+      <span class="normal">(String upn, String aadId, String tenantId, String authority, String resourceId)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -461,10 +553,38 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Acquire a token for the requested resource, for the requested user.  If a token
+ can not be acquired, return a null. A token can be provided later by calling
+ MAMEnrollmentManger.updateToken() with the same parameter values as passed
+ here, along with the requested token.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN identifying the user.</td>
+        </tr>
+        <tr>
+          <th>aadId</th>
+          <td>AAD ID of the user.</td>
+        </tr>
+        <tr>
+          <th>tenantId</th>
+          <td>Tenant ID of the user.</td>
+        </tr>
+        <tr>
+          <th>authority</th>
+          <td>Authority of the user.</td>
+        </tr>
+        <tr>
+          <th>resourceId</th>
+          <td>ID of the requested resource.</td>
+        </tr>
+      </table>
+  </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the primary user's UPN (managed user) or null if there is no managed user.
+      <ul class="nolist"><li>Returns the acquired token, or null if the token could not be acquired.
 </li></ul>
   </div>
 
@@ -472,7 +592,7 @@
 </div>
 
 
-<a id="getPrimaryUserOID()"></a>
+<a id="acquireToken(java.lang.String, java.lang.String, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -484,8 +604,8 @@
          
         String
       </span>
-      <span class="sympad">getPrimaryUserOID</span>
-      <span class="normal">()</span>
+      <span class="sympad">acquireToken</span>
+      <span class="normal">(String upn, String aadId, String resourceId)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -497,10 +617,29 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Default implementation of MAMServiceAuthenticationCallback's acquireToken
+ method. This is provided for convenience so that implementers of
+ MAMServiceAuthenticationCallbackExtended don't have to provide this method.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>upn</th>
+          <td>UPN identifying the user.</td>
+        </tr>
+        <tr>
+          <th>aadId</th>
+          <td>AAD ID of the user.</td>
+        </tr>
+        <tr>
+          <th>resourceId</th>
+          <td>ID of the request resource.</td>
+        </tr>
+      </table>
+  </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the primary user's AAD OID or null if there is no managed user.
+      <ul class="nolist"><li>null
 </li></ul>
   </div>
 

@@ -848,7 +848,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentity(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentity</a></span>(String newIdentity, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
         
-        <div class="jd-descrdiv">Set new identity.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID(String, EnumSet)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -865,6 +869,46 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentity(java.lang.String)">switchMAMIdentity</a></span>(String newIdentity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String)">switchMAMIdentityOID(String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID</a></span>(String newOid, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
+        
+        <div class="jd-descrdiv">Set new identity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String)">switchMAMIdentityOID</a></span>(String newOid)
         
         <div class="jd-descrdiv">Set new identity.</div>
   
@@ -916,10 +960,32 @@ From interface
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired</a></span>(String upn, String oid)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that this activity is being blocked from displaying data because the Company Portal is
  required for the identity currently in use.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String)">onMAMCompanyPortalRequired</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityBlockingListener.html#onMAMCompanyPortalRequired(java.lang.String, java.lang.String)">onMAMCompanyPortalRequired(String, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -962,6 +1028,29 @@ From interface
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use
+ <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchReason, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchReason, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html">AppIdentitySwitchReason</a> reason, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires an identity switch for this Activity.</div>
   
@@ -1752,7 +1841,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">switchMAMIdentityOID(String, EnumSet)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set new identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1763,8 +1857,7 @@ From interface
         </tr>
         <tr>
           <th>options</th>
-          <td>Identity switch options.
-</td>
+          <td>Identity switch options.</td>
         </tr>
       </table>
   </div>
@@ -1797,14 +1890,104 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/HookedActivity.html#switchMAMIdentityOID(java.lang.String)">switchMAMIdentityOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Set new identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>newIdentity</th>
-          <td>New identity
+          <td>New identity</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="switchMAMIdentityOID(java.lang.String, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">switchMAMIdentityOID</span>
+      <span class="normal">(String newOid, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set new identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>newOid</th>
+          <td>AAD OID of the new identity.</td>
+        </tr>
+        <tr>
+          <th>options</th>
+          <td>Identity switch options.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="switchMAMIdentityOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        void
+      </span>
+      <span class="sympad">switchMAMIdentityOID</span>
+      <span class="normal">(String newOid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set new identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>newOid</th>
+          <td>AAD OID of the new identity.
 </td>
         </tr>
       </table>

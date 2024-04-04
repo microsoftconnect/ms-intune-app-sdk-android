@@ -464,9 +464,31 @@ Summary:
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html#showInstallCompanyPortalUIIfNeeded(android.content.Context, java.lang.String)">showInstallCompanyPortalUIIfNeeded</a></span>(Context context, String upn)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html#showInstallCompanyPortalUIForOIDIfNeeded(android.content.Context, java.lang.String)">showInstallCompanyPortalUIForOIDIfNeeded</a></span>(Context context, String oid)
         
         <div class="jd-descrdiv">Show a non-blocking install dialog for Company Portal, if needed.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html#showInstallCompanyPortalUIIfNeeded(android.content.Context, java.lang.String)">showInstallCompanyPortalUIIfNeeded</a></span>(Context context, String upn)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html#showInstallCompanyPortalUIForOIDIfNeeded(android.content.Context, java.lang.String)">showInstallCompanyPortalUIForOIDIfNeeded(Context, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -770,6 +792,58 @@ From class
 </div>
 
 
+<a id="showInstallCompanyPortalUIForOIDIfNeeded(android.content.Context, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">showInstallCompanyPortalUIForOIDIfNeeded</span>
+      <span class="normal">(Context context, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Show a non-blocking install dialog for Company Portal, if needed.
+
+ Note: this should only be called by config-only apps. Fully integrated applications will show this dialog
+ automatically.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</th>
+          <td>the context to use for showing the dialog.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>the AAD OID of the account to show the dialog for.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the dialog was shown; otherwise, false.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="showInstallCompanyPortalUIIfNeeded(android.content.Context, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -794,7 +868,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMConfigOnly.html#showInstallCompanyPortalUIForOIDIfNeeded(android.content.Context, java.lang.String)">showInstallCompanyPortalUIForOIDIfNeeded(Context, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Show a non-blocking install dialog for Company Portal, if needed.
 
  Note: this should only be called by config-only apps. Fully integrated applications will show this dialog
@@ -814,8 +893,7 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the dialog was shown; otherwise, false.
-</li></ul>
+      <ul class="nolist"><li>true if the dialog was shown; otherwise, false.</li></ul>
   </div>
 
     </div>

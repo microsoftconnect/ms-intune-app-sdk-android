@@ -479,7 +479,51 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContext(java.lang.String, java.lang.String)">createSSLContext</a></span>(String identity, String protocol)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContextForOID(java.lang.String, java.lang.String)">createSSLContextForOID(String, String)</a></code>.        
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            SSLContext
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContextForOID(java.lang.String, java.lang.String)">createSSLContextForOID</a></span>(String oid, String protocol)
+        
         <div class="jd-descrdiv">Creates an SSL context that uses the specified protocol and trusted root certificates for the specified identity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            SSLSocketFactory
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactory(java.lang.String, java.lang.String)">createSSLSocketFactory</a></span>(String identity, String protocol)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactoryForOID(java.lang.String, java.lang.String)">createSSLSocketFactoryForOID(String, String)</a></code>.        
+</em></div>
   
   </td></tr>
 
@@ -495,7 +539,7 @@ Summary:
             SSLSocketFactory
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactory(java.lang.String, java.lang.String)">createSSLSocketFactory</a></span>(String identity, String protocol)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactoryForOID(java.lang.String, java.lang.String)">createSSLSocketFactoryForOID</a></span>(String oid, String protocol)
         
         <div class="jd-descrdiv">Creates an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</div>
   
@@ -514,6 +558,28 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagers(java.lang.String)">createX509TrustManagers</a></span>(String identity)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagersForOID(java.lang.String)">createX509TrustManagersForOID(String)</a></code>.        
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            TrustManager[]
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagersForOID(java.lang.String)">createX509TrustManagersForOID</a></span>(String oid)
         
         <div class="jd-descrdiv">Creates an array of X509TrustManager that uses the trusted root certificates from the MAM service for the specified identity.</div>
   
@@ -802,7 +868,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLContextForOID(java.lang.String, java.lang.String)">createSSLContextForOID(String, String)</a></code>.        
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL context that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -810,6 +881,80 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
+        </tr>
+        <tr>
+          <th>protocol</th>
+          <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
+         is not provided, MAM will use the default supported protocol for the current level of Android
+         at runtime.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an SSLContext that uses the specified protocol and trusted root certificates for the specified identity.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the specified protocol is not available.</td>
+        </tr>  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>KeyManagementException</td>
+            <td>if the SSL context cannot be created.</td>
+        </tr>  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="createSSLContextForOID(java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        SSLContext
+      </span>
+      <span class="sympad">createSSLContextForOID</span>
+      <span class="normal">(String oid, String protocol)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL context that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>an optional string identifier for the AAD OID of a particular user that is expected to receive
          trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
          in and MAM will attempt to discover the correct identity from the thread or process in which this class
          is running.</td>
@@ -877,7 +1022,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createSSLSocketFactoryForOID(java.lang.String, java.lang.String)">createSSLSocketFactoryForOID(String, String)</a></code>.        
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -885,6 +1035,80 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
+        </tr>
+        <tr>
+          <th>protocol</th>
+          <td>an optional standard name of the protocol to be used to initialize the SSL context. If the protocol
+         is not provided, MAM will use the default supported protocol for the current level of Android
+         at runtime.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the specified protocol is not available on Android where the application is running.</td>
+        </tr>  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>KeyManagementException</td>
+            <td>if the SSL context cannot be created.</td>
+        </tr>  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="createSSLSocketFactoryForOID(java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        SSLSocketFactory
+      </span>
+      <span class="sympad">createSSLSocketFactoryForOID</span>
+      <span class="normal">(String oid, String protocol)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an SSL socket factory that uses the specified protocol and trusted root certificates for the specified identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>an optional string identifier for the AAD OID of a particular user that is expected to receive
          trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
          in and MAM will attempt to discover the correct identity from the thread or process in which this class
          is running.</td>
@@ -952,7 +1176,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html#createX509TrustManagersForOID(java.lang.String)">createX509TrustManagersForOID(String)</a></code>.        
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Creates an array of X509TrustManager that uses the trusted root certificates from the MAM service for the specified identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -960,6 +1189,71 @@ From class
         <tr>
           <th>identity</th>
           <td>an optional string identifier for a particular user running the application that is expected to receive
+         trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
+         in and MAM will attempt to discover the correct identity from the thread or process in which this class
+         is running.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an array of X509TrustManager instances that use the trusted root certificates from the MAM service for the specified
+ identity.</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>NoSuchAlgorithmException</td>
+            <td>if the algorithm for creating trust managers is not available.</td>
+        </tr>  
+        <tr>
+            <th>KeyStoreException</td>
+            <td>if the keystore has not been initialized.</td>
+        </tr>  
+        <tr>
+            <th>GeneralSecurityException</td>
+            <td>if other security related failures occurred.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="createX509TrustManagersForOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        TrustManager[]
+      </span>
+      <span class="sympad">createX509TrustManagersForOID</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates an array of X509TrustManager that uses the trusted root certificates from the MAM service for the specified identity.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>an optional string identifier for the AAD OID of a particular user that is expected to receive
          trusted root certificates from the MAM service. If the identifier is unknown, a value of null can be passed
          in and MAM will attempt to discover the correct identity from the thread or process in which this class
          is running.</td>

@@ -187,10 +187,12 @@
               
     <li><h2>Classes</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/ExternalIdentityUtils.html">ExternalIdentityUtils</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMAsyncTask.html">MAMAsyncTask</a>&lt;Params,&nbsp;Progress,&nbsp;Result&gt;</li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html">MAMDataProtectionManager</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html">MAMFileProtectionManager</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityExecutors.html">MAMIdentityExecutors</a></li>
+          <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityOIDRunnable.html">MAMIdentityOIDRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMIdentityRunnable.html">MAMIdentityRunnable</a></li>
           <li class="api apilevel-"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html">MAMPolicyManager</a></li>
       </ul>
@@ -487,7 +489,11 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(android.os.ParcelFileDescriptor, java.lang.String)">protect</a></span>(ParcelFileDescriptor file, String identity)
         
-        <div class="jd-descrdiv">Protect a file, generally one obtained from a content provider.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(android.os.ParcelFileDescriptor, java.lang.String)">protectForOID(ParcelFileDescriptor, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -505,7 +511,47 @@ Summary:
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protect(java.io.File, java.lang.String)">protect</a></span>(File file, String identity)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(java.io.File, java.lang.String)">protectForOID(File, String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(java.io.File, java.lang.String)">protectForOID</a></span>(File file, String oid)
+        
         <div class="jd-descrdiv">Protect a file or directory.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(android.os.ParcelFileDescriptor, java.lang.String)">protectForOID</a></span>(ParcelFileDescriptor file, String oid)
+        
+        <div class="jd-descrdiv">Protect a file, generally one obtained from a content provider.</div>
   
   </td></tr>
 
@@ -1013,7 +1059,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(android.os.ParcelFileDescriptor, java.lang.String)">protectForOID(ParcelFileDescriptor, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Protect a file, generally one obtained from a content provider. This is intended to be used for sdcard (whether internal
  or removable) files accessed through the Storage Access Framework. It may also be used with descriptors referring to private
  files owned by this app. It is not intended to be used for files owned by other apps and such usage will fail. If creating
@@ -1036,7 +1087,7 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>Identity to set.</td>
+          <td>UPN of identity to set.</td>
         </tr>
       </table>
   </div>
@@ -1045,8 +1096,7 @@ From class
       <table class="jd-tagtable">  
         <tr>
             <th>IOException</td>
-            <td>If the file cannot be protected.
-</td>
+            <td>If the file cannot be protected.</td>
         </tr>
       </table>
   </div>
@@ -1079,7 +1129,12 @@ From class
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html#protectForOID(java.io.File, java.lang.String)">protectForOID(File, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Protect a file or directory. This will synchronously trigger whatever protection is required for the file, and will tag the
  file for future protection changes. If an identity is set on a directory, it is set recursively on all files and
  subdirectories. New files or directories will inherit their parent directory's identity. This method will silently do nothing
@@ -1098,7 +1153,134 @@ From class
         </tr>
         <tr>
           <th>identity</th>
-          <td>Identity to set.</td>
+          <td>UPN of the identity to set.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If the file cannot be protected.</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="protectForOID(java.io.File, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">protectForOID</span>
+      <span class="normal">(File file, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Protect a file or directory. This will synchronously trigger whatever protection is required for the file, and will tag the
+ file for future protection changes. If an identity is set on a directory, it is set recursively on all files and
+ subdirectories. New files or directories will inherit their parent directory's identity. This method will silently do nothing
+ (neither change an identity nor throw) in the following conditions:
+
+ <ul>
+     <li>MAM is operating in offline mode</li>
+     <li>The file is exempted from MAM file protection (such as .so and .apk files)</li>
+ </ul></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>file</th>
+          <td>File to protect.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the identity to set.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If the file cannot be protected.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="protectForOID(android.os.ParcelFileDescriptor, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">protectForOID</span>
+      <span class="normal">(ParcelFileDescriptor file, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Protect a file, generally one obtained from a content provider. This is intended to be used for sdcard (whether internal
+ or removable) files accessed through the Storage Access Framework. It may also be used with descriptors referring to private
+ files owned by this app. It is not intended to be used for files owned by other apps and such usage will fail. If creating
+ a new file via a content provider exposed by another MAM-integrated app, the new file identity will automatically be set
+ correctly if the ContentResolver in use was obtained via a Context with an identity or if the thread identity is set.
+ <p>
+ This will synchronously trigger whatever protection is required for the file, and will tag the
+ file for future protection changes. If an identity is set on a directory, it is set recursively on all files and
+ subdirectories. If MAM is operating in offline mode, this method will silently do nothing.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>file</th>
+          <td>File to protect. This descriptor must be open for both read and write. Additionally, due to limitations in the
+ 		encrypted filesystem view if the identity is one for which policy may be present, then the app should not be holding
+ 		any other file descriptors on the same file which are open for write-only. If such descriptors are found, MAM will
+ 		attempt to reopen them for read-write, but this will not be possible for descriptors obtained over a content
+ 		provider or where the name in the filesystem has been unlinked.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of identity to set.</td>
         </tr>
       </table>
   </div>

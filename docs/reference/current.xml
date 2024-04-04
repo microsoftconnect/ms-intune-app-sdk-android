@@ -539,7 +539,7 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
@@ -552,10 +552,38 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
+</parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
+</method>
+<method name="switchMAMIdentityOID"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newOid" type="java.lang.String">
+</parameter>
+</method>
+<method name="switchMAMIdentityOID"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -1011,12 +1039,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -1081,19 +1130,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -1144,10 +1180,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -1477,13 +1532,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -1493,7 +1550,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -1524,12 +1581,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -1594,19 +1672,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -1657,10 +1722,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -1990,13 +2074,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -2006,7 +2092,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -2026,10 +2112,25 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+<method name="onMAMCompanyPortalRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 </interface>
@@ -2058,12 +2159,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -2128,19 +2250,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -2191,10 +2300,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -2524,13 +2652,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -2540,7 +2670,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -2560,10 +2690,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -2648,12 +2797,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -2718,19 +2888,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -2781,10 +2938,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -3114,13 +3290,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -3130,7 +3308,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -3237,10 +3415,27 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="url" type="java.net.URL">
+</parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
+</method>
+<method name="getPinningSSLContextForOID"
+ return="javax.net.ssl.SSLContext"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="url" type="java.net.URL">
 </parameter>
@@ -3254,10 +3449,27 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="url" type="java.net.URL">
+</parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
+</method>
+<method name="getPinningSocketFactoryForOID"
+ return="javax.net.ssl.SSLSocketFactory"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="url" type="java.net.URL">
 </parameter>
@@ -3271,12 +3483,31 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="chain" type="java.security.cert.X509Certificate[]">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="url" type="java.net.URL">
+</parameter>
+<exception name="CertificateException" type="java.security.cert.CertificateException">
+</exception>
+</method>
+<method name="validatePinsForOID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="chain" type="java.security.cert.X509Certificate[]">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="url" type="java.net.URL">
 </parameter>
@@ -3353,7 +3584,7 @@
 <parameter name="app" type="android.app.Application">
 </parameter>
 </method>
-<method name="showInstallCompanyPortalUIIfNeeded"
+<method name="showInstallCompanyPortalUIForOIDIfNeeded"
  return="boolean"
  abstract="false"
  native="false"
@@ -3361,6 +3592,21 @@
  static="true"
  final="false"
  deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
+<method name="showInstallCompanyPortalUIIfNeeded"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
@@ -4020,12 +4266,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -4090,19 +4357,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -4153,10 +4407,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -4486,13 +4759,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -4502,7 +4777,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -5056,10 +5331,27 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
 </parameter>
@@ -5107,21 +5399,6 @@
  visibility="public"
 >
 <parameter name="intent" type="android.content.Intent">
-</parameter>
-</method>
-<method name="onMAMIdentitySwitchRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
 </parameter>
 </method>
 <method name="onMAMStart"
@@ -5214,12 +5491,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -5284,19 +5582,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -5347,10 +5632,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -5680,13 +5984,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -5696,7 +6002,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -5727,12 +6033,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -5797,19 +6124,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -5860,10 +6174,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -6193,13 +6526,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -6209,7 +6544,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -6774,12 +7109,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -6844,19 +7200,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -6907,10 +7250,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -7240,13 +7602,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -7256,7 +7620,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -7505,21 +7869,6 @@
 <parameter name="intent" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMIdentitySwitchRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
-</parameter>
-</method>
 <method name="onMAMStart"
  return="void"
  abstract="false"
@@ -7610,12 +7959,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -7680,19 +8050,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -7743,10 +8100,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -8076,13 +8452,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -8092,7 +8470,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -8362,10 +8740,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="protocol" type="java.lang.String">
+</parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
+<exception name="KeyManagementException" type="java.security.KeyManagementException">
+</exception>
+<exception name="KeyStoreException" type="java.security.KeyStoreException">
+</exception>
+<exception name="NoSuchAlgorithmException" type="java.security.NoSuchAlgorithmException">
+</exception>
+</method>
+<method name="createSSLContextForOID"
+ return="javax.net.ssl.SSLContext"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="protocol" type="java.lang.String">
 </parameter>
@@ -8385,10 +8786,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="protocol" type="java.lang.String">
+</parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
+<exception name="KeyManagementException" type="java.security.KeyManagementException">
+</exception>
+<exception name="KeyStoreException" type="java.security.KeyStoreException">
+</exception>
+<exception name="NoSuchAlgorithmException" type="java.security.NoSuchAlgorithmException">
+</exception>
+</method>
+<method name="createSSLSocketFactoryForOID"
+ return="javax.net.ssl.SSLSocketFactory"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="protocol" type="java.lang.String">
 </parameter>
@@ -8408,10 +8832,29 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
+</exception>
+<exception name="KeyStoreException" type="java.security.KeyStoreException">
+</exception>
+<exception name="NoSuchAlgorithmException" type="java.security.NoSuchAlgorithmException">
+</exception>
+</method>
+<method name="createX509TrustManagersForOID"
+ return="javax.net.ssl.TrustManager[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <exception name="GeneralSecurityException" type="java.security.GeneralSecurityException">
 </exception>
@@ -9852,7 +10295,7 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="contentIdentity" type="java.lang.String">
@@ -9865,7 +10308,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="provider" type="android.content.ContentProvider">
@@ -9873,19 +10316,32 @@
 <parameter name="contentIdentity" type="java.lang.String">
 </parameter>
 </method>
-<method name="onMAMIdentitySwitchRequired"
- return="void"
+<method name="isProvideContentAllowedForOID"
+ return="boolean"
  abstract="false"
  native="false"
  synchronized="false"
  static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
+<method name="isProvideContentAllowedForOid"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="identity" type="java.lang.String">
+<parameter name="provider" type="android.content.ContentProvider">
 </parameter>
-<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 <method name="openAssetFile"
@@ -11918,21 +12374,6 @@
 <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
 </exception>
 </method>
-<method name="onMAMIdentitySwitchRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
-</parameter>
-</method>
 <method name="openAssetFileMAM"
  return="android.content.res.AssetFileDescriptor"
  abstract="false"
@@ -12444,6 +12885,43 @@
 </package>
 <package name="com.microsoft.intune.mam.client.identity"
 >
+<class name="ExternalIdentityUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="fromUpnAndOid"
+ return="com.microsoft.intune.mam.client.identity.MAMIdentity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
+<method name="identityFromOID"
+ return="com.microsoft.intune.mam.client.identity.MAMIdentity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
+</class>
 <class name="MAMAsyncTask"
  extends="android.os.AsyncTask"
  abstract="true"
@@ -12596,7 +13074,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="input" type="java.io.InputStream">
@@ -12613,12 +13091,46 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="input" type="byte[]">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="protectForOID"
+ return="java.io.InputStream"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="java.io.InputStream">
+</parameter>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="protectForOID"
+ return="byte[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="byte[]">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <exception name="IOException" type="java.io.IOException">
 </exception>
@@ -12739,7 +13251,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="file" type="java.io.File">
@@ -12756,12 +13268,46 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="file" type="android.os.ParcelFileDescriptor">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="protectForOID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
+</parameter>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="protectForOID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="android.os.ParcelFileDescriptor">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <exception name="IOException" type="java.io.IOException">
 </exception>
@@ -12832,12 +13378,46 @@
 </parameter>
 </method>
 </class>
-<class name="MAMIdentityRunnable"
+<class name="MAMIdentityOIDRunnable"
  extends="java.lang.Object"
  abstract="false"
  static="false"
  final="false"
  deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.Runnable">
+</implements>
+<constructor name="MAMIdentityOIDRunnable"
+ type="com.microsoft.intune.mam.client.identity.MAMIdentityOIDRunnable"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+<parameter name="wrapped" type="java.lang.Runnable">
+</parameter>
+</constructor>
+<method name="run"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MAMIdentityRunnable"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
  visibility="public"
 >
 <implements name="java.lang.Runnable">
@@ -12913,6 +13493,19 @@
  synchronized="false"
  static="true"
  final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="getCurrentIdentityOID"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
  deprecated="not deprecated"
  visibility="public"
 >
@@ -12920,6 +13513,17 @@
 </parameter>
 </method>
 <method name="getCurrentThreadIdentity"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentThreadIdentityOID"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -12948,10 +13552,23 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+<method name="getIsIdentityOIDManaged"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 <method name="getPolicy"
@@ -12985,13 +13602,37 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
 </parameter>
 </method>
+<method name="getPolicyForIdentityOID"
+ return="com.microsoft.intune.mam.policy.AppPolicy"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
 <method name="getProcessIdentity"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+</method>
+<method name="getProcessIdentityOID"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -13003,6 +13644,19 @@
 >
 </method>
 <method name="getUIPolicyIdentity"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="getUIPolicyIdentityOID"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -13022,13 +13676,13 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
 </parameter>
 </method>
-<method name="setProcessIdentity"
+<method name="setCurrentThreadIdentityOID"
  return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
  abstract="false"
  native="false"
@@ -13038,7 +13692,33 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="oid" type="java.lang.String">
+</parameter>
+</method>
+<method name="setProcessIdentity"
+ return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+<method name="setProcessIdentityOID"
+ return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 <method name="setUIPolicyIdentity"
@@ -13048,7 +13728,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
@@ -13065,12 +13745,48 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="context" type="android.content.Context">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="mamSetUIIdentityCallback" type="com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback">
+</parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
+</method>
+<method name="setUIPolicyIdentityOID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="oid" type="java.lang.String">
+</parameter>
+<parameter name="mamSetUIIdentityCallback" type="com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback">
+</parameter>
+</method>
+<method name="setUIPolicyIdentityOID"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="mamSetUIIdentityCallback" type="com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback">
 </parameter>
@@ -13099,6 +13815,17 @@
  visibility="public"
 >
 <method name="getIdentity"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIdentityOID"
  return="java.lang.String"
  abstract="true"
  native="false"
@@ -13283,12 +14010,33 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="activity" type="android.app.Activity">
 </parameter>
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="defaultOnMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -13353,19 +14101,6 @@
 <parameter name="data" type="android.content.Intent">
 </parameter>
 </method>
-<method name="onMAMCompanyPortalRequired"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="identity" type="java.lang.String">
-</parameter>
-</method>
 <method name="onMAMCreate"
  return="void"
  abstract="false"
@@ -13416,10 +14151,29 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+<parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback">
+</parameter>
+</method>
+<method name="onMAMIdentitySwitchRequired"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 <parameter name="reason" type="com.microsoft.intune.mam.client.app.AppIdentitySwitchReason">
 </parameter>
@@ -13749,13 +14503,15 @@
  synchronized="false"
  static="false"
  final="true"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="newIdentity" type="java.lang.String">
 </parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
 </method>
-<method name="switchMAMIdentity"
+<method name="switchMAMIdentityOID"
  return="void"
  abstract="false"
  native="false"
@@ -13765,7 +14521,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="newIdentity" type="java.lang.String">
+<parameter name="newOid" type="java.lang.String">
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
@@ -14207,12 +14963,27 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="location" type="com.microsoft.intune.mam.policy.OpenLocation">
 </parameter>
 <parameter name="username" type="java.lang.String">
+</parameter>
+</method>
+<method name="getIsOpenFromLocationAllowedForOID"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="location" type="com.microsoft.intune.mam.policy.OpenLocation">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 <method name="getIsPinRequired"
@@ -14246,12 +15017,27 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="service" type="com.microsoft.intune.mam.policy.SaveLocation">
 </parameter>
 <parameter name="username" type="java.lang.String">
+</parameter>
+</method>
+<method name="getIsSaveToLocationAllowedForOID"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="service" type="com.microsoft.intune.mam.policy.SaveLocation">
+</parameter>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 <method name="getIsSaveToPersonalAllowed"
@@ -14614,6 +15400,54 @@
 </parameter>
 </method>
 </interface>
+<interface name="MAMServiceAuthenticationCallbackExtended"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback">
+</implements>
+<method name="acquireToken"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="tenantId" type="java.lang.String">
+</parameter>
+<parameter name="authority" type="java.lang.String">
+</parameter>
+<parameter name="resourceId" type="java.lang.String">
+</parameter>
+</method>
+<method name="acquireToken"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="upn" type="java.lang.String">
+</parameter>
+<parameter name="aadId" type="java.lang.String">
+</parameter>
+<parameter name="resourceId" type="java.lang.String">
+</parameter>
+</method>
+</interface>
 <interface name="MAMUserInfo"
  abstract="true"
  static="false"
@@ -14622,6 +15456,17 @@
  visibility="public"
 >
 <method name="getPrimaryUser"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPrimaryUserOID"
  return="java.lang.String"
  abstract="true"
  native="false"
@@ -15074,10 +15919,23 @@
  synchronized="false"
  static="false"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="identity" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAppConfigForOID"
+ return="com.microsoft.intune.mam.policy.appconfig.MAMAppConfig"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oid" type="java.lang.String">
 </parameter>
 </method>
 </interface>
@@ -15147,6 +16005,27 @@
  visibility="public"
 >
 </method>
+<method name="getSessionId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="MAMLogCollectionNotification"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.microsoft.intune.mam.policy.notification.MAMUserNotification">
+</implements>
 <method name="getSessionId"
  return="java.lang.String"
  abstract="true"

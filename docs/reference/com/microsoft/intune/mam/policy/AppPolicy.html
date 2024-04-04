@@ -182,6 +182,7 @@
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMComplianceManager.html">MAMComplianceManager</a></li>
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMEnrollmentManager.html">MAMEnrollmentManager</a></li>
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html">MAMServiceAuthenticationCallback</a></li>
+          <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html">MAMServiceAuthenticationCallbackExtended</a></li>
           <li class="api apilevel-"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html">MAMUserInfo</a></li>
       </ul>
     </li>
@@ -513,13 +514,35 @@
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsOpenFromLocationAllowed(com.microsoft.intune.mam.policy.OpenLocation, java.lang.String)">getIsOpenFromLocationAllowed</a></span>(<a href="../../../../../com/microsoft/intune/mam/policy/OpenLocation.html">OpenLocation</a> location, String username)
         
-        <div class="jd-descrdiv">Determines if data from the OpenLocation can be opened for the username associated with the data.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsOpenFromLocationAllowedForOID(com.microsoft.intune.mam.policy.OpenLocation, java.lang.String)">getIsOpenFromLocationAllowedForOID(OpenLocation, String)</a></code>.
+</em></div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsOpenFromLocationAllowedForOID(com.microsoft.intune.mam.policy.OpenLocation, java.lang.String)">getIsOpenFromLocationAllowedForOID</a></span>(<a href="../../../../../com/microsoft/intune/mam/policy/OpenLocation.html">OpenLocation</a> location, String oid)
+        
+        <div class="jd-descrdiv">Determines if data from the OpenLocation can be opened for the account associated with the data.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -537,7 +560,7 @@
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -555,7 +578,7 @@
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             abstract
             
@@ -567,7 +590,29 @@
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsSaveToLocationAllowed(com.microsoft.intune.mam.policy.SaveLocation, java.lang.String)">getIsSaveToLocationAllowed</a></span>(<a href="../../../../../com/microsoft/intune/mam/policy/SaveLocation.html">SaveLocation</a> service, String username)
         
-        <div class="jd-descrdiv">Determines if the SaveLocation passed in can be saved to by the username associated with the cloud service.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsSaveToLocationAllowedForOID(com.microsoft.intune.mam.policy.SaveLocation, java.lang.String)">getIsSaveToLocationAllowedForOID(SaveLocation, String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsSaveToLocationAllowedForOID(com.microsoft.intune.mam.policy.SaveLocation, java.lang.String)">getIsSaveToLocationAllowedForOID</a></span>(<a href="../../../../../com/microsoft/intune/mam/policy/SaveLocation.html">SaveLocation</a> service, String oid)
+        
+        <div class="jd-descrdiv">Determines if the SaveLocation passed in can be saved to by the account associated with the cloud service.</div>
   
   </td></tr>
 
@@ -1055,7 +1100,12 @@
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsOpenFromLocationAllowedForOID(com.microsoft.intune.mam.policy.OpenLocation, java.lang.String)">getIsOpenFromLocationAllowedForOID(OpenLocation, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Determines if data from the OpenLocation can be opened for the username associated with the data.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1068,6 +1118,56 @@
           <th>username</th>
           <td>the username/email associated with the location the data is being opened from. Use null if a mapping between the
       AAD username and the cloud service username does not exist or the username is not known.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the data can be opened from the location for the identity, false if otherwise.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getIsOpenFromLocationAllowedForOID(com.microsoft.intune.mam.policy.OpenLocation, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">getIsOpenFromLocationAllowedForOID</span>
+      <span class="normal">(<a href="../../../../../com/microsoft/intune/mam/policy/OpenLocation.html">OpenLocation</a> location, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Determines if data from the OpenLocation can be opened for the account associated with the data.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>location</th>
+          <td>see <code><a href="../../../../../com/microsoft/intune/mam/policy/OpenLocation.html">OpenLocation</a></code>.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>the AAD User Id of the account associated with the location the data is being opened from.
+      Use null if a mapping between the AAD account and the cloud service account does not exist
+      or the account is not known.</td>
         </tr>
       </table>
   </div>
@@ -1186,7 +1286,12 @@
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../com/microsoft/intune/mam/policy/AppPolicy.html#getIsSaveToLocationAllowedForOID(com.microsoft.intune.mam.policy.SaveLocation, java.lang.String)">getIsSaveToLocationAllowedForOID(SaveLocation, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Determines if the SaveLocation passed in can be saved to by the username associated with the cloud service.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -1199,6 +1304,55 @@
           <th>username</th>
           <td>the username/email associated with the cloud service being saved to. Use null if a mapping between the
  		AAD username and the cloud service username does not exist or the username is not known.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the location can be saved to by the identity, false if otherwise.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getIsSaveToLocationAllowedForOID(com.microsoft.intune.mam.policy.SaveLocation, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        boolean
+      </span>
+      <span class="sympad">getIsSaveToLocationAllowedForOID</span>
+      <span class="normal">(<a href="../../../../../com/microsoft/intune/mam/policy/SaveLocation.html">SaveLocation</a> service, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Determines if the SaveLocation passed in can be saved to by the account associated with the cloud service.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>service</th>
+          <td>see <code><a href="../../../../../com/microsoft/intune/mam/policy/SaveLocation.html">SaveLocation</a></code>.</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>the AAD User Id of the account for the cloud service being saved to. Use null if a mapping between the
+ 		AAD account and the cloud service account does not exist or the account is not known.</td>
         </tr>
       </table>
   </div>

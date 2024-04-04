@@ -871,7 +871,11 @@ android.content.ComponentCallbacks2
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowed(java.lang.String)">isProvideContentAllowed</a></span>(String contentIdentity)
         
-        <div class="jd-descrdiv">A multi-identity aware app MUST use this method to determine whether policy allows sharing of content to another app.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOID(java.lang.String)">isProvideContentAllowedForOID(String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -889,7 +893,11 @@ android.content.ComponentCallbacks2
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowed(android.content.ContentProvider, java.lang.String)">isProvideContentAllowed</a></span>(ContentProvider provider, String contentIdentity)
         
-        <div class="jd-descrdiv">Like the instance-method isProvideContentAllowed above, but static.</div>
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOid(android.content.ContentProvider, java.lang.String)">isProvideContentAllowedForOid(ContentProvider, String)</a></code>.
+</em></div>
   
   </td></tr>
 
@@ -899,21 +907,39 @@ android.content.ComponentCallbacks2
         <td class="jd-typecol">
             
             
+            final
             
             
-            
-            void
+            boolean
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOID(java.lang.String)">isProvideContentAllowedForOID</a></span>(String oid)
         
-        <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread.</div>
+        <div class="jd-descrdiv">A multi-identity aware app MUST use this method to determine whether policy allows sharing of content to another app.</div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOid(android.content.ContentProvider, java.lang.String)">isProvideContentAllowedForOid</a></span>(ContentProvider provider, String oid)
+        
+        <div class="jd-descrdiv">Like the instance-method isProvideContentAllowed above, but static.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -929,7 +955,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -945,7 +971,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -961,7 +987,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -977,7 +1003,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -993,7 +1019,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1009,7 +1035,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1025,7 +1051,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1041,7 +1067,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1057,7 +1083,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1073,7 +1099,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1089,7 +1115,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1105,7 +1131,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1121,7 +1147,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1137,7 +1163,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1153,7 +1179,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1169,7 +1195,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1185,7 +1211,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1201,7 +1227,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1217,7 +1243,7 @@ android.content.ComponentCallbacks2
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -2422,6 +2448,28 @@ From interface
         </td>
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
+        
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired(String, String, AppIdentitySwitchResultCallback)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMIdentityRequirementListener.html#onMAMIdentitySwitchRequired(java.lang.String, java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)">onMAMIdentitySwitchRequired</a></span>(String upn, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)
         
         <div class="jd-descrdiv">Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread.</div>
   
@@ -3783,7 +3831,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOID(java.lang.String)">isProvideContentAllowedForOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>A multi-identity aware app MUST use this method to determine whether policy allows sharing of content to another app. This
  method may be called only from the implementation of a MAMContentProvider method (callqueryMAM, callMAM, etc). It allows the
  app to determine whether the content it is about to return to the app which invoked the content provider is allowed to be
@@ -3802,8 +3855,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not
-</li></ul>
+      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not</li></ul>
   </div>
 
     </div>
@@ -3834,7 +3886,12 @@ From interface
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/client/content/MAMContentProvider.html#isProvideContentAllowedForOid(android.content.ContentProvider, java.lang.String)">isProvideContentAllowedForOid(ContentProvider, String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>Like the instance-method isProvideContentAllowed above, but static. Allows usage of isProvideContentAllowed
  from a ContentProvider which is intended to be processed by the MAM build plugin rather than inheriting
  MAMContentProvider in source.</p></div>
@@ -3853,28 +3910,27 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not
-</li></ul>
+      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not</li></ul>
   </div>
 
     </div>
 </div>
 
 
-<a id="onMAMIdentitySwitchRequired(java.lang.String, com.microsoft.intune.mam.client.app.AppIdentitySwitchResultCallback)"></a>
+<a id="isProvideContentAllowedForOID(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
          
+        final 
          
          
-         
-        void
+        boolean
       </span>
-      <span class="sympad">onMAMIdentitySwitchRequired</span>
-      <span class="normal">(String identity, <a href="../../../../../../com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html">AppIdentitySwitchResultCallback</a> callback)</span>
+      <span class="sympad">isProvideContentAllowedForOID</span>
+      <span class="normal">(String oid)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3886,29 +3942,77 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Called by MAM to notify the app that an incoming intent requires a temporary identity switch on this thread. The application
- must call <code>callback.reportIdentitySwitchResult</code> to tell MAM whether the identity switch is allowed. In general,
- applications should allow identity switches. The default implementation allows all identity switches.
-
- Service calls will block until the callback is made. For services which run on the UI thread, the callback must be made
- before this function returns, otherwise the application will be nonresponsive. If a FAILED result is reported,
- then the service operation that initiated the identity switch will be cancelled.
-
- Activities should instead override the three-argument version of this method from
- <code><a href="../../../../../../com/microsoft/intune/mam/client/app/MAMActivityIdentityRequirementListener.html">MAMActivityIdentityRequirementListener</a></code>.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>A multi-identity aware app MUST use this method to determine whether policy allows sharing of content to another app. This
+ method may be called only from the implementation of a MAMContentProvider method (callqueryMAM, callMAM, etc). It allows the
+ app to determine whether the content it is about to return to the app which invoked the content provider is allowed to be
+ provided. If this method returns false, the content must not be provided. It is not necessary to use this method for content
+ which can never contain corporate data. It is also not necessary to use this method when returning a ParcelFileDescriptor
+ through openFileMAM, openAssetFileMAM, or openTypedAssetFileMAM as the underlying file is required to already be tagged with
+ the correct identity.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>identity</th>
-          <td>identity being switched to</td>
-        </tr>
-        <tr>
-          <th>callback</th>
-          <td>must be called to notify MAM whether to allow the switch.
-</td>
+          <th>oid</th>
+          <td>OID representing the owner of the content.</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="isProvideContentAllowedForOid(android.content.ContentProvider, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">isProvideContentAllowedForOid</span>
+      <span class="normal">(ContentProvider provider, String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Like the instance-method isProvideContentAllowed above, but static. Allows usage of isProvideContentAllowed
+ from a ContentProvider which is intended to be processed by the MAM build plugin rather than inheriting
+ MAMContentProvider in source.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>provider</th>
+          <td>provider to use for the check</td>
+        </tr>
+        <tr>
+          <th>oid</th>
+          <td>OID representing the owner of the content.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the content is allowed to be provided, false if it is not
+</li></ul>
   </div>
 
     </div>

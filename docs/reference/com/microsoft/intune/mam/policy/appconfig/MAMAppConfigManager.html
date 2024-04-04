@@ -365,6 +365,28 @@
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html#getAppConfig(java.lang.String)">getAppConfig</a></span>(String identity)
         
+        <div class="jd-descrdiv">
+      <em>
+  This method is deprecated.
+      Use <code><a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html#getAppConfigForOID(java.lang.String)">getAppConfigForOID(String)</a></code>.
+</em></div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html">MAMAppConfig</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html#getAppConfigForOID(java.lang.String)">getAppConfigForOID</a></span>(String oid)
+        
         <div class="jd-descrdiv">returns custom app configuration data for the given user.</div>
   
   </td></tr>
@@ -442,14 +464,63 @@
 
       </div>
     <div class="jd-details-descr">
-      
+      <p>
+  <p class="caution">
+      <strong>
+  This method is deprecated.</strong><br/> Use <code><a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html#getAppConfigForOID(java.lang.String)">getAppConfigForOID(String)</a></code>.
+
+  </p>
   <div class="jd-tagdata jd-tagdescr"><p>returns custom app configuration data for the given user.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>identity</th>
-          <td>the user for whom the config data is retrieved. If null, only Android Enterprise config will be returned</td>
+          <td>UPN of the user for whom the config data is retrieved. If null, only Android Enterprise config will be returned</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a MAMAppConfig object containing the config data.</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="getAppConfigForOID(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html">MAMAppConfig</a>
+      </span>
+      <span class="sympad">getAppConfigForOID</span>
+      <span class="normal">(String oid)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>returns custom app configuration data for the given user.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>oid</th>
+          <td>AAD OID of the user for whom the config data is retrieved. If null, only Android Enterprise config will be returned</td>
         </tr>
       </table>
   </div>
