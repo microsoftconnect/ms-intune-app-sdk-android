@@ -369,6 +369,8 @@
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html#getPrimaryUser()">getPrimaryUser</a></span>()
         
+        <div class="jd-descrdiv">Use of this method is discouraged for all apps.</div>
+  
   </td></tr>
 
 
@@ -385,6 +387,8 @@
         <td class="jd-linkcol" width="100%">
         <span class="sympad"><a href="../../../../../com/microsoft/intune/mam/policy/MAMUserInfo.html#getPrimaryUserOID()">getPrimaryUserOID</a></span>()
         
+        <div class="jd-descrdiv">Use of this method is discouraged for all apps.</div>
+  
   </td></tr>
 
 
@@ -461,7 +465,9 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Use of this method is discouraged for all apps. Prefer using MAMPolicyManager's getIsIdentityManaged/getIsIdentityOIDManaged.
+ If you have scenarios for which this is insufficient, please contact the MAM team.
+ This method will throw an UnsupportedOperationException if called when multiple managed identities is enabled.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>the primary user's UPN (managed user) or null if there is no managed user.
@@ -497,7 +503,9 @@
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Use of this method is discouraged for all apps. Prefer using MAMPolicyManager's getIsIdentityOIDManaged.
+ If you have scenarios for which this is insufficient, please contact the MAM team.
+ This method will throw an UnsupportedOperationException if called when multiple managed identities is enabled.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>the primary user's AAD OID or null if there is no managed user.

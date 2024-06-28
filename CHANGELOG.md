@@ -1,5 +1,16 @@
-Version 10.2.1
+Version 10.3.1
+--------------
+* Track managed dialog requirement per identity.
+* Track wipe requirement for PIN retries exceeded per identity.
+* `MAMUserInfo` `getPrimaryUser` and `getPrimaryUserOID` methods will
+  throw `UnsupportedOperationException` if called when multiple
+  managed identities is enabled. This is a forward-looking change -- multiple
+  managed identities is not yet supported in production.
+
+Version 10.3.0
 -------------
+* Fixed issue with dynamic feature modules not mamifying properly.
+* Remove usage of deprecated GET_UNINSTALLED_PACKAGES flag from `MAMComponents`.
 * Ensure that app always connects to Company Portal if App Config policy is in use.
 
 Version 10.2.0
