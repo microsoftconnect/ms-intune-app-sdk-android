@@ -1,20 +1,39 @@
+Version 10.4.1
+-------------
+
+* Fixed issue with dynamic feature modules not mamifying properly when referencing classes from transitive dependencies.
+
+Version 10.4.0
+-------------
+
+* Add a default implementation of the deprecated method onMAMIdentitySwitchRequired()
+  in the `MAMActivityIdentityRequirementListener` interface, so that apps implementing
+  the interface don't need to provide an implementation for a deprecated method.
+* App is required to prompt their own UI to obtain user consent for log upload in the background.
+* Remove the MAM prompted user consent screen for log upload in the background and
+  add enum value `MAMDiagnosticLogManager.Result.USER_CONSENT_DENIED`.
+
 Version 10.3.1
 --------------
+
 * Track managed dialog requirement per identity.
 * Track wipe requirement for PIN retries exceeded per identity.
 * `MAMUserInfo` `getPrimaryUser` and `getPrimaryUserOID` methods will
   throw `UnsupportedOperationException` if called when multiple
   managed identities is enabled. This is a forward-looking change -- multiple
   managed identities is not yet supported in production.
+* Handle crashes caused by `UnsupportedOperationException` when resources cannot be found for an app specific theme.
 
 Version 10.3.0
 -------------
+
 * Fixed issue with dynamic feature modules not mamifying properly.
 * Remove usage of deprecated GET_UNINSTALLED_PACKAGES flag from `MAMComponents`.
 * Ensure that app always connects to Company Portal if App Config policy is in use.
 
 Version 10.2.0
 -------------
+
 * MAM SDK API methods that take UPNs to specify identities are deprecated.
   They will be removed completely at the next major version increment.
   New methods that specify identities by OID (also known as AAD User ID,
@@ -23,49 +42,58 @@ Version 10.2.0
 
 Version 10.1.2
 -------------
+
 * Remove single identity assumptions from implicit wipe behavior.
 * Handle `ClassNotFoundException` and `BadParcelableException` thrown when un-parceling intent extras in offline mode.
 
 Version 10.1.1
 -------------
+
 * Fix `NullPointerException` in MAM logger initialization.
 
 Version 10.1.0
 -------------
+
 * Remove single identity assumptions in the enrolled identity and MAM service URL caches.
   * IMPORTANT: this update performs cache migrations that are **not compatible for rollback**.
-    After updating to 9.7.5 and deploying, your app cannot downgrade to an earlier SDK version in a subsequent release. 
+    After updating to 9.7.5 and deploying, your app cannot downgrade to an earlier SDK version in a subsequent release.
 * Remove redundant offline enrollment status caching.
 * Improve heuristic for primary offline identity.
 * Add MAMDiagnosticLogManager and MAMLogCollectionNotification to support M365 log collection feature.
 
 Version 10.0.0
 -------------
+
 * Support for Android 14 targeting.
 * Update Javassist dependency to 3.29.2-GA.
 * Update minimum supported MAM SDK version to Android 4.1 (API level 16).
 
 Version 9.7.4
 -------------
+
 * Fix for MAM error logging.
 * Update strings to fix support for accessibility tools.
 
 Version 9.7.3
 -------------
+
 * Fix behavior for `onQueryDeletedMedia` and `onQueryMedia` in `MAMCloudMediaProvider`
 * Miscellaneous code cleanup for obsolete enrollment cache items.
 * Fix `ClassNotFoundException` in `OfflineActivityBehavior`.
 
 Version 9.7.2
 -------------
+
 * Error telemetry improvements.
 
 Version 9.7.1
 -------------
+
 * Add Gradle build cache support for MAM plugin on AGP 7.4+.
 
 Version 9.7.0
 -------------
+
 * Remove no-longer-necessary ProGuard rules targeting the legacy Android
   Support Libraries. SDK support for these was removed in `8.0.0`.
 * Fix configuration cache and incremental build issues with new build plugin.
@@ -73,12 +101,14 @@ Version 9.7.0
 
 Version 9.6.1
 -------------
+
 * Fix handling of int, float, and short in `MAMAppConfig` when
   returning config from Android Enterprise (rather than the MAM
   channel)
 
 Version 9.6.0
 -------------
+
 * Deprecate ADALConnectionDetails and remove obsolete meta-data authentication configurations.
 * Preview build plugin is now part of the main artifact.
   Apply `com.microsoft.intune.mam-preview` to use the new behavior with
@@ -88,11 +118,13 @@ Version 9.6.0
 
 Version 9.5.0
 -------------
+
 * Add MAMTrustedRootCertsManager and MAMCertTrustWebViewClient APIs for trusted root certificates support.
 * Fix SecurityException in isolated processes on devices with API 27 or under.
 
 Version 9.4.0
 -------------
+
 * Add new preview build plugin to support Android Gradle Plugin 8.0.
   This plugin can be applied by adding `-preview` to the sdk version
   and ensuring the `-preview` library is included on the buildscript
@@ -112,6 +144,7 @@ Version 9.4.0
 
 Version 9.3.0
 -------------
+
 * Fix build plugin issue applying certain rewrites to super calls in
   an invalid way. This could result in invalid bytecode (and then
   runtime crashes) in apps which subclasses system services wrapped by
@@ -121,6 +154,7 @@ Version 9.3.0
 
 Version 9.2.0
 -------------
+
 * Add MAM Strict Mode check: 'UNREGISTER_ACCOUNT_WITHIN_ACQUIRE_TOKEN' to
   check for calls to the MAMEnrollmentManager's unregisterAccountForMAM()
   method from within the app-provided MAMServiceAuthenticationCallback's
@@ -129,25 +163,28 @@ Version 9.2.0
 
 Version 9.1.0
 -------------
+
 * The build plugin will now replace inheritance of `FileBackupHelper` with
   `MAMFileBackupHelper` and `SharedPreferencesBackupHelper` with `MAMSharedPreferencesBackupHelper`.
 * Fix incompatibility with `androidx.lifecycle:lifecycle-runtime:2.5.0+` that caused crash due to
   missing hooks for ActivityLifecycleCallbacks.
-* Fix ProGuard rule in SDK to keep only MAM classes that implement `@Keep` annotated 
+* Fix ProGuard rule in SDK to keep only MAM classes that implement `@Keep` annotated
   interfaces.
 
 Version 9.0.1
 -------------
+
 * Fix offline behavior for `PackageManager` methods added in API 33.
 
 Version 9.0.0
 -------------
+
 * Support for API 33 targeting.
 * Add build plugin support for missing PackageManager method
   `getPackageInfo(VersionedPackage versionedPackage, int flags)`
 * The Build Tool CLI now supports accepting a plain-text file for the input
   and output parameters.
-* Include API 33 Photo Picker tool in the `PHOTO_LIBRARY` location 
+* Include API 33 Photo Picker tool in the `PHOTO_LIBRARY` location
   of `getIsOpenFromLocationAllowed` and `getIsSaveToLocationAllowed` SDK methods.
 * The build plugin will now replace instantiation of `CloudMediaProvider` with
 `MAMCloudMediaProvider`.
@@ -155,18 +192,21 @@ Version 9.0.0
 
 Version 8.6.3
 -------------
+
 * Minor logging improvements to Gradle plugin.
 * Add version check to Gradle plugin to prevent mamification when using
   Android Gradle Plugin 7.2.0/7.2.1 due to
-  https://issuetracker.google.com/issues/232438924. Use AGP 7.1.3 and below or
+  <https://issuetracker.google.com/issues/232438924>. Use AGP 7.1.3 and below or
   7.2.2 and above.
 
 Version 8.6.2
 -------------
+
 * Update documentation for SaveLocation.LOCAL.
 
 Version 8.6.1
 -------------
+
 * The MAM SDK will attempt to validate tokens returned from the app's
   MAMServiceAuthenticationCallback instance, and tokens acquired
   with the wrong parameters may be rejected.
@@ -175,13 +215,15 @@ Version 8.6.1
 
 Version 8.5.0
 -------------
-* Expanded `getIsOpenFromLocationAllowed` and `getIsSaveToLocationAllowed` SDK method 
+
+* Expanded `getIsOpenFromLocationAllowed` and `getIsSaveToLocationAllowed` SDK method
   to include `PHOTO_LIBRARY` location.
 * Fix build plugin issue resuling in a `javassist.CannotCompileException` in
   certain projects.
 
 Version 8.4.0
 -------------
+
 * The build plugin will now replace inheritance/instantiation of
   `SurfaceView`, `GLSurfaceView` and `VideoView` with MAM-specific replacements.
   These are used to enforce editor policy restrictions on SurfaceViews.
@@ -194,6 +236,7 @@ Version 8.4.0
 
 Version 8.3.0
 -------------
+
 * Add new `com.microsoft.intune.mam.AllowIsolatedProcesses` manifest meta-data
   item to allow isolated process execution. MAM cannot apply protections to
   isolated processes. As the app developer, it is your responsibility to ensure
@@ -204,6 +247,7 @@ Version 8.3.0
 
 Version 8.2.0
 -------------
+
 * The build plugin will now wrap calls to various `JobService` methods.
   For multi-identity apps, the MAM SDK will not attempt to infer the
   identity for a `JobService` or its individual jobs. Users of `JobService`
@@ -236,16 +280,19 @@ Version 8.2.0
 
 Version 8.1.1
 -------------
+
 * Ensure MAM component initialization before execution of a
   `MAMContentProvider`.
 
 Version 8.1.0
 -------------
+
 * Add the MAMLayoutInflaterManagement with build plugin support to handle application
   usage of custom LayoutInflator.Factory and LayoutInflator.Factory2 instances.
 
 Version 8.0.0
 -------------
+
 * Enable Java 8 language feature support. SDK consumers must specify
   'JavaVersion.VERSION_1_8' in 'compileOptions' if using an Android
   Gradle Plugin version below 4.2.
@@ -282,15 +329,18 @@ Version 8.0.0
 
 Version 7.6.2
 -------------
+
 * Fix build plugin issue with methods which use a more-derived return
   type than the superclass method.
 
 Version 7.6.1
 -------------
+
 * Fix authentication callback issue for Microsoft Defender.
 
 Version 7.6.0
 -------------
+
 * Add MAM Strict Mode check: `CONTENT_INTENT_WITHOUT_IDENTITY` to
   check for intents started to transfer content to another app without
   an identity,while the foreground activity does have an identity
@@ -318,6 +368,7 @@ Version 7.6.0
 
 Version 7.5.0
 -------------
+
 * Fix build-plugin issue where RC-suffixed Gradle versions would cause
   build failure.
 * Add config mode for Microsoft Defender ATP.
@@ -328,9 +379,9 @@ Version 7.5.0
   option will be removed in MAM SDK 8.0.
 * Add MAMCertificatePinningManager API for certificate pinning support.
 
-
 Version 7.4.1
 -------------
+
 * Fix NullPointerException in Allowed Accounts.
 * Fix an intermittent build plugin issue that impacts super calls
   that target non-parent, non-system classes. We previously failed
@@ -338,11 +389,12 @@ Version 7.4.1
   before its ancestor classes.
 * Fix bounds-checking in MAMDataProtectionManager (small buffers could
   previously result in an BufferUnderflowException).
-* The Build Tool CLI now supports incremental builds (via a new 
+* The Build Tool CLI now supports incremental builds (via a new
   --processed option) for parity with the Gradle plugin.
 
 Version 7.4.0
 -------------
+
 * Report functionality is now supported in the command-line BuildTool,
   via the `--report` parameter. This functionality has been available
   in the Gradle plugin for some time.
@@ -355,6 +407,7 @@ Version 7.4.0
   
 Version 7.3.1
 -------------
+
 * The build plugin will now replace inheritance/instantiation of
   `RelativeLayout` with `MAMRelativeLayout`. This is used to enforce
   keyboard restrictions in apps which create input connections from
@@ -362,6 +415,7 @@ Version 7.3.1
 
 Version 7.3.0
 -------------
+
 * Add MAM Strict Mode check: `AUTHENTICATION_CALLBACK_NOT_REGISTERED` to check that
   the MAMServiceAuthenticationCallback is registered in Application.onCreate().
 * Reduce main-thread IO during app initialization.
@@ -371,7 +425,7 @@ Version 7.3.0
   convenience, it is not necessary for enforcement. MAM will continue
   to automatically block prohibited content provider queries/opens.
 * Exclude all nested inner classes of classes excluded from mamificiation.
-* Add MAMKeyNotAvailableException which is thrown from MAMDataProtectionManager when a 
+* Add MAMKeyNotAvailableException which is thrown from MAMDataProtectionManager when a
   buffer cannot be decrypted due to the app no longer being managed.
 * Fix build plugin to rewrite all super calls that target a replaced base class at any
   point in the inheritance chain. In v7.2.1, we introduced a similar fix to correctly
@@ -391,16 +445,19 @@ Version 7.3.0
   
 Version 7.2.2
 -------------
+
 * The build plugin will now replace inheritance/instantiation of
   `ViewGroup` with `MAMViewGroup`. This is used to enforce editor policy restrictions on ViewGroup.
 
 Version 7.2.1
 -------------
+
 * Fix build plugin bug that misses super call rewrites when the calls target an
   ancestor of the rewritten base class.
 
 Version 7.2.0
 -------------
+
 * Add new `DATA_FROM_INTENT` option to `IdentitySwitchOption`.
 * Improve build plugin classpath computation. This fixes missed
   project dependencies with Android Gradle Plugin 3.6.1+ as well as an
@@ -411,22 +468,25 @@ Version 7.2.0
 
 Version 7.1.0
 -------------
+
 * Updates `MAMAutoCompleteTextView` classes to enforce screenshot blocking policy when a screen recorder is in use.
 
 Version 7.0.1
 -------------
+
 * Fix build plugin NPE when entites that aren't full-fledged classes end up on the classpath.
 * Update certificate pins for connections to Intune services.
 
 Version 7.0.0
 -------------
+
 * Android Gradle Plugin version 3.6.1 or higher is required.
 * Update Javassist dependency to 3.27.0-GA.
 * Remove `SecureBrowserPolicy` from the SDK. This class was exposed
   but was not documented. It was previously used by the Intune Managed
   Browser, which has since been superseded by Microsoft Edge.
 * Support libraries no longer use AndroidX annotations due to tighter
-  restrictions in the Android build system around Support and AndroidX 
+  restrictions in the Android build system around Support and AndroidX
   library coexistence.
 * Support for targeting API 30, including new ContentProvider,
   ContentProviderClient, ContentResolver methods, and allow-list Company Portal against package visibility restrictions.
@@ -452,6 +512,7 @@ Version 7.0.0
 
 Version 6.7.0
 -------------
+
 * Refine proguard rules to reduce the size impact of the SDK.
 * Add `bypassConditionalLaunchChecks` to `MAMPolicyManager` interface
   to allow special-purpose Activities to avoid conditional launch checks.
@@ -463,19 +524,20 @@ Version 6.7.0
 * The build plugin will now replace inheritance/instantiation of
   `PopupWindow` with MAM equivalent `MAMPopupWindow`, `ListPopupWindow` with
   MAM equivalent `MAMListPopupWindow`, and `PopupMenu` with MAM equivalent
-  `MAMPopupMenu`. This is used to enforce screenshot blocking policy when 
+  `MAMPopupMenu`. This is used to enforce screenshot blocking policy when
   a screen recorder is in use.
 * If not using the build plugin, the replacements listed above must be made
   manually. Using the build plugin is very strongly recommended.
 
-
 Version 6.6.1
 -------------
+
 * Fix build plugin compile-time error when Android Gradle Plugin 4.0
   is used with the Play Services Core library.
 
 Version 6.6.0
 -------------
+
 * Add `onMAMUserLeaveHint` to `MAMActivity` to ensure `onUserLeaveHint` is not called
   if launch is blocked during `onCreate`
 * When an app throws an exception from an implementation of
@@ -488,18 +550,20 @@ Version 6.6.0
   transparent background.
 * Extend redirection to the Intune web portal for all app installation scenarios where Google Play Services are not
   available and links to market:// are not handled.
-* Point to per-environment specific FWLinks for Company Portal installation when Google Play Services and links to 
+* Point to per-environment specific FWLinks for Company Portal installation when Google Play Services and links to
   market:// are not available.
 * Use android.R.attr.colorForeground instead of android.R.attr.textColorPrimary to apply textColor on all dialogs successfully
   when an app theme is given.
 
 Version 6.5.6
 -------------
+
 * Fix theming issue in "Install Company Portal" dialog which has a black background instead of a transparent background.
   This regression was introduced in SDK 6.5.0"
 
 Version 6.5.5
 -------------
+
 * `MAMAppConfig` will read the following configs from both MAM app config and Android Enterprise.
   * `com.microsoft.intune.mam.managedbrowser.bookmarks`
   * `com.microsoft.intune.mam.managedbrowser.homepage`
@@ -520,10 +584,12 @@ Version 6.5.5
 
 Version 6.5.4
 -------------
+
 * Add support for the Gallatin / Mooncake Sovereign Cloud.
 
 Version 6.5.3
 -------------
+
 * Fix build plugin issue where not all libraries with dependencies on
   processed libraries were properly included for processing. This fix
   is necessary when upgrading to ADAL 3.0.1. Without this fix, if
@@ -534,22 +600,26 @@ Version 6.5.3
 
 Version 6.5.2
 -------------
+
 * Build plugin support for Gradle 5.6/Android Gradle Plugin 3.6
 
 Version 6.5.1
 -------------
+
 * Added support for a MAM Service feature to detect disabled AAD accounts.
 
 Version 6.5.0
 -------------
+
 * Added support for custom themes. The app may provide a theme to the MAM SDK
-  using `MAMThemeManager.setAppTheme` which will be applied to all 
+  using `MAMThemeManager.setAppTheme` which will be applied to all
   MAM screens and dialogs.
 * Add MAM Strict Mode check: `APPLICATION_CONTEXT_DISCOVERED` which identifies when
   an Application context is discovered when an Activity context is expected.
   
 Version 6.4.0
 -------------
+
 * Add a new method `MAMPolicyManager.showDiagnostics` that displays Intune
   MAM diagnostics information.
 * Update login authority mapping to supported sovereign cloud endpoints.
@@ -561,6 +631,7 @@ Version 6.4.0
 
 Version 6.3.0
 -------------
+
 * Add MAM Strict Mode check: `NON_INTEGRATED_VIEW` which verifies that
   View classes are properly MAM-integrated.
 * Update button label "Go Back" to "Close" to better reflect actual behavior.
@@ -571,15 +642,18 @@ Version 6.3.0
 
 Version 6.2.2
 -------------
+
 * Fix plugin build error if the `excludeClasses` specification was empty
   (regressed in 6.2.0)
 
 Version 6.2.1
 -------------
+
 * Fix missing Javadoc for MAM Strict Mode
 
 Version 6.2.0
 -------------
+
 * Added MAM Strict Mode which uses heuristics to detect mistakes in
   usage of MAM APIs or MAM-restricted platform APIs. Your team is
   strongly encouraged to use it in internal debug/develop/dogfood
@@ -590,6 +664,7 @@ Version 6.2.0
 
 Version 6.1.0
 -------------
+
 * Allow the Intune service to configure retry intervals for users not yet licensed or policy-targeted.
 * The `android:testOnly` attribute no longer causes apps to
   automatically connect to the Test Agent instead of the Company
@@ -602,22 +677,26 @@ Version 6.1.0
 
 Version 6.0.3
 -------------
+
 * Exclude META-INF classes from processing in the build plugin. This
   fixes a build-time error encountered by one SDK consumer.
 
 Version 6.0.2
 -------------
-* `MAMAppConfig` will only read `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock `
+
+* `MAMAppConfig` will only read `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`
   and `com.microsoft.intune.useEdge` from the MAM app config channel and not from Android Enterprise.
 * Improve Company Portal update dialog for devices without the Play Store.
 
 Version 6.0.1
 -------------
+
 * For Xamarin apps, correct an issue in the SDK bindings that prevented
   IntentServices from starting correctly.
 
 Version 6.0.0
 -------------
+
 * Add nullability annotations in the SDK. This introduces a dependency
   on `androidx.annotation:annotation:1.0.0`.
 * Remove DownlevelStubs JAR which was replaced by an AAR in 5.8.0.
@@ -630,6 +709,7 @@ Version 6.0.0
 
 Version 5.9.0
 -------------
+
 * Make build plugin classpath computation more deterministic to avoid
   intermittent edge-case compilation errors. Build plugin output
   should not be affected.
@@ -648,12 +728,14 @@ Version 5.9.0
 
 Version 5.8.1
 -------------
+
 * Fix bug in implicit wipe (primarily when Company Portal is
   uninstalled unexpectedly) where `onStart`/`onMAMResume` may be called
   without `onMAMCreate` being called.
 
 Version 5.8.0
 -------------
+
 * Fix build plugin error related to processing transitive
   dependencies. If your app builds without issue, it is not affected
   by this bug.
@@ -677,6 +759,7 @@ Version 5.8.0
 
 Version 5.7.1
 -------------
+
 * Fix SDK 5.4.0 regression in `MAMAlertDialogBuilder` causing
   application crash due to build plugin rewrite of
   `AlertDialog.Builder`. `MAMAlertDialogBuilder` is no longer marked as
@@ -684,6 +767,7 @@ Version 5.7.1
 
 Version 5.7.0
 -------------
+
 * Convert `DownlevelStubs` from JAR to AAR so consumers do not need to specify
   their own ProGuard rules.
 * Remove deprecated telemetry events.
@@ -697,16 +781,18 @@ Version 5.7.0
 
 Version 5.6.1
 -------------
+
 * Handle `CertificateException` thrown during Company Portal signature
   verification in automated testing.
 
 Version 5.6.0
 -------------
+
 * The build plugin will now replace inheritance/instantiation of
   `WebView` with `MAMWebView`. This is used on Android O+
   for transfer policy enforcement on text classifier actions
 * The build plugin now bypasses jar verification. Jars with invalid
-  signatures will not cause it to fail.	
+  signatures will not cause it to fail.
 * Fix `MAMResolverActivity` breaks multi-process activity stack.
 * Reduce telemetry noise by downgrading a severe message from an expected AAD change.
 * The interval for enrollment retries for accounts that are not licensed or targeted with
@@ -714,6 +800,7 @@ Version 5.6.0
 
 Version 5.5.0
 -------------
+
 * The build plugin will automatically include external libraries which
   depend on an included external library.
 * The build plugin will rerun if the `build.gradle` file changes
@@ -738,6 +825,7 @@ Version 5.5.0
 
 Version 5.4.0
 -------------
+
 * Build plugin no longer tries to rewrite non-existent `Fragment.onCreateDialog` method.
 * Blocking UI is not shown until all offline wipes are complete to avoid race conditions.
 * Added an `areIntentActivitiesAllowed` method to `AppPolicy`, allowing an
@@ -747,6 +835,7 @@ Version 5.4.0
 
 Version 5.3.2
 -------------
+
 * Ensure `MAMComponents` initialized in `MAMActivity`. This is a
   speculative fix for crashes occurring in Launcher.
 * Remove reference to the ADAL `StringUtil` class. This was causing
@@ -755,6 +844,7 @@ Version 5.3.2
 
 Version 5.3.1
 -------------
+
 * Append MAM service URL queries with device and MAM app information
 * The build plugin can write a report of the changes it makes. Specify
   `"report = true"` in the intunemam configuration block. Logs will be
@@ -770,6 +860,7 @@ Version 5.3.1
 
 Version 5.3.0
 -------------
+
 * Only support TLS 1.2 protocol above Jelly Bean
 * Update MAM AppConfig to support Android Enterprise AppRestrictions.
 * The build plugin will now wrap calls to `ContentResolver` and
@@ -779,14 +870,15 @@ Version 5.3.0
 * Fix a bug where a wipe could occur if the app was started while the
   Company Portal required a version update.
 * The build plugin now works around a Gradle 4.8+ bug in decoration of
-  signed plugins causing configure failure. See gradle issue 
+  signed plugins causing configure failure. See gradle issue
   [6860](https://github.com/gradle/gradle/issues/6860)
 
 Version 5.2.0
 -------------
+
 * Add the `MAMComplianceManager` interface with new API to support the
   MAM-CA compliance flow.
-* Added `MAMAlertDialogBuilder` to create managed `AlertDialog` 
+* Added `MAMAlertDialogBuilder` to create managed `AlertDialog`
   (with a support class version).
 * Fixed bug where multi-process apps didn't use the registered
   data wipe handlers in secondary processes.
@@ -798,6 +890,7 @@ Version 5.2.0
 
 Version 5.1.0
 -------------
+
 * The build plugin now supports negation patterns in the
   `includeExternalLibraries` configuration to exclude libs which would
   otherwise be included by a wildcard pattern.
@@ -817,14 +910,17 @@ Version 5.1.0
 
 Version 5.0.2
 -------------
-* Fixed NPE in build plugin when some subprojects do not use the Android plugin.	
+
+* Fixed NPE in build plugin when some subprojects do not use the Android plugin.
 
 Version 5.0.1
 -------------
+
 * Fix a bug with build plugin support for `BackupAgent` and `BackupAgentHelper`.
 
 Version 5.0.0
 -------------
+
 * The build plugin will now wrap all `ClipboardManager` calls to query or
   set the primary clip in calls to `MAMClipboard`.
 * The build plugin will now wrap most `PackageManager` calls in calls to
@@ -840,7 +936,7 @@ Version 5.0.0
   text classifier actions
 * If not using the build plugin, the replacements listed above must be made
   manually. Using the build plugin is very strongly recommended.
-* Add `MAMBackupDataInput` to the SDK and signatures of `BackupAgent.onMAMRestore` and 
+* Add `MAMBackupDataInput` to the SDK and signatures of `BackupAgent.onMAMRestore` and
   `BackupAgentHelper.onMAMRestore` for identity backup.
 * Add support for new (Android P) `BackupAgent.onRestore` overload to `MAMBackupAgent`.
 * Fix missing handling of `Activity.startActivities`.
@@ -848,6 +944,7 @@ Version 5.0.0
 
 Version 4.7.0
 -------------
+
 * The build plugin now supports exluding specific variants from processing.
 * The build plugin now rewrites all MAM overloads for `DocumentsProviders`.
 * Fix build plugin failure if app activity derives a library project activity.
@@ -861,6 +958,7 @@ Version 4.7.0
 
 Version 4.6.0
 -------------
+
 * Improve performance in offline scenario when the Company Portal app is not on device
   by providing an option to disable MAM offline logging.
 * Improvements to the Build Plugin. It is now supported for production use.
@@ -875,6 +973,7 @@ Version 4.6.0
 
 Version 4.5.0
 -------------
+
 * Fix portal reinstallation wait loop to be correctly bounded.
 * Improve performance in offline scenario when the Company Portal app is not on device.
 * Add Sovereign Cloud support via a new `registerAccountForMAM` that accepts the user's
@@ -884,17 +983,20 @@ Version 4.5.0
 
 Version 4.4.2
 -------------
+
 * Fix `NullPointerException` if `onAttach` is not the first `MAMFragment` method called.
 * Fix `ArrayIndexOutOfBoundsException` for `testOnly` builds if the process is started
   by a component with `android:isolatedProcess="true"` flag.
 
 Version 4.4.1
 -------------
+
 * Minor fix to `MAMApplication.attachBaseContext` handling. Always call
   `super.attachBaseContext` even if invoked more than once.
 
 Version 4.4.0
 -------------
+
 * SDK now supports targeting API 27
 * Fix crash in conditional launch dialog on API 26 devices for apps that target API 27.
 * Prevent proguard from marking classes/methods as `final`/`private` as
@@ -904,6 +1006,7 @@ Version 4.4.0
 
 Version 4.3.0
 -------------
+
 * Fix `MAMAsyncTask` so it does not hold onto Context references for longer than needed.
 * Send tracked occurrence and service request telemetry to Aria.
 * Stop sending error event telemetry to Asimov.
@@ -913,6 +1016,7 @@ Version 4.3.0
 
 Version 4.2.1
 -------------
+
 * Fix PII logging leak of user UPN.
 * Properly block activity launch for multiple identities in
   `COMPANY_PORTAL_REQUIRED` state
@@ -921,6 +1025,7 @@ Version 4.2.1
 
 Version 4.2.0
 -------------
+
 * Add `AllowedAccounts`, allowing an app to query whether the set of
   accounts it is allowed to sign in is limited.
 * Use https for all network calls to support apps which set
@@ -928,6 +1033,7 @@ Version 4.2.0
 
 Version 4.1.0
 -------------
+
 * When the Company Portal is not installed, `MAMUserInfo.getPrimaryUser`
   will now return a non-null result only when enrollment has been
   attempted for a user which is actually targeted with policy, not
@@ -948,6 +1054,7 @@ Version 4.1.0
 
 Version 4.0.0
 -------------
+
 * Add new, API26 functions to `MAMContentProvider`, `MAMDocumentsProvider`, `MAMFileProvider`,
   `MAMPendingIntent` and `MAMMediaPlayer`.
 * Add new, API26 class `MAMJobIntentService`.
@@ -957,12 +1064,13 @@ Version 4.0.0
   This is a MAM internal only change and no partner interaction is required.
 * Send severe telemetry to new telemetry pipeline (Aria). Add selective wipe event.
 * Version 1 of the MAM-WE enrollment API is now completely removed.
-* Provide a default implementation for `getAdalSecretKey()`. Apps using Version 2 of the 
+* Provide a default implementation for `getAdalSecretKey()`. Apps using Version 2 of the
   MAM-WE enrollment API no longer need to override this method.
 * Add MAM dialog UI update that was removed in SDK 3.1.2.
 
 Version 3.1.2
 -------------
+
 * Remove MAM dialog UI update introduced in SDK 3.1.1. This change
   resulted in broken UI under some circumstances. It will be
   reinstated in a forthcoming SDK update. Any app which updated to SDK
@@ -970,6 +1078,7 @@ Version 3.1.2
 
 Version 3.1.1
 -------------
+
 * Fix logging of some exceptions
 * Update MAM dialogs to match the Material design guidelines on API 21 and above.
 * Display a non-blocking "You need to update your Android device" deprecation warning, which is
@@ -977,6 +1086,7 @@ Version 3.1.1
 
 Version 3.1.0
 -------------
+
 * Allow Company Portal installation detection to close the app on Android O
 * Certificate pinning for the MAM services.
 * `MAMFileProtectionManager` now provides an overload of the protect
@@ -990,6 +1100,7 @@ Version 3.1.0
 
 Version 3.0.1
 -------------
+
 * Set `android:multiprocess=true` for `MAMStartupActivity` and other
   similar activities. This addresses issues that occur when a
   multi-process app tries to start a MAM-integrated activity from a
@@ -1000,17 +1111,19 @@ Version 3.0.1
 
 Version 3.0.0
 -------------
+
 * Version 1 of the MAM-WE enrollment API is now deprecated.  It will be removed completely
     at the next major version increment.
-* Mark `onPrepareOptionsMenu` as `final`. Activities which previously implemented 
+* Mark `onPrepareOptionsMenu` as `final`. Activities which previously implemented
     `onPrepareOptionsMenu` must override `onMAMPrepareOptionsMenu` instead
 * Mark `MAMFileProvider.call` as `final`. Apps which previously implemented call
     must override `callMAM` instead.
 * Prevent erroneously logging a severe message.
-* Improve locking in log handling. 
+* Improve locking in log handling.
 
 Version 2.3.0
 -------------
+
 * Add `MANAGEMENT_REMOVED` notification. This can be registered for in
     the same manner as `WIPE_USER_DATA` or `REFRESH_POLICY`. It is sent
     immediately before the app becomes unmanaged. Data protected with
@@ -1022,6 +1135,7 @@ Version 2.3.0
 
 Version 2.2.1
 -------------
+
 * Add notification dialog if Selective Wipe was triggered implicitly.
 * Update telemetry to include the mechanism used to acquire MAM service token.
 * Add a guard to `attachBaseContext()` in `MAMApplication` to ensure that initialization is only done once.
@@ -1029,6 +1143,7 @@ Version 2.2.1
 
 Version 2.2.0
 -------------
+
 * Added new MAM-WE account registration API, which should replace the existing enrollment API.
     The existing enrollment API will be deprecated at the next major version increment.
 * Distribute proguard.txt in the MAMSDK AAR file and alongside the jar. Note that the rule
@@ -1036,24 +1151,29 @@ Version 2.2.0
 
 Version 2.1.6
 -------------
+
 * Fix race condition in offline MAM-WE cache that was causing JSON deserialization failures.
 
 Version 2.1.5
 -------------
+
 * Clear the setting for showing the "Your organization protects data in this app" dialog after a selective wipe.
 * Fixed the hardware back button does not dismiss the "Go to Store" dialog.
-    
+
 Version 2.1.4
 -------------
+
 * Fixed bug where app is incorrectly restarted following MAM enrollment.
     Now all Activities will be finished, not just `MAMActivity`.
 
 Version 2.1.3
 -------------
+
 * Handle `COMPANY_PORTAL_REQUIRED` in `getIsIdentityManaged`.
-    
+
 Version 2.1.2
 -------------
+
 * Update telemetry events to more precisely track enrollment duration.
 * Clear enrollment cache tracking upon offline wipe. This clears any
     potential PII. Also update cache for consistency and register a
@@ -1062,10 +1182,12 @@ Version 2.1.2
 
 Version 2.1.1
 -------------
+
 * Added the device network info to the data collected by telemetry.
 
 Version 2.1.0
 -------------
+
 * New method `AppPolicy.getAreScreenshotsAllowed`. This method will return
     false if the policy restricts taking screenshots
 * Add missing override for the call method to `MAMFileProvider`. Apps should
@@ -1076,6 +1198,7 @@ Version 2.1.0
 
 Version 2.0.0
 --------------
+
 * Beginning of new release cadence
 * Added delayed loading of MAM internal.
     MAM internal libraries are not loaded unless MAM policy is deployed to an app on the device.
