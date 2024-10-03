@@ -1,3 +1,12 @@
+Version 11.0.0
+--------------
+
+* Support for Android 15 targeting.
+* Update minimum supported MAM SDK version to Android 4.4 (API level 19).
+* Add SDK surface for new `PackageManager` APIs. The MAM build plugin will automatically intercept these methods.
+* Add SDK surface for new `EnterpriseGlobalSearchSession` APIs to enforce transfer policy.
+  The MAM build plugin will automatically intercept these methods.
+
 Version 10.4.1
 -------------
 
