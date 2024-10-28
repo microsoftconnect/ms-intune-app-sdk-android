@@ -1,0 +1,6 @@
+The following libraries can be redistributed if you are using the Microsoft Intune App SDK for Android, subject to its license:
+
+  Microsoft.Intune.MAM.SDK.aar
+  Microsoft.Intune.MAM.SDK.DownlevelStubs.aar
+
+Depending on your usage, you only need to redistribute a subset of the above.
