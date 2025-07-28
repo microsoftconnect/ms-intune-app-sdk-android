@@ -1,0 +1,46 @@
+name: Publish the Microsoft Mobile Application Management Build Gradle Plugin to GitHub Packages
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      GITHUB_USERNAME: engbotdialpad
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Get version
+        run: |
+          VERSION=$(xmllint --xpath "//version/text()" GradlePlugin/mam-build.xml | head -1)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Publish JAR with POM configuration to GitHub Packages
+        run: |
+          mvn deploy:deploy-file \
+            -DgroupId=com.microsoft.intune \
+            -DartifactId=mam-build \
+            -Dversion=$VERSION \
+            -Dpackaging=jar \
+            -Dfile=GradlePlugin/com.microsoft.intune.mam.build.jar \
+            -DpomFile=GradlePlugin/mam-build.xml \
+            -DrepositoryId=github \
+            -Durl=https://maven.pkg.github.com/dialpad/ms-intune-app-sdk-android \
+            -Dusername=$GITHUB_USERNAME \
+            -Dpassword=$GITHUB_TOKEN

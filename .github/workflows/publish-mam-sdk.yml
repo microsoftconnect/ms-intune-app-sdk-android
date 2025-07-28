@@ -1,0 +1,49 @@
+name: Publish the Microsoft Mobile Application Management SDK to GitHub Packages
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      GITHUB_USERNAME: engbotdialpad
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Get version
+        run: |
+          VERSION=$(xmllint --xpath "//version/text()" mam-sdk.xml | head -1)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Publish AAR with JAR attachment and POM configuration to GitHub Packages
+        run: |
+          mvn deploy:deploy-file \
+            -DgroupId=com.microsoft.intune \
+            -DartifactId=mam-sdk \
+            -Dversion=$VERSION \
+            -Dpackaging=aar \
+            -Dfile=Microsoft.Intune.MAM.SDK.aar \
+            -DpomFile=mam-sdk.xml \
+            -Dfiles=Microsoft.Intune.MAM.SDK-javadoc.jar \
+            -Dclassifiers=javadoc \
+            -Dtypes=jar \
+            -DrepositoryId=github \
+            -Durl=https://maven.pkg.github.com/dialpad/ms-intune-app-sdk-android \
+            -Dusername=$GITHUB_USERNAME \
+            -Dpassword=$GITHUB_TOKEN
