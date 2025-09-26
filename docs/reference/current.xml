@@ -510,7 +510,29 @@
 <parameter name="outState" type="android.os.Bundle">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="true"
  native="false"
@@ -1368,7 +1390,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -1511,6 +1555,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -1910,7 +1976,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -2053,6 +2141,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -2488,7 +2598,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -2631,6 +2763,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -3126,7 +3280,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -3270,6 +3446,28 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
  abstract="false"
@@ -3332,6 +3530,17 @@
  visibility="public"
 >
 </constructor>
+<method name="isInitializing"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="offlineRegisterActivityLifecycleCallbacks"
  return="android.app.Application.ActivityLifecycleCallbacks"
  abstract="false"
@@ -4595,7 +4804,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -4738,6 +4969,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -5820,7 +6073,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -5963,6 +6238,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -6362,7 +6659,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -6505,6 +6824,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -7438,7 +7779,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -7581,6 +7944,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -8288,7 +8673,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -8431,6 +8838,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -12966,6 +13395,17 @@
 <parameter name="params" type="Params...">
 </parameter>
 </method>
+<method name="getIdentity"
+ return="com.microsoft.intune.mam.client.identity.MAMIdentity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
 <method name="onPreExecute"
  return="void"
  abstract="false"
@@ -13669,6 +14109,38 @@
 <parameter name="context" type="android.content.Context">
 </parameter>
 </method>
+<method name="getUIPolicyIdentityOIDs"
+ return="java.util.List&lt;java.lang.String&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
+</exception>
+<exception name="UnsupportedOperationException" type="java.lang.UnsupportedOperationException">
+</exception>
+</method>
+<method name="registerBlockedAccountCallback"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="callback" type="com.microsoft.intune.mam.client.identity.MAMBlockAccountCallback">
+</parameter>
+</method>
 <method name="setCurrentThreadIdentity"
  return="com.microsoft.intune.mam.client.MAMIdentitySwitchResult"
  abstract="false"
@@ -13792,6 +14264,50 @@
 </parameter>
 <parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
 </parameter>
+</method>
+<method name="setUIPolicyIdentityOIDs"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="oids" type="java.util.List&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="mamSetUIIdentityCallback" type="com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback">
+</parameter>
+<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
+</exception>
+<exception name="UnsupportedOperationException" type="java.lang.UnsupportedOperationException">
+</exception>
+</method>
+<method name="setUIPolicyIdentityOIDs"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="activity" type="android.app.Activity">
+</parameter>
+<parameter name="oids" type="java.util.List&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="mamSetUIIdentityCallback" type="com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback">
+</parameter>
+<parameter name="options" type="java.util.EnumSet&lt;com.microsoft.intune.mam.client.app.IdentitySwitchOption&gt;">
+</parameter>
+<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
+</exception>
+<exception name="UnsupportedOperationException" type="java.lang.UnsupportedOperationException">
+</exception>
 </method>
 <method name="showDiagnostics"
  return="void"
@@ -14339,7 +14855,29 @@
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
 </method>
+<method name="onMAMStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="onMAMStateNotSaved"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMAMStop"
  return="void"
  abstract="false"
  native="false"
@@ -14482,6 +15020,28 @@
 >
 <parameter name="event" type="android.view.SearchEvent">
 </parameter>
+</method>
+<method name="onStart"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
 </method>
 <method name="onSwitchMAMIdentityComplete"
  return="void"
@@ -15615,6 +16175,17 @@
 </method>
 <method name="getCode"
  return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isUsernameExpected"
+ return="boolean"
  abstract="false"
  native="false"
  synchronized="false"
