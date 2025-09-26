@@ -728,6 +728,42 @@ Summary:
             
             static
             
+            List&lt;String&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getUIPolicyIdentityOIDs(android.app.Activity)">getUIPolicyIdentityOIDs</a></span>(Activity activity)
+        
+        <div class="jd-descrdiv">Get the OIDs of identities associated with the Activity, if any.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#registerBlockedAccountCallback(android.app.Activity, com.microsoft.intune.mam.client.identity.MAMBlockAccountCallback)">registerBlockedAccountCallback</a></span>(Activity activity, MAMBlockAccountCallback callback)
+        
+        <div class="jd-descrdiv">Register a block account callback for a given activity.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
             <a href="../../../../../../com/microsoft/intune/mam/client/MAMIdentitySwitchResult.html">MAMIdentitySwitchResult</a>
         </td>
         <td class="jd-linkcol" width="100%">
@@ -876,6 +912,42 @@ Summary:
         <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOID(android.content.Context, java.lang.String, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentityOID</a></span>(Context context, String oid, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
         
         <div class="jd-descrdiv">Set the associated identity with the Context.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOIDs(android.app.Activity, java.util.List<java.lang.String>, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentityOIDs</a></span>(Activity activity, List&lt;String&gt; oids, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)
+        
+        <div class="jd-descrdiv">Set multiple identities for a mixed view.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOIDs(android.app.Activity, java.util.List<java.lang.String>, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)">setUIPolicyIdentityOIDs</a></span>(Activity activity, List&lt;String&gt; oids, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)
+        
+        <div class="jd-descrdiv">Set multiple identities for a mixed view.</div>
   
   </td></tr>
 
@@ -1861,6 +1933,111 @@ From class
 </div>
 
 
+<a id="getUIPolicyIdentityOIDs(android.app.Activity)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        List&lt;String&gt;
+      </span>
+      <span class="sympad">getUIPolicyIdentityOIDs</span>
+      <span class="normal">(Activity activity)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get the OIDs of identities associated with the Activity, if any.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>Activity to get the identities from.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Current UI identities OIDs.
+</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalArgumentException</td>
+            <td></td>
+        </tr>  
+        <tr>
+            <th>UnsupportedOperationException</td>
+            <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="registerBlockedAccountCallback(android.app.Activity, com.microsoft.intune.mam.client.identity.MAMBlockAccountCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">registerBlockedAccountCallback</span>
+      <span class="normal">(Activity activity, MAMBlockAccountCallback callback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Register a block account callback for a given activity. This callback is used in mixed view mode,
+ when the MAM SDK may need to inform the app that a subset of accounts are blocked.
+ Must be registered before calling <code><a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#setUIPolicyIdentityOIDs(android.app.Activity, java.util.List<java.lang.String>, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)">setUIPolicyIdentityOIDs(Activity, List<String>, MAMSetUIIdentityCallback)</a></code> with multiple OIDs.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>The activity that is blocked.</td>
+        </tr>
+        <tr>
+          <th>callback</th>
+          <td>The callback to be notified when the account is blocked.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <a id="setCurrentThreadIdentity(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -2252,6 +2429,136 @@ From class
         <tr>
           <th>options</th>
           <td>Identity switch options.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setUIPolicyIdentityOIDs(android.app.Activity, java.util.List<java.lang.String>, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUIPolicyIdentityOIDs</span>
+      <span class="normal">(Activity activity, List&lt;String&gt; oids, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set multiple identities for a mixed view. If `identities` contains 2 or more values,
+ puts the `activity` into mixed-view mode, otherwise behaves as setUIPolicyIdentityOID().</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>Activity to set the identity in.</td>
+        </tr>
+        <tr>
+          <th>oids</th>
+          <td>AAD OIDs of identities to set. This list must be non-empty and must contain non-null OIDs.</td>
+        </tr>
+        <tr>
+          <th>mamSetUIIdentityCallback</th>
+          <td>Callback to notify the application of the identity switch result.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalArgumentException</td>
+            <td>If one of the provided OIDs is found to be null or the list of OIDs is empty.</td>
+        </tr>  
+        <tr>
+            <th>UnsupportedOperationException</td>
+            <td>If the app is not MMA-enabled.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="setUIPolicyIdentityOIDs(android.app.Activity, java.util.List<java.lang.String>, com.microsoft.intune.mam.client.identity.MAMSetUIIdentityCallback, java.util.EnumSet<com.microsoft.intune.mam.client.app.IdentitySwitchOption>)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUIPolicyIdentityOIDs</span>
+      <span class="normal">(Activity activity, List&lt;String&gt; oids, <a href="../../../../../../com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html">MAMSetUIIdentityCallback</a> mamSetUIIdentityCallback, EnumSet&lt;<a href="../../../../../../com/microsoft/intune/mam/client/app/IdentitySwitchOption.html">IdentitySwitchOption</a>&gt; options)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Set multiple identities for a mixed view. If `identities` contains 2 or more values,
+ puts the `activity` into mixed-view mode, otherwise behaves as setUIPolicyIdentityOID().</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>activity</th>
+          <td>Activity to set the identity in.</td>
+        </tr>
+        <tr>
+          <th>oids</th>
+          <td>AAD OIDs of identities to set. This list must be non-empty and must contain non-null OIDs.</td>
+        </tr>
+        <tr>
+          <th>mamSetUIIdentityCallback</th>
+          <td>Callback to notify the application of the identity switch result.</td>
+        </tr>
+        <tr>
+          <th>options</th>
+          <td>Identity switch options.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IllegalArgumentException</td>
+            <td>If one of the provided OIDs is found to be null or the list of OIDs is empty.</td>
+        </tr>  
+        <tr>
+            <th>UnsupportedOperationException</td>
+            <td>If the app is not MMA-enabled.
 </td>
         </tr>
       </table>
