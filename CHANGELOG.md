@@ -1,6 +1,17 @@
-Version 11.5.1
+Version 12.0.2
 --------------
-* Update infrastructure for connections to Intune services.
+* Protect WebView cache data using a device-wide key for MMA apps.
+
+Version 12.0.1
+--------------
+* Improve `CloudMediaProvider` related error messages.
+
+Version 12.0.0
+--------------
+* Support for Android 16 targeting.
+* Update minimum supported MAM SDK version to Android 5.0 (API level 21).
+* Expand `MAMCloudMediaProvider` to cover new `CloudMediaProvider` APIs.
+* The build plugin will now replace `MediaStore` with `MAMMediaStore`.
 
 Version 11.5.0
 --------------
