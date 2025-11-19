@@ -1,3 +1,7 @@
+Version 12.0.3
+--------------
+* Fix Build Tool CLI argument parsing for empty strings.
+
 Version 12.0.2
 --------------
 * Protect WebView cache data using a device-wide key for MMA apps.
