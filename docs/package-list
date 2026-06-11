@@ -1,0 +1,21 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.microsoft.intune.mam.policy.appconfig/MAMAppConfig.BooleanQueryType///PointingToDeclaration/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.BooleanQueryType.html
+$dokka.location:com.microsoft.intune.mam.policy.appconfig/MAMAppConfig.NumberQueryType///PointingToDeclaration/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.NumberQueryType.html
+$dokka.location:com.microsoft.intune.mam.policy.appconfig/MAMAppConfig.StringQueryType///PointingToDeclaration/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.StringQueryType.html
+$dokka.location:com.microsoft.intune.mam.policy/MAMEnrollmentManager.Result///PointingToDeclaration/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
+com.microsoft.intune.mam.client
+com.microsoft.intune.mam.client.app
+com.microsoft.intune.mam.client.app.backup
+com.microsoft.intune.mam.client.app.startup
+com.microsoft.intune.mam.client.app.ui
+com.microsoft.intune.mam.client.content
+com.microsoft.intune.mam.client.identity
+com.microsoft.intune.mam.client.notification
+com.microsoft.intune.mam.client.os
+com.microsoft.intune.mam.client.preference
+com.microsoft.intune.mam.client.strict
+com.microsoft.intune.mam.log
+com.microsoft.intune.mam.policy
+com.microsoft.intune.mam.policy.appconfig
+com.microsoft.intune.mam.policy.notification

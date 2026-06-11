@@ -1,0 +1,1238 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>HookedActivity </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li>Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.microsoft.intune.mam.client.app</a></div>
+        <h2 title="Interface HookedActivity" class="title">Interface HookedActivity</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>com.microsoft.intune.mam.client.app.HookedContextWrapper</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.app.MAMActivityBlockingListener</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.app.MAMActivityIdentityRequirementListener</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.app.MAMActivityIdentitySwitchListener</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public interface <span class="typeNameLabel"><a href=HookedActivity.html>HookedActivity</a></span>
+ implements HookedContextWrapper, <a href=MAMActivityBlockingListener.html>MAMActivityBlockingListener</a>, <a href=MAMActivityIdentityRequirementListener.html>MAMActivityIdentityRequirementListener</a>, <a href=MAMActivityIdentitySwitchListener.html>MAMActivityIdentitySwitchListener</a>
+                    </pre>
+                    <div class="block"><p>Allow access to an Activity's super class implementation.</p></div>
+
+                    <dl>
+
+                    
+
+                    
+
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMCreate(android.os.Bundle)>onMAMCreate</a>(@Nullable() Bundle savedInstanceState) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onCreate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMStart()>onMAMStart</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onStart.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMResume()>onMAMResume</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onResume.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMPause()>onMAMPause</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onPause.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMStop()>onMAMStop</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onStop.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMDestroy()>onMAMDestroy</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onDestroy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMPostCreate(android.os.Bundle)>onMAMPostCreate</a>(@Nullable() Bundle savedInstanceState) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onPostCreate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMPostResume()>onMAMPostResume</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onPostResume.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMNewIntent(android.content.Intent)>onMAMNewIntent</a>(Intent intent) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onNewIntent.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMActivityResult(int,int,android.content.Intent)>onMAMActivityResult</a>(int requestCode, int resultCode, Intent data) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onActivityResult.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMSaveInstanceState(android.os.Bundle)>onMAMSaveInstanceState</a>(@NonNull() Bundle outState) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onSaveInstanceState.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMUserLeaveHint()>onMAMUserLeaveHint</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onUserLeaveHint.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMPictureInPictureRequested()>onMAMPictureInPictureRequested</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onPictureInPictureRequested.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMRawProvideAssistContent(Object)>onMAMRawProvideAssistContent</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html>Object</a> content) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onProvideAssistContent.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMRawSearchRequested(Object)>onMAMRawSearchRequested</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html>Object</a> event) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onSearchRequested.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMPrepareOptionsMenu(android.view.Menu)>onMAMPrepareOptionsMenu</a>(Menu menu) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onPrepareOptionsMenu.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>abstract Uri</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMProvideReferrer()>onMAMProvideReferrer</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM version on onProviderReferrer.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMStateNotSaved()>onMAMStateNotSaved</a>() </code>
+                                            </th>
+                                            <td class="colLast">MAM Version of onStateNotSaved.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>abstract View</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#onMAMCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>onMAMCreateView</a>(View parent, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> name, Context context, AttributeSet attrs) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of onCreateView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#switchMAMIdentity(java.lang.String)>switchMAMIdentity</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newIdentity) </code>
+                                            </th>
+                                            <td class="colLast">Set new identity.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#switchMAMIdentityOID(java.lang.String)>switchMAMIdentityOID</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newOid) </code>
+                                            </th>
+                                            <td class="colLast">Set new identity.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#switchMAMIdentity(java.lang.String,java.util.EnumSet)>switchMAMIdentity</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newIdentity, @NonNull() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html>EnumSet</a>&lt;<a href=IdentitySwitchOption.html>IdentitySwitchOption</a>&gt; options) </code>
+                                            </th>
+                                            <td class="colLast">Set new identity.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HookedActivity.html#switchMAMIdentityOID(java.lang.String,java.util.EnumSet)>switchMAMIdentityOID</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newOid, @NonNull() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html>EnumSet</a>&lt;<a href=IdentitySwitchOption.html>IdentitySwitchOption</a>&gt; options) </code>
+                                            </th>
+                                            <td class="colLast">Set new identity.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.microsoft.intune.mam.client.app.MAMActivityBlockingListener">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.microsoft.intune.mam.client.app.MAMActivityBlockingListener</h3>
+                                            <code>onMAMCompanyPortalRequired, onMAMCompanyPortalRequired</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.microsoft.intune.mam.client.app.MAMActivityIdentityRequirementListener">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.microsoft.intune.mam.client.app.MAMActivityIdentityRequirementListener</h3>
+                                            <code>onMAMIdentitySwitchRequired, onMAMIdentitySwitchRequired</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.microsoft.intune.mam.client.app.MAMActivityIdentitySwitchListener">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.microsoft.intune.mam.client.app.MAMActivityIdentitySwitchListener</h3>
+                                            <code>onSwitchMAMIdentityComplete</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="onMAMCreate(android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMCreate</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMCreate(android.os.Bundle)>onMAMCreate</a>(@Nullable() Bundle savedInstanceState)</pre>
+                                        <div class="block"><p>MAM version of onCreate.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>savedInstanceState</code> - Saved instance state.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMStart()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMStart</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMStart()>onMAMStart</a>()</pre>
+                                        <div class="block"><p>MAM version of onStart.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMResume()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMResume</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMResume()>onMAMResume</a>()</pre>
+                                        <div class="block"><p>MAM version of onResume.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMPause()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMPause</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMPause()>onMAMPause</a>()</pre>
+                                        <div class="block"><p>MAM version of onPause.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMStop()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMStop</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMStop()>onMAMStop</a>()</pre>
+                                        <div class="block"><p>MAM version of onStop.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMDestroy()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMDestroy</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMDestroy()>onMAMDestroy</a>()</pre>
+                                        <div class="block"><p>MAM version of onDestroy.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMPostCreate(android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMPostCreate</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMPostCreate(android.os.Bundle)>onMAMPostCreate</a>(@Nullable() Bundle savedInstanceState)</pre>
+                                        <div class="block"><p>MAM version of onPostCreate.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>savedInstanceState</code> - Saved instance state.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMPostResume()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMPostResume</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMPostResume()>onMAMPostResume</a>()</pre>
+                                        <div class="block"><p>MAM version of onPostResume.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMNewIntent(android.content.Intent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMNewIntent</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMNewIntent(android.content.Intent)>onMAMNewIntent</a>(Intent intent)</pre>
+                                        <div class="block"><p>MAM version of onNewIntent.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>intent</code> - intent to process</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMActivityResult(int,int,android.content.Intent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMActivityResult</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMActivityResult(int,int,android.content.Intent)>onMAMActivityResult</a>(int requestCode, int resultCode, Intent data)</pre>
+                                        <div class="block"><p>MAM version of onActivityResult.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>requestCode</code> - Request code.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>resultCode</code> - Result code.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>data</code> - Intent data.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMSaveInstanceState(android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMSaveInstanceState</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMSaveInstanceState(android.os.Bundle)>onMAMSaveInstanceState</a>(@NonNull() Bundle outState)</pre>
+                                        <div class="block"><p>MAM version of onSaveInstanceState.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>outState</code> - Out state.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMUserLeaveHint()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMUserLeaveHint</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#onMAMUserLeaveHint()>onMAMUserLeaveHint</a>()</pre>
+                                        <div class="block"><p>MAM version of onUserLeaveHint.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMPictureInPictureRequested()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMPictureInPictureRequested</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) abstract boolean <a href=HookedActivity.html#onMAMPictureInPictureRequested()>onMAMPictureInPictureRequested</a>()</pre>
+                                        <div class="block"><p>MAM version of onPictureInPictureRequested.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>true if the activity received this callback regardless of if it acts on it or not. If false, the framework will assume the app hasn't been updated to leverage this callback and will in turn send a legacy callback of onUserLeaveHint() for the app to enter picture-in-picture mode.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMRawProvideAssistContent(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMRawProvideAssistContent</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.M) abstract void <a href=HookedActivity.html#onMAMRawProvideAssistContent(Object)>onMAMRawProvideAssistContent</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html>Object</a> content)</pre>
+                                        <div class="block"><p>MAM version of onProvideAssistContent.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>content</code> - AssistContent.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMRawSearchRequested(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMRawSearchRequested</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.M) abstract boolean <a href=HookedActivity.html#onMAMRawSearchRequested(Object)>onMAMRawSearchRequested</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html>Object</a> event)</pre>
+                                        <div class="block"><p>MAM version of onSearchRequested.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>event</code> - SearchEvent.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>false if activity blocks the search.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMPrepareOptionsMenu(android.view.Menu)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMPrepareOptionsMenu</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=HookedActivity.html#onMAMPrepareOptionsMenu(android.view.Menu)>onMAMPrepareOptionsMenu</a>(Menu menu)</pre>
+                                        <div class="block"><p>MAM version of onPrepareOptionsMenu.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>menu</code> - menu</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>true to display the menu</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMProvideReferrer()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMProvideReferrer</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.M) abstract Uri <a href=HookedActivity.html#onMAMProvideReferrer()>onMAMProvideReferrer</a>()</pre>
+                                        <div class="block"><p>MAM version on onProviderReferrer.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>URI representing referrer.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMStateNotSaved()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMStateNotSaved</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.M) abstract void <a href=HookedActivity.html#onMAMStateNotSaved()>onMAMStateNotSaved</a>()</pre>
+                                        <div class="block"><p>MAM Version of onStateNotSaved.</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMAMCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMAMCreateView</h4>
+                                        <pre class="methodSignature"> abstract View <a href=HookedActivity.html#onMAMCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>onMAMCreateView</a>(View parent, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> name, Context context, AttributeSet attrs)</pre>
+                                        <div class="block"><p>MAM version of onCreateView. See Android documentation for more info.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parent</code> - parent</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>name</code> - name</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>context</code> - context</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>attrs</code> - attrs</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>view</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="switchMAMIdentity(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>switchMAMIdentity</h4>
+                                        <pre class="methodSignature">@<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html>Deprecated</a>() void <a href=../preference/MAMPreferenceActivity.html#switchMAMIdentity(java.lang.String)>switchMAMIdentity</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newIdentity)</pre>
+                                        <div class="block"><p>Set new identity.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>newIdentity</code> - New identity</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="switchMAMIdentityOID(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>switchMAMIdentityOID</h4>
+                                        <pre class="methodSignature"> void <a href=../preference/MAMPreferenceActivity.html#switchMAMIdentityOID(java.lang.String)>switchMAMIdentityOID</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newOid)</pre>
+                                        <div class="block"><p>Set new identity.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>newOid</code> - AAD OID of the new identity.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="switchMAMIdentity(java.lang.String,java.util.EnumSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>switchMAMIdentity</h4>
+                                        <pre class="methodSignature">@<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html>Deprecated</a>() abstract void <a href=HookedActivity.html#switchMAMIdentity(java.lang.String,java.util.EnumSet)>switchMAMIdentity</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newIdentity, @NonNull() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html>EnumSet</a>&lt;<a href=IdentitySwitchOption.html>IdentitySwitchOption</a>&gt; options)</pre>
+                                        <div class="block"><p>Set new identity.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>newIdentity</code> - New identity</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - Identity switch options.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="switchMAMIdentityOID(java.lang.String,java.util.EnumSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>switchMAMIdentityOID</h4>
+                                        <pre class="methodSignature"> abstract void <a href=HookedActivity.html#switchMAMIdentityOID(java.lang.String,java.util.EnumSet)>switchMAMIdentityOID</a>(@Nullable() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> newOid, @NonNull() <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html>EnumSet</a>&lt;<a href=IdentitySwitchOption.html>IdentitySwitchOption</a>&gt; options)</pre>
+                                        <div class="block"><p>Set new identity.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>newOid</code> - AAD OID of the new identity.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - Identity switch options.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li>Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
