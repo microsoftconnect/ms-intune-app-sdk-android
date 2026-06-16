@@ -1,3 +1,32 @@
+Version 12.4.0
+--------------
+* Fix image/file copy-paste between managed apps under encrypted clipboard policy.
+* Remove `@DeveloperPreview` annotation from MMA mixed view APIs `setUIPolicyIdentityOIDs`, `getUIPolicyIdentityOIDs`, 
+  and `registerBlockedAccountCallback`. 
+* Enrollment retries will be scheduled in offline mode for the `COMPANY_PORTAL_REQUIRED` status.
+  Previously, enrollments were not retried, leaving apps stuck in that state if policy was later untargeted.
+* Add MAM Strict Mode check: `ACTIVITY_LAUNCHED_FROM_MIXED_VIEW_REQUIRES_IDENTITY_SWITCH` to check that activities 
+  launched from mixed views call `setUIPolicyIdentityOID` or `setUIPolicyIdentityOIDs` to set the activity's 
+  identity or identities. Failing to do so will cause data leaks if the activity is intended to be managed.
+
+Version 12.3.0
+--------------
+* When IPC retries to Company Portal are exhausted due to battery optimization killing the Company Portal process, the app now 
+falls back to offline mode on the same launch and displays a blocking message explaining the issue, rather than crashing. Users are 
+directed to turn off battery optimization for Company Portal in device settings. The app retries normal online initialization on 
+the next launch.
+
+Version 12.2.0
+--------------
+* Add `DeferredStartupManager` API for China app store privacy compliance. Apps distributing through China app stores can defer 
+offline startup operations (specifically install receiver registration) until after showing a required privacy consent dialog by
+opting in via the `com.microsoft.intune.mam.OfflineStartupDeferredUntilAppSignal` manifest flag. See Phase 7 doc for details.
+* Fix deferred offline startup to detect already-installed Company Portal when calling `setOfflineStartupReady()`.
+
+Version 12.1.0
+--------------
+* Add SDK surface for missing `MediaRecorder` constructor that was Added in API 31.
+
 Version 12.0.3
 --------------
 * Fix Build Tool CLI argument parsing for empty strings.
@@ -16,6 +45,10 @@ Version 12.0.0
 * Update minimum supported MAM SDK version to Android 5.0 (API level 21).
 * Expand `MAMCloudMediaProvider` to cover new `CloudMediaProvider` APIs.
 * The build plugin will now replace `MediaStore` with `MAMMediaStore`.
+
+Version 11.5.1
+--------------
+* Update infrastructure for connections to Intune services.
 
 Version 11.5.0
 --------------

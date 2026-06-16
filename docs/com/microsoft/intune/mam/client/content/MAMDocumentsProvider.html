@@ -1,0 +1,2919 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>MAMDocumentsProvider </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">com.microsoft.intune.mam.client.content</a></div>
+        <h2 title="Class MAMDocumentsProvider" class="title">Class MAMDocumentsProvider</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>android.content.ComponentCallbacks</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.content.ComponentCallbacks2</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.app.MAMIdentityRequirementListener</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.content.HookedContentProvider</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.microsoft.intune.mam.client.content.HookedDocumentsProvider</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=MAMDocumentsProvider.html>MAMDocumentsProvider</a></span>
+extends DocumentsProvider implements HookedDocumentsProvider
+                    </pre>
+                    <div class="block"><p>MAM version of DocumentsProvider.</p></div>
+
+                    <dl>
+
+                    
+
+                    
+
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_BACKGROUND>TRIM_MEMORY_BACKGROUND</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_COMPLETE>TRIM_MEMORY_COMPLETE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_MODERATE>TRIM_MEMORY_MODERATE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_RUNNING_CRITICAL>TRIM_MEMORY_RUNNING_CRITICAL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_RUNNING_LOW>TRIM_MEMORY_RUNNING_LOW</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_RUNNING_MODERATE>TRIM_MEMORY_RUNNING_MODERATE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=../preference/MAMPreferenceActivity.html#TRIM_MEMORY_UI_HIDDEN>TRIM_MEMORY_UI_HIDDEN</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MAMDocumentsProvider()">MAMDocumentsProvider</a></span>()</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#attachInfo(android.content.Context,android.content.pm.ProviderInfo)>attachInfo</a>(Context context, ProviderInfo info) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#applyBatch(java.util.ArrayList)>applyBatch</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#applyBatch(java.lang.String,java.util.ArrayList)>applyBatch</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#bulkInsert(android.net.Uri,kotlin.Array)>bulkInsert</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentValues&gt; values) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>final Bundle</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#call(java.lang.String,java.lang.String,android.os.Bundle)>call</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>final Bundle</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#call(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)>call</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>final <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#createDocument(java.lang.String,java.lang.String,java.lang.String)>createDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeType, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> displayName) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#deleteDocument(java.lang.String)>deleteDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#delete(android.net.Uri,android.os.Bundle)>delete</a>(Uri uri, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>final Uri</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)>insert</a>(Uri uri, ContentValues values, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>final ParcelFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openDocument(java.lang.String,java.lang.String,android.os.CancellationSignal)>openDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>final AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openDocumentThumbnail(java.lang.String,android.graphics.Point,android.os.CancellationSignal)>openDocumentThumbnail</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Point sizeHint, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#query(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)>query</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder, CancellationSignal cancellationSignal) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryChildDocuments(java.lang.String,kotlin.Array,java.lang.String)>queryChildDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder) </code>
+                                            </th>
+                                            <td class="colLast">Note, there are other overloads of query which we do not override because they are final.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryChildDocuments(java.lang.String,kotlin.Array,android.os.Bundle)>queryChildDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryDocument(java.lang.String,kotlin.Array)>queryDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryRecentDocuments(java.lang.String,kotlin.Array)>queryRecentDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryRoots(kotlin.Array)>queryRoots</a>(<a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>final Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#querySearchDocuments(java.lang.String,java.lang.String,kotlin.Array)>querySearchDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> query, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#update(android.net.Uri,android.content.ContentValues,android.os.Bundle)>update</a>(Uri uri, ContentValues values, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#ejectRoot(java.lang.String)>ejectRoot</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>IntentSender</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#createWebLinkIntent(java.lang.String,android.os.Bundle)>createWebLinkIntent</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Bundle options) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>final DocumentsContract.Path</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#findDocumentPath(java.lang.String,java.lang.String)>findDocumentPath</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> childDocumentId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#attachInfoMAM(android.content.Context,android.content.pm.ProviderInfo)>attachInfoMAM</a>(Context context, ProviderInfo info) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of attachInfo.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code><a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#applyBatchMAM(java.util.ArrayList)>applyBatchMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of applyBatch.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#applyBatchMAM(java.lang.String,java.util.ArrayList)>applyBatchMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of applyBatch.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#bulkInsertMAM(android.net.Uri,kotlin.Array)>bulkInsertMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentValues&gt; values) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of bulkInsert.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>Bundle</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#callMAM(java.lang.String,java.lang.String,android.os.Bundle)>callMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of call.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>Bundle</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#callMAM(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)>callMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of call.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#createDocumentMAM(java.lang.String,java.lang.String,java.lang.String)>createDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeType, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> displayName) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#deleteDocumentMAM(java.lang.String)>deleteDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openDocumentThumbnailMAM(java.lang.String,android.graphics.Point,android.os.CancellationSignal)>openDocumentThumbnailMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Point sizeHint, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder, CancellationSignal cancellationSignal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of query.</td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,android.os.Bundle,android.os.CancellationSignal)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs, CancellationSignal cancellationSignal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of query.</td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryChildDocumentsMAM(java.lang.String,kotlin.Array,android.os.Bundle)>queryChildDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryRecentDocumentsMAM(java.lang.String,kotlin.Array)>queryRecentDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#querySearchDocumentsMAM(java.lang.String,java.lang.String,kotlin.Array)>querySearchDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> query, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection) </code>
+                                            </th>
+                                            <td class="colLast">See DocumentsProvider.</td>
+                                        </tr>
+                                        
+                                        <tr id="i37" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#copyDocument(java.lang.String,java.lang.String)>copyDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i38" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#copyDocumentMAM(java.lang.String,java.lang.String)>copyDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of copyDocument.</td>
+                                        </tr>
+                                        
+                                        <tr id="i39" class="rowColor">
+                                            <td class="colFirst"><code>AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openTypedDocument(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i40" class="altColor">
+                                            <td class="colFirst"><code>AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openTypedDocumentMAM(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openTypedDocument.</td>
+                                        </tr>
+                                        
+                                        <tr id="i41" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#moveDocument(java.lang.String,java.lang.String,java.lang.String)>moveDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceParentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i42" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#moveDocumentMAM(java.lang.String,java.lang.String,java.lang.String)>moveDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceParentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of moveDocument.</td>
+                                        </tr>
+                                        
+                                        <tr id="i43" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#removeDocument(java.lang.String,java.lang.String)>removeDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i44" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#removeDocumentMAM(java.lang.String,java.lang.String)>removeDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of removeDocument.</td>
+                                        </tr>
+                                        
+                                        <tr id="i45" class="rowColor">
+                                            <td class="colFirst"><code>final AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openAssetFileMAM(android.net.Uri,java.lang.String)>openAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openAssetFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i46" class="altColor">
+                                            <td class="colFirst"><code>final AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openAssetFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)>openAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openAssetFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i47" class="rowColor">
+                                            <td class="colFirst"><code>final ParcelFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openFileMAM(android.net.Uri,java.lang.String)>openFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i48" class="altColor">
+                                            <td class="colFirst"><code>final ParcelFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)>openFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i49" class="rowColor">
+                                            <td class="colFirst"><code>final AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle)>openTypedAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openTypedAssetFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i50" class="altColor">
+                                            <td class="colFirst"><code>final AssetFileDescriptor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of openTypedAssetFile.</td>
+                                        </tr>
+                                        
+                                        <tr id="i51" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#deleteMAM(android.net.Uri,java.lang.String,kotlin.Array)>deleteMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of delete.</td>
+                                        </tr>
+                                        
+                                        <tr id="i52" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#deleteMAM(android.net.Uri,android.os.Bundle)>deleteMAM</a>(Uri uri, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of delete.</td>
+                                        </tr>
+                                        
+                                        <tr id="i53" class="rowColor">
+                                            <td class="colFirst"><code>Uri</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#insertMAM(android.net.Uri,android.content.ContentValues)>insertMAM</a>(Uri uri, ContentValues values) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of insert.</td>
+                                        </tr>
+                                        
+                                        <tr id="i54" class="altColor">
+                                            <td class="colFirst"><code>Uri</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#insertMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)>insertMAM</a>(Uri uri, ContentValues values, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of insert.</td>
+                                        </tr>
+                                        
+                                        <tr id="i55" class="rowColor">
+                                            <td class="colFirst"><code>Cursor</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of query.</td>
+                                        </tr>
+                                        
+                                        <tr id="i56" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#updateMAM(android.net.Uri,android.content.ContentValues,java.lang.String,kotlin.Array)>updateMAM</a>(Uri uri, ContentValues values, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of update.</td>
+                                        </tr>
+                                        
+                                        <tr id="i57" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#updateMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)>updateMAM</a>(Uri uri, ContentValues values, Bundle extras) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of update.</td>
+                                        </tr>
+                                        
+                                        <tr id="i58" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#ejectRootMAM(java.lang.String)>ejectRootMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of ejectRoot.</td>
+                                        </tr>
+                                        
+                                        <tr id="i59" class="rowColor">
+                                            <td class="colFirst"><code>IntentSender</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#createWebLinkIntentMAM(java.lang.String,android.os.Bundle)>createWebLinkIntentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Bundle options) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of createWebLinkIntent.</td>
+                                        </tr>
+                                        
+                                        <tr id="i60" class="altColor">
+                                            <td class="colFirst"><code>DocumentsContract.Path</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MAMDocumentsProvider.html#findDocumentPathMAM(java.lang.String,java.lang.String)>findDocumentPathMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> childDocumentId) </code>
+                                            </th>
+                                            <td class="colLast">MAM version of findDocumentPath.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.provider.DocumentsProvider">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.provider.DocumentsProvider</h3>
+                                            <code>canonicalize, delete, getDocumentMetadata, getDocumentStreamTypes, getDocumentType, getStreamTypes, getType, getTypeAnonymous, insert, isChildDocument, openAssetFile, openFile, openTypedAssetFile, query, renameDocument, revokeDocumentPermission, update</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.microsoft.intune.mam.client.content.HookedDocumentsProvider">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.microsoft.intune.mam.client.content.HookedDocumentsProvider</h3>
+                                            <code>openDocumentMAM, queryChildDocumentsMAM, queryDocumentMAM, queryRootsMAM</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.content.ContentProvider">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.content.ContentProvider</h3>
+                                            <code>clearCallingIdentity, dump, getCallingAttributionSource, getCallingAttributionTag, getCallingPackage, getCallingPackageUnchecked, getContext, getPathPermissions, getReadPermission, getWritePermission, onCallingPackageChanged, onConfigurationChanged, onCreate, onLowMemory, onTrimMemory, openPipeHelper, refresh, requireContext, restoreCallingIdentity, shutdown, uncanonicalize</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.microsoft.intune.mam.client.app.MAMIdentityRequirementListener">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.microsoft.intune.mam.client.app.MAMIdentityRequirementListener</h3>
+                                            <code>onMAMIdentitySwitchRequired, onMAMIdentitySwitchRequired</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="MAMDocumentsProvider()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MAMDocumentsProvider</h4>
+                                        <pre>MAMDocumentsProvider()</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="attachInfo(android.content.Context,android.content.pm.ProviderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>attachInfo</h4>
+                                        <pre class="methodSignature"> void <a href=MAMDocumentsProvider.html#attachInfo(android.content.Context,android.content.pm.ProviderInfo)>attachInfo</a>(Context context, ProviderInfo info)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="applyBatch(java.util.ArrayList)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>applyBatch</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt; <a href=MAMDocumentsProvider.html#applyBatch(java.util.ArrayList)>applyBatch</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="applyBatch(java.lang.String,java.util.ArrayList)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>applyBatch</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt; <a href=MAMDocumentsProvider.html#applyBatch(java.lang.String,java.util.ArrayList)>applyBatch</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="bulkInsert(android.net.Uri,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>bulkInsert</h4>
+                                        <pre class="methodSignature"> final int <a href=MAMDocumentsProvider.html#bulkInsert(android.net.Uri,kotlin.Array)>bulkInsert</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentValues&gt; values)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="call(java.lang.String,java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>call</h4>
+                                        <pre class="methodSignature"> final Bundle <a href=MAMDocumentsProvider.html#call(java.lang.String,java.lang.String,android.os.Bundle)>call</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="call(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>call</h4>
+                                        <pre class="methodSignature"> final Bundle <a href=MAMDocumentsProvider.html#call(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)>call</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="createDocument(java.lang.String,java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createDocument</h4>
+                                        <pre class="methodSignature"> final <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#createDocument(java.lang.String,java.lang.String,java.lang.String)>createDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeType, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> displayName)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="deleteDocument(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>deleteDocument</h4>
+                                        <pre class="methodSignature"> final void <a href=MAMDocumentsProvider.html#deleteDocument(java.lang.String)>deleteDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="delete(android.net.Uri,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>delete</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) final int <a href=MAMDocumentsProvider.html#delete(android.net.Uri,android.os.Bundle)>delete</a>(Uri uri, Bundle extras)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>insert</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) final Uri <a href=MAMDocumentsProvider.html#insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)>insert</a>(Uri uri, ContentValues values, Bundle extras)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openDocument(java.lang.String,java.lang.String,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openDocument</h4>
+                                        <pre class="methodSignature"> final ParcelFileDescriptor <a href=MAMDocumentsProvider.html#openDocument(java.lang.String,java.lang.String,android.os.CancellationSignal)>openDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openDocumentThumbnail(java.lang.String,android.graphics.Point,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openDocumentThumbnail</h4>
+                                        <pre class="methodSignature"> final AssetFileDescriptor <a href=MAMDocumentsProvider.html#openDocumentThumbnail(java.lang.String,android.graphics.Point,android.os.CancellationSignal)>openDocumentThumbnail</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Point sizeHint, CancellationSignal signal)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="query(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>query</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#query(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)>query</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder, CancellationSignal cancellationSignal)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryChildDocuments(java.lang.String,kotlin.Array,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryChildDocuments</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#queryChildDocuments(java.lang.String,kotlin.Array,java.lang.String)>queryChildDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder)</pre>
+                                        <div class="block"><p>Note, there are other overloads of query which we do not override because they are final. Data leak will not occur, because the DocumentsProvider implementation of these always calls into one of the non-final documents-specific query* methods (queryRoots, queryRecentDocuments, etc).</p></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryChildDocuments(java.lang.String,kotlin.Array,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryChildDocuments</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) final Cursor <a href=MAMDocumentsProvider.html#queryChildDocuments(java.lang.String,kotlin.Array,android.os.Bundle)>queryChildDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryDocument(java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryDocument</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#queryDocument(java.lang.String,kotlin.Array)>queryDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryRecentDocuments(java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryRecentDocuments</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#queryRecentDocuments(java.lang.String,kotlin.Array)>queryRecentDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryRoots(kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryRoots</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#queryRoots(kotlin.Array)>queryRoots</a>(<a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="querySearchDocuments(java.lang.String,java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>querySearchDocuments</h4>
+                                        <pre class="methodSignature"> final Cursor <a href=MAMDocumentsProvider.html#querySearchDocuments(java.lang.String,java.lang.String,kotlin.Array)>querySearchDocuments</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> query, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="update(android.net.Uri,android.content.ContentValues,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>update</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) final int <a href=MAMDocumentsProvider.html#update(android.net.Uri,android.content.ContentValues,android.os.Bundle)>update</a>(Uri uri, ContentValues values, Bundle extras)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="ejectRoot(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>ejectRoot</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) final void <a href=MAMDocumentsProvider.html#ejectRoot(java.lang.String)>ejectRoot</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="createWebLinkIntent(java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createWebLinkIntent</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) IntentSender <a href=MAMDocumentsProvider.html#createWebLinkIntent(java.lang.String,android.os.Bundle)>createWebLinkIntent</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Bundle options)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="findDocumentPath(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findDocumentPath</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) final DocumentsContract.Path <a href=MAMDocumentsProvider.html#findDocumentPath(java.lang.String,java.lang.String)>findDocumentPath</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> childDocumentId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="attachInfoMAM(android.content.Context,android.content.pm.ProviderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>attachInfoMAM</h4>
+                                        <pre class="methodSignature"> void <a href=MAMDocumentsProvider.html#attachInfoMAM(android.content.Context,android.content.pm.ProviderInfo)>attachInfoMAM</a>(Context context, ProviderInfo info)</pre>
+                                        <div class="block"><p>MAM version of attachInfo.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>context</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>info</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="applyBatchMAM(java.util.ArrayList)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>applyBatchMAM</h4>
+                                        <pre class="methodSignature"> <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt; <a href=MAMDocumentsProvider.html#applyBatchMAM(java.util.ArrayList)>applyBatchMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations)</pre>
+                                        <div class="block"><p>MAM version of applyBatch.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>operations</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="applyBatchMAM(java.lang.String,java.util.ArrayList)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>applyBatchMAM</h4>
+                                        <pre class="methodSignature"> <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentProviderResult&gt; <a href=MAMDocumentsProvider.html#applyBatchMAM(java.lang.String,java.util.ArrayList)>applyBatchMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>ArrayList</a>&lt;ContentProviderOperation&gt; operations)</pre>
+                                        <div class="block"><p>MAM version of applyBatch.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>authority</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>operations</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="bulkInsertMAM(android.net.Uri,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>bulkInsertMAM</h4>
+                                        <pre class="methodSignature"> int <a href=MAMDocumentsProvider.html#bulkInsertMAM(android.net.Uri,kotlin.Array)>bulkInsertMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;ContentValues&gt; values)</pre>
+                                        <div class="block"><p>MAM version of bulkInsert.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>values</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="callMAM(java.lang.String,java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>callMAM</h4>
+                                        <pre class="methodSignature"> Bundle <a href=MAMDocumentsProvider.html#callMAM(java.lang.String,java.lang.String,android.os.Bundle)>callMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras)</pre>
+                                        <div class="block"><p>MAM version of call.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>method</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>arg</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>extras</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="callMAM(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>callMAM</h4>
+                                        <pre class="methodSignature"> Bundle <a href=MAMDocumentsProvider.html#callMAM(java.lang.String,java.lang.String,java.lang.String,android.os.Bundle)>callMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> authority, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> method, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> arg, Bundle extras)</pre>
+                                        <div class="block"><p>MAM version of call.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>authority</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>method</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>arg</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>extras</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="createDocumentMAM(java.lang.String,java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createDocumentMAM</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#createDocumentMAM(java.lang.String,java.lang.String,java.lang.String)>createDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeType, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> displayName)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parentDocumentId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mimeType</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>displayName</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="deleteDocumentMAM(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>deleteDocumentMAM</h4>
+                                        <pre class="methodSignature"> void <a href=MAMDocumentsProvider.html#deleteDocumentMAM(java.lang.String)>deleteDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parentDocumentId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openDocumentThumbnailMAM(java.lang.String,android.graphics.Point,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openDocumentThumbnailMAM</h4>
+                                        <pre class="methodSignature"> AssetFileDescriptor <a href=MAMDocumentsProvider.html#openDocumentThumbnailMAM(java.lang.String,android.graphics.Point,android.os.CancellationSignal)>openDocumentThumbnailMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Point sizeHint, CancellationSignal signal)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>documentId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>sizeHint</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signal</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryMAM</h4>
+                                        <pre class="methodSignature"> Cursor <a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String,android.os.CancellationSignal)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder, CancellationSignal cancellationSignal)</pre>
+                                        <div class="block"><p>MAM version of query.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selectionArgs</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>sortOrder</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>cancellationSignal</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryMAM(android.net.Uri,kotlin.Array,android.os.Bundle,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) Cursor <a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,android.os.Bundle,android.os.CancellationSignal)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs, CancellationSignal cancellationSignal)</pre>
+                                        <div class="block"><p>MAM version of query.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>queryArgs</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>cancellationSignal</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryChildDocumentsMAM(java.lang.String,kotlin.Array,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryChildDocumentsMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) Cursor <a href=MAMDocumentsProvider.html#queryChildDocumentsMAM(java.lang.String,kotlin.Array,android.os.Bundle)>queryChildDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, Bundle queryArgs)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parentDocumentId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>queryArgs</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryRecentDocumentsMAM(java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryRecentDocumentsMAM</h4>
+                                        <pre class="methodSignature"> Cursor <a href=MAMDocumentsProvider.html#queryRecentDocumentsMAM(java.lang.String,kotlin.Array)>queryRecentDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>rootId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="querySearchDocumentsMAM(java.lang.String,java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>querySearchDocumentsMAM</h4>
+                                        <pre class="methodSignature"> Cursor <a href=MAMDocumentsProvider.html#querySearchDocumentsMAM(java.lang.String,java.lang.String,kotlin.Array)>querySearchDocumentsMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> query, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection)</pre>
+                                        <div class="block"><p>See DocumentsProvider.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>rootId</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>query</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See DocumentsProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="copyDocument(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>copyDocument</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#copyDocument(java.lang.String,java.lang.String)>copyDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="copyDocumentMAM(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>copyDocumentMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#copyDocumentMAM(java.lang.String,java.lang.String)>copyDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId)</pre>
+                                        <div class="block"><p>MAM version of copyDocument.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>sourceDocumentId</code> - the document to copy.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>targetParentDocumentId</code> - the target document to be copied into as a child.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>documentId of new document.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openTypedDocument(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openTypedDocument</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) AssetFileDescriptor <a href=MAMDocumentsProvider.html#openTypedDocument(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openTypedDocumentMAM(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openTypedDocumentMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) AssetFileDescriptor <a href=MAMDocumentsProvider.html#openTypedDocumentMAM(java.lang.String,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal)</pre>
+                                        <div class="block"><p>MAM version of openTypedDocument.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>documentId</code> - the document to return.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mimeTypeFilter</code> - the MIM type filter for the requested format.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>opts</code> - extra options from the client.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signal</code> - used by the caller to signal if the request should be cancelled.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>AssetFileDescriptor for typed document.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="moveDocument(java.lang.String,java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>moveDocument</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#moveDocument(java.lang.String,java.lang.String,java.lang.String)>moveDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceParentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="moveDocumentMAM(java.lang.String,java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>moveDocumentMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> <a href=MAMDocumentsProvider.html#moveDocumentMAM(java.lang.String,java.lang.String,java.lang.String)>moveDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sourceParentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> targetParentDocumentId)</pre>
+                                        <div class="block"><p>MAM version of moveDocument.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>sourceDocumentId</code> - the document to move.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>sourceParentDocumentId</code> - the parent of the document to move.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>targetParentDocumentId</code> - the target document to be a new parent of the source document.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>documentId of new document.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeDocument(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeDocument</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) void <a href=MAMDocumentsProvider.html#removeDocument(java.lang.String,java.lang.String)>removeDocument</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId)</pre>
+                                        <div class="block"></div>
+
+                                        <dl>
+
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeDocumentMAM(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeDocumentMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.N) void <a href=MAMDocumentsProvider.html#removeDocumentMAM(java.lang.String,java.lang.String)>removeDocumentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId)</pre>
+                                        <div class="block"><p>MAM version of removeDocument.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>documentId</code> - the document to remove.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parentDocumentId</code> - the parent of the document to remove.</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openAssetFileMAM(android.net.Uri,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openAssetFileMAM</h4>
+                                        <pre class="methodSignature"> final AssetFileDescriptor <a href=MAMDocumentsProvider.html#openAssetFileMAM(android.net.Uri,java.lang.String)>openAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode)</pre>
+                                        <div class="block"><p>MAM version of openAssetFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openAssetFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openAssetFileMAM</h4>
+                                        <pre class="methodSignature"> final AssetFileDescriptor <a href=MAMDocumentsProvider.html#openAssetFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)>openAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal)</pre>
+                                        <div class="block"><p>MAM version of openAssetFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signal</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openFileMAM(android.net.Uri,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openFileMAM</h4>
+                                        <pre class="methodSignature"> final ParcelFileDescriptor <a href=MAMDocumentsProvider.html#openFileMAM(android.net.Uri,java.lang.String)>openFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode)</pre>
+                                        <div class="block"><p>MAM version of openFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openFileMAM</h4>
+                                        <pre class="methodSignature"> final ParcelFileDescriptor <a href=MAMDocumentsProvider.html#openFileMAM(android.net.Uri,java.lang.String,android.os.CancellationSignal)>openFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mode, CancellationSignal signal)</pre>
+                                        <div class="block"><p>MAM version of openFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signal</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openTypedAssetFileMAM</h4>
+                                        <pre class="methodSignature"> final AssetFileDescriptor <a href=MAMDocumentsProvider.html#openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle)>openTypedAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts)</pre>
+                                        <div class="block"><p>MAM version of openTypedAssetFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mimeTypeFilter</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>opts</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle,android.os.CancellationSignal)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>openTypedAssetFileMAM</h4>
+                                        <pre class="methodSignature"> final AssetFileDescriptor <a href=MAMDocumentsProvider.html#openTypedAssetFileMAM(android.net.Uri,java.lang.String,android.os.Bundle,android.os.CancellationSignal)>openTypedAssetFileMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> mimeTypeFilter, Bundle opts, CancellationSignal signal)</pre>
+                                        <div class="block"><p>MAM version of openTypedAssetFile.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mimeTypeFilter</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>opts</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>signal</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="deleteMAM(android.net.Uri,java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>deleteMAM</h4>
+                                        <pre class="methodSignature"> int <a href=MAMDocumentsProvider.html#deleteMAM(android.net.Uri,java.lang.String,kotlin.Array)>deleteMAM</a>(Uri uri, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs)</pre>
+                                        <div class="block"><p>MAM version of delete.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selectionArgs</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="deleteMAM(android.net.Uri,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>deleteMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) int <a href=MAMDocumentsProvider.html#deleteMAM(android.net.Uri,android.os.Bundle)>deleteMAM</a>(Uri uri, Bundle extras)</pre>
+                                        <div class="block"><p>MAM version of delete.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>extras</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="insertMAM(android.net.Uri,android.content.ContentValues)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>insertMAM</h4>
+                                        <pre class="methodSignature"> Uri <a href=MAMDocumentsProvider.html#insertMAM(android.net.Uri,android.content.ContentValues)>insertMAM</a>(Uri uri, ContentValues values)</pre>
+                                        <div class="block"><p>MAM version of insert.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>values</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="insertMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>insertMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) Uri <a href=MAMDocumentsProvider.html#insertMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)>insertMAM</a>(Uri uri, ContentValues values, Bundle extras)</pre>
+                                        <div class="block"><p>MAM version of insert.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>values</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>extras</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>queryMAM</h4>
+                                        <pre class="methodSignature"> Cursor <a href=MAMDocumentsProvider.html#queryMAM(android.net.Uri,kotlin.Array,java.lang.String,kotlin.Array,java.lang.String)>queryMAM</a>(Uri uri, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; projection, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> sortOrder)</pre>
+                                        <div class="block"><p>MAM version of query.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>projection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selectionArgs</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>sortOrder</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="updateMAM(android.net.Uri,android.content.ContentValues,java.lang.String,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>updateMAM</h4>
+                                        <pre class="methodSignature"> int <a href=MAMDocumentsProvider.html#updateMAM(android.net.Uri,android.content.ContentValues,java.lang.String,kotlin.Array)>updateMAM</a>(Uri uri, ContentValues values, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> selection, <a href=https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a>&gt; selectionArgs)</pre>
+                                        <div class="block"><p>MAM version of update.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>values</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selection</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>selectionArgs</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="updateMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>updateMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(api = Build.VERSION_CODES.R) int <a href=MAMDocumentsProvider.html#updateMAM(android.net.Uri,android.content.ContentValues,android.os.Bundle)>updateMAM</a>(Uri uri, ContentValues values, Bundle extras)</pre>
+                                        <div class="block"><p>MAM version of update.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>values</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>extras</code> - See ContentProvider.</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See ContentProvider.</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="ejectRootMAM(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>ejectRootMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) void <a href=MAMDocumentsProvider.html#ejectRootMAM(java.lang.String)>ejectRootMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> rootId)</pre>
+                                        <div class="block"><p>MAM version of ejectRoot.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>rootId</code> - root id</dd>
+                                            
+                                            
+                                        
+
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="createWebLinkIntentMAM(java.lang.String,android.os.Bundle)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createWebLinkIntentMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) IntentSender <a href=MAMDocumentsProvider.html#createWebLinkIntentMAM(java.lang.String,android.os.Bundle)>createWebLinkIntentMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> documentId, Bundle options)</pre>
+                                        <div class="block"><p>MAM version of createWebLinkIntent.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>documentId</code> - See DocumentsProvider</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - See DocumentsProvider</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a id="findDocumentPathMAM(java.lang.String,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findDocumentPathMAM</h4>
+                                        <pre class="methodSignature">@RequiresApi(value = Build.VERSION_CODES.O) DocumentsContract.Path <a href=MAMDocumentsProvider.html#findDocumentPathMAM(java.lang.String,java.lang.String)>findDocumentPathMAM</a>(<a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> parentDocumentId, <a href=https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html>String</a> childDocumentId)</pre>
+                                        <div class="block"><p>MAM version of findDocumentPath.</p></div>
+
+                                        <dl>
+
+                                        
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parentDocumentId</code> - See DocumentsProvider</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>childDocumentId</code> - See DocumentsProvider</dd>
+                                            
+                                            
+                                        
+
+                                        
+                                            <dt><span class="returnLabel">Returns:</span></dt>
+                                            <dd><p>See DocumentsProvider</p></dd>
+                                        
+
+                                        
+
+                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
